@@ -1,0 +1,972 @@
+2014-03-05 14:06:58		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 14:07:19		irc: server irc.freenode.net created (temporary server, NOT SAVED!)
+2014-03-05 14:09:36	=!=	No help available, "Register" is not a command or an option
+2014-03-05 14:09:43		[irc]  /msg  [-server <server>] <target>[,<target>...] <text>
+2014-03-05 14:09:43		send message to a nick or channel
+2014-03-05 14:09:43		server: send to this server (internal name)
+2014-03-05 14:09:43		target: nick or channel (may be mask, '*' = current channel)
+2014-03-05 14:09:43		  text: text to send
+2014-03-05 14:19:58		Option changed: weechat.bar.title.color_bg = yellow  (default: blue)
+2014-03-05 14:20:02		Option changed: weechat.bar.title.color_bg = green  (default: blue)
+2014-03-05 14:20:08		Option changed: weechat.bar.title.color_bg = white  (default: blue)
+2014-03-05 14:20:16		Option changed: weechat.bar.status.color_bg = white  (default: blue)
+2014-03-05 14:20:26		Option changed: weechat.bar.status.color_fg = black  (default: default)
+2014-03-05 14:20:38		Option changed: weechat.bar.status.color_bg = 60  (default: blue)
+2014-03-05 14:20:43		Option changed: weechat.bar.status.color_bg = 70  (default: blue)
+2014-03-05 14:20:45		Option changed: weechat.bar.status.color_bg = 10  (default: blue)
+2014-03-05 14:20:47		Option changed: weechat.bar.status.color_bg = 20  (default: blue)
+2014-03-05 14:20:49		Option changed: weechat.bar.status.color_bg = 110  (default: blue)
+2014-03-05 14:20:56		Option changed: weechat.bar.status.color_bg = red  (default: blue)
+2014-03-05 14:21:02		Option changed: weechat.bar.status.color_bg = cyan  (default: blue)
+2014-03-05 14:21:11		Option changed: weechat.bar.status.color_bg = green  (default: blue)
+2014-03-05 14:21:21		Option changed: weechat.bar.status.color_fg = black  (default: default)
+2014-03-05 14:21:32		Option changed: weechat.bar.status.color_fg = default
+2014-03-05 14:21:39		Option changed: weechat.bar.status.color_fg = black  (default: default)
+2014-03-05 14:22:49		Option changed: weechat.bar.status.color_fg = red  (default: default)
+2014-03-05 14:22:55		Option changed: weechat.bar.status.color_fg = black  (default: default)
+2014-03-05 14:22:59		Option changed: weechat.bar.status.color_fg = red  (default: default)
+2014-03-05 14:23:04		Option changed: weechat.bar.status.color_fg = default
+2014-03-05 14:23:09		Option changed: weechat.bar.status.color_fg = red  (default: default)
+2014-03-05 14:23:24		Option changed: weechat.bar.status.color_fg = black  (default: default)
+2014-03-05 14:23:35		Option changed: weechat.bar.status.color_delim = red  (default: cyan)
+2014-03-05 14:24:39		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 14:30:17	=!=	irc: command "quiet" must be executed on irc buffer (server or channel)
+2014-03-05 14:30:22		Theme saved to "/home/cskksc/.weechat/themes/_backup.theme"
+2014-03-05 14:30:22		python scripts loaded: theme
+2014-03-05 14:30:22		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 14:30:42		[python/theme]  /theme  list [<text>]
+2014-03-05 14:30:42		                        info|show [<theme>]
+2014-03-05 14:30:42		                        install <theme>
+2014-03-05 14:30:42		                        installfile <file>
+2014-03-05 14:30:42		                        undo
+2014-03-05 14:30:42		                        save <file>
+2014-03-05 14:30:42		                        backup
+2014-03-05 14:30:42		                        restore
+2014-03-05 14:30:42		                        export [-white] <file>
+2014-03-05 14:30:42		WeeChat theme manager
+2014-03-05 14:30:42		       list: list themes (search text if given)
+2014-03-05 14:30:42		       info: show info about theme (without argument: for current theme)
+2014-03-05 14:30:42		       show: show all options in theme (without argument: for current theme)
+2014-03-05 14:30:42		    install: install a theme from repository
+2014-03-05 14:30:42		installfile: load theme from a file
+2014-03-05 14:30:42		       undo: undo last theme install
+2014-03-05 14:30:42		       save: save current theme in a file
+2014-03-05 14:30:42		     backup: backup current theme (by default in ~/.weechat/themes/_backup.theme); this is done the first time script is loaded
+2014-03-05 14:30:42		    restore: restore theme backuped by script
+2014-03-05 14:30:42		     export: save current theme as HTML in a file (with "-white": use white background in HTML)
+2014-03-05 14:30:42		Examples:
+2014-03-05 14:30:42		  /theme save /tmp/flashcode.theme => save current theme
+2014-03-05 14:31:57		theme: action "install" not developed
+2014-03-05 14:32:18		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 14:32:18		Error loading theme "~/.weechat/themes/fixato.theme"
+2014-03-05 14:34:00		python: scripts unloaded
+2014-03-05 14:34:02		python scripts loaded: theme
+2014-03-05 14:34:02		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 14:34:24		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 14:34:24		Error loading theme "themes/fixato.theme"
+2014-03-05 14:36:40		Info about current theme:
+2014-03-05 14:36:40		  options: 116 (all OK)
+2014-03-05 14:37:05		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 14:37:05		Error loading theme "themes/fixato.theme"
+2014-03-05 14:37:26		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 14:37:26		Error loading theme "themes/_backup.theme"
+2014-03-05 14:37:34		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 14:37:34		Error loading theme "themes/_undo.theme"
+2014-03-05 14:37:38		python: scripts unloaded
+2014-03-05 14:40:23		python scripts loaded: theme
+2014-03-05 14:40:23		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 14:40:53		Theme "/home/cskksc/.weechat/themes/_backup.theme" installed (107 options set)
+2014-03-05 14:41:06		Content of current theme:
+2014-03-05 14:41:06		  aspell.color.misspelled = lightred
+2014-03-05 14:41:06		  aspell.color.suggestions = default
+2014-03-05 14:41:06		  irc.color.input_nick = lightcyan
+2014-03-05 14:41:06		  irc.color.item_away = yellow
+2014-03-05 14:41:06		  irc.color.item_channel_modes = default
+2014-03-05 14:41:06		  irc.color.item_lag_counting = default
+2014-03-05 14:41:06		  irc.color.item_lag_finished = yellow
+2014-03-05 14:41:06		  irc.color.message_join = green
+2014-03-05 14:41:06		  irc.color.message_quit = red
+2014-03-05 14:41:06		  irc.color.mirc_remap = 1,-1:darkgray
+2014-03-05 14:41:06		  irc.color.nick_prefixes = q:lightred;a:lightcyan;o:lightgreen;h:lightmagenta;v:yellow;*:lightblue
+2014-03-05 14:41:06		  irc.color.notice = green
+2014-03-05 14:41:06		  irc.color.reason_quit = default
+2014-03-05 14:41:06		  irc.color.topic_new = white
+2014-03-05 14:41:06		  irc.color.topic_old = default
+2014-03-05 14:41:06		  logger.color.backlog_end = default
+2014-03-05 14:41:06		  logger.color.backlog_line = default
+2014-03-05 14:41:06		  relay.color.client = cyan
+2014-03-05 14:41:06		  relay.color.status_active = lightblue
+2014-03-05 14:41:06		  relay.color.status_auth_failed = lightred
+2014-03-05 14:41:06		  relay.color.status_connecting = yellow
+2014-03-05 14:41:06		  relay.color.status_disconnected = lightred
+2014-03-05 14:41:06		  relay.color.status_waiting_auth = brown
+2014-03-05 14:41:06		  relay.color.text = default
+2014-03-05 14:41:06		  relay.color.text_bg = default
+2014-03-05 14:41:06		  relay.color.text_selected = white
+2014-03-05 14:41:06		  weechat.bar.input.color_bg = default
+2014-03-05 14:41:06		  weechat.bar.input.color_delim = cyan
+2014-03-05 14:41:06		  weechat.bar.input.color_fg = default
+2014-03-05 14:41:06		  weechat.bar.nicklist.color_bg = default
+2014-03-05 14:41:06		  weechat.bar.nicklist.color_delim = cyan
+2014-03-05 14:41:06		  weechat.bar.nicklist.color_fg = default
+2014-03-05 14:41:06		  weechat.bar.status.color_bg = green
+2014-03-05 14:41:06		  weechat.bar.status.color_delim = red
+2014-03-05 14:41:06		  weechat.bar.status.color_fg = black
+2014-03-05 14:41:06		  weechat.bar.title.color_bg = white
+2014-03-05 14:41:06		  weechat.bar.title.color_delim = cyan
+2014-03-05 14:41:06		  weechat.bar.title.color_fg = default
+2014-03-05 14:41:06		  weechat.color.bar_more = lightmagenta
+2014-03-05 14:41:06		  weechat.color.chat = default
+2014-03-05 14:41:06		  weechat.color.chat_bg = default
+2014-03-05 14:41:06		  weechat.color.chat_buffer = white
+2014-03-05 14:41:06		  weechat.color.chat_channel = white
+2014-03-05 14:41:06		  weechat.color.chat_day_change = cyan
+2014-03-05 14:41:06		  weechat.color.chat_delimiters = green
+2014-03-05 14:41:06		  weechat.color.chat_highlight = yellow
+2014-03-05 14:41:06		  weechat.color.chat_highlight_bg = magenta
+2014-03-05 14:41:06		  weechat.color.chat_host = cyan
+2014-03-05 14:41:06		  weechat.color.chat_inactive_buffer = default
+2014-03-05 14:41:06		  weechat.color.chat_inactive_window = default
+2014-03-05 14:41:06		  weechat.color.chat_nick = lightcyan
+2014-03-05 14:41:06		  weechat.color.chat_nick_colors = cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue
+2014-03-05 14:41:06		  weechat.color.chat_nick_offline = default
+2014-03-05 14:41:06		  weechat.color.chat_nick_offline_highlight = default
+2014-03-05 14:41:06		  weechat.color.chat_nick_offline_highlight_bg = blue
+2014-03-05 14:41:06		  weechat.color.chat_nick_other = cyan
+2014-03-05 14:41:06		  weechat.color.chat_nick_prefix = green
+2014-03-05 14:41:06		  weechat.color.chat_nick_self = white
+2014-03-05 14:41:06		  weechat.color.chat_nick_suffix = green
+2014-03-05 14:41:06		  weechat.color.chat_prefix_action = white
+2014-03-05 14:41:06		  weechat.color.chat_prefix_buffer = brown
+2014-03-05 14:41:06		  weechat.color.chat_prefix_buffer_inactive_buffer = default
+2014-03-05 14:41:06		  weechat.color.chat_prefix_error = yellow
+2014-03-05 14:41:06		  weechat.color.chat_prefix_join = lightgreen
+2014-03-05 14:41:06		  weechat.color.chat_prefix_more = lightmagenta
+2014-03-05 14:41:06		  weechat.color.chat_prefix_network = magenta
+2014-03-05 14:41:06		  weechat.color.chat_prefix_quit = lightred
+2014-03-05 14:41:06		  weechat.color.chat_prefix_suffix = green
+2014-03-05 14:41:06		  weechat.color.chat_read_marker = magenta
+2014-03-05 14:41:06		  weechat.color.chat_read_marker_bg = default
+2014-03-05 14:41:06		  weechat.color.chat_server = brown
+2014-03-05 14:41:06		  weechat.color.chat_tags = red
+2014-03-05 14:41:06		  weechat.color.chat_text_found = yellow
+2014-03-05 14:41:06		  weechat.color.chat_text_found_bg = lightmagenta
+2014-03-05 14:41:06		  weechat.color.chat_time = default
+2014-03-05 14:41:06		  weechat.color.chat_time_delimiters = brown
+2014-03-05 14:41:06		  weechat.color.chat_value = cyan
+2014-03-05 14:41:06		  weechat.color.emphasized = yellow
+2014-03-05 14:41:06		  weechat.color.emphasized_bg = magenta
+2014-03-05 14:41:06		  weechat.color.input_actions = lightgreen
+2014-03-05 14:41:06		  weechat.color.input_text_not_found = red
+2014-03-05 14:41:06		  weechat.color.nicklist_away = cyan
+2014-03-05 14:41:06		  weechat.color.nicklist_group = green
+2014-03-05 14:41:06		  weechat.color.nicklist_offline = blue
+2014-03-05 14:41:06		  weechat.color.separator = blue
+2014-03-05 14:41:06		  weechat.color.status_count_highlight = magenta
+2014-03-05 14:41:06		  weechat.color.status_count_msg = brown
+2014-03-05 14:41:06		  weechat.color.status_count_other = default
+2014-03-05 14:41:06		  weechat.color.status_count_private = green
+2014-03-05 14:41:06		  weechat.color.status_data_highlight = lightmagenta
+2014-03-05 14:41:06		  weechat.color.status_data_msg = yellow
+2014-03-05 14:41:06		  weechat.color.status_data_other = default
+2014-03-05 14:41:06		  weechat.color.status_data_private = lightgreen
+2014-03-05 14:41:06		  weechat.color.status_filter = green
+2014-03-05 14:41:06		  weechat.color.status_more = yellow
+2014-03-05 14:41:06		  weechat.color.status_name = white
+2014-03-05 14:41:06		  weechat.color.status_name_ssl = lightgreen
+2014-03-05 14:41:06		  weechat.color.status_number = yellow
+2014-03-05 14:41:06		  weechat.color.status_time = default
+2014-03-05 14:41:06		  weechat.look.buffer_time_format = %H:%M:%S
+2014-03-05 14:41:06		  weechat.look.color_inactive_buffer = on
+2014-03-05 14:41:06		  weechat.look.color_inactive_message = on
+2014-03-05 14:41:06		  weechat.look.color_inactive_prefix = on
+2014-03-05 14:41:06		  weechat.look.color_inactive_prefix_buffer = on
+2014-03-05 14:41:06		  weechat.look.color_inactive_time = off
+2014-03-05 14:41:06		  weechat.look.color_inactive_window = on
+2014-03-05 14:41:06		  weechat.look.color_nick_offline = off
+2014-03-05 14:41:06		  xfer.color.status_aborted = lightred
+2014-03-05 14:41:06		  xfer.color.status_active = lightblue
+2014-03-05 14:41:06		  xfer.color.status_connecting = yellow
+2014-03-05 14:41:06		  xfer.color.status_done = lightgreen
+2014-03-05 14:41:06		  xfer.color.status_failed = lightred
+2014-03-05 14:41:06		  xfer.color.status_waiting = lightcyan
+2014-03-05 14:41:06		  xfer.color.text = default
+2014-03-05 14:41:06		  xfer.color.text_bg = default
+2014-03-05 14:41:06		  xfer.color.text_selected = white
+2014-03-05 14:41:25		theme: action "install" not developed
+2014-03-05 14:41:39		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 14:41:39		Error loading theme "~/.weechat/themes/fixato.theme"
+2014-03-05 14:46:05		python: scripts unloaded
+2014-03-05 14:46:11		python scripts loaded: theme
+2014-03-05 14:46:11		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 14:46:22		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 14:46:22		Error loading theme "themes/fixato.theme"
+2014-03-05 14:58:45		python: scripts unloaded
+2014-03-05 14:58:48		python scripts loaded: theme
+2014-03-05 14:58:48		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:00:05		Theme saved to "/home/cskksc/.weechat/themes/_undo.theme"
+2014-03-05 15:00:05		Theme "/home/cskksc/.weechat/themes/fixato.theme" installed (116 options set)
+2014-03-05 15:01:17		python: scripts unloaded
+2014-03-05 15:11:28		python scripts loaded: theme
+2014-03-05 15:11:28		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:19:02		Option "irc.server.freenode.addresses":
+2014-03-05 15:19:02		  description: list of hostname/port or IP/port for server (separated by comma)
+2014-03-05 15:19:02		  type: string
+2014-03-05 15:19:02		  values: any string
+2014-03-05 15:19:02		  default value: (undefined)
+2014-03-05 15:19:02		  current value: "chat.freenode.net/6667"
+2014-03-05 15:19:02		  undefined value allowed (null)
+2014-03-05 15:19:29		Option changed: irc.server.freenode.ssl = on  (default: (undefined))
+2014-03-05 15:19:46		Option changed: irc.server.freenode.ssl_verify = on  (default: (undefined))
+2014-03-05 15:20:16		Option changed: irc.server.freenode.ssl_dhkey_size = 1024  (default: (undefined))
+2014-03-05 15:20:56	=!=	Error: failed to set option "irc.server.freenode.sasl_mechanism"
+2014-03-05 15:21:22		Option changed: irc.server.freenode.sasl_mechanism = dh-blowfish  (default: (undefined))
+2014-03-05 15:22:00		Option changed: irc.server.freenode.sasl_username = "__cskksc"  (default: (undefined))
+2014-03-05 15:22:14		Option changed: irc.server.freenode.sasl_password = "bazzinga"  (default: (undefined))
+2014-03-05 15:23:07	=!=	Error: unknown command "/" (type /help for help)
+2014-03-05 15:24:27		python: scripts unloaded
+2014-03-05 15:24:31		python scripts loaded: theme
+2014-03-05 15:24:31		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:25:00		[server] (irc.conf)
+2014-03-05 15:25:00		  irc.server.freenode.addresses = "chat.freenode.net/6667"  (default: (undefined))
+2014-03-05 15:25:00		  irc.server.freenode.anti_flood_prio_high
+2014-03-05 15:25:00		  irc.server.freenode.anti_flood_prio_low
+2014-03-05 15:25:00		  irc.server.freenode.autoconnect
+2014-03-05 15:25:00		  irc.server.freenode.autojoin
+2014-03-05 15:25:00		  irc.server.freenode.autoreconnect
+2014-03-05 15:25:00		  irc.server.freenode.autoreconnect_delay
+2014-03-05 15:25:00		  irc.server.freenode.autorejoin
+2014-03-05 15:25:00		  irc.server.freenode.autorejoin_delay
+2014-03-05 15:25:00		  irc.server.freenode.away_check
+2014-03-05 15:25:00		  irc.server.freenode.away_check_max_nicks
+2014-03-05 15:25:00		  irc.server.freenode.capabilities
+2014-03-05 15:25:00		  irc.server.freenode.command
+2014-03-05 15:25:00		  irc.server.freenode.command_delay
+2014-03-05 15:25:00		  irc.server.freenode.connection_timeout
+2014-03-05 15:25:00		  irc.server.freenode.default_msg_kick
+2014-03-05 15:25:00		  irc.server.freenode.default_msg_part
+2014-03-05 15:25:00		  irc.server.freenode.default_msg_quit
+2014-03-05 15:25:00		  irc.server.freenode.ipv6
+2014-03-05 15:25:00		  irc.server.freenode.local_hostname
+2014-03-05 15:25:00		  irc.server.freenode.nicks
+2014-03-05 15:25:00		  irc.server.freenode.notify
+2014-03-05 15:25:00		  irc.server.freenode.password
+2014-03-05 15:25:00		  irc.server.freenode.proxy
+2014-03-05 15:25:00		  irc.server.freenode.realname
+2014-03-05 15:25:00		  irc.server.freenode.sasl_mechanism = dh-blowfish  (default: (undefined))
+2014-03-05 15:25:00		  irc.server.freenode.sasl_password = "bazzinga"  (default: (undefined))
+2014-03-05 15:25:00		  irc.server.freenode.sasl_timeout
+2014-03-05 15:25:00		  irc.server.freenode.sasl_username = "__cskksc"  (default: (undefined))
+2014-03-05 15:25:00		  irc.server.freenode.ssl = on  (default: (undefined))
+2014-03-05 15:25:00		  irc.server.freenode.ssl_cert
+2014-03-05 15:25:00		  irc.server.freenode.ssl_dhkey_size = 1024  (default: (undefined))
+2014-03-05 15:25:00		  irc.server.freenode.ssl_fingerprint
+2014-03-05 15:25:00		  irc.server.freenode.ssl_priorities
+2014-03-05 15:25:00		  irc.server.freenode.ssl_verify = on  (default: (undefined))
+2014-03-05 15:25:00		  irc.server.freenode.username
+2014-03-05 15:25:00		36 options (matching with "*freenode*")
+2014-03-05 15:26:28		Option changed: irc.server.freenode.ssl_verify = off  (default: (undefined))
+2014-03-05 15:26:42	=!=	irc: command "quiet" must be executed on connected irc server
+2014-03-05 15:26:50		python: scripts unloaded
+2014-03-05 15:26:51		python scripts loaded: theme
+2014-03-05 15:26:51		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:28:27		Option changed: irc.server.freenode.command_delay = 5  (default: (undefined))
+2014-03-05 15:28:59	=!=	irc: command "quiet" must be executed on connected irc server
+2014-03-05 15:29:02		python: scripts unloaded
+2014-03-05 15:29:03		python scripts loaded: theme
+2014-03-05 15:29:03		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:29:23		Option changed: irc.server.freenode.addresses = "chat.freenode.net/6697"  (default: (undefined))
+2014-03-05 15:29:35		Option changed: irc.server.freenode.ssl = on  (default: (undefined))
+2014-03-05 15:29:40		Option changed: irc.server.freenode.ssl_verify = on  (default: (undefined))
+2014-03-05 15:30:01		python: scripts unloaded
+2014-03-05 15:30:02		python scripts loaded: theme
+2014-03-05 15:30:02		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:30:26		Option changed: irc.server.freenode.addresses = "chat.freenode.net/6697"  (default: (undefined))
+2014-03-05 15:30:42		Option changed: irc.server.freenode.ssl = on  (default: (undefined))
+2014-03-05 15:30:51		Option changed: irc.server.freenode.ssl_verify = on  (default: (undefined))
+2014-03-05 15:30:56		Option changed: irc.server.freenode.ssl_dhkey_size = 1024  (default: (undefined))
+2014-03-05 15:31:43		Option changed: irc.server.freenode.autojoin = "#weechat, #weechat-offtopic, #archlinux, #archlinux-offtopic, #clojure"  (default: (undefined))
+2014-03-05 15:32:09		Option changed: irc.server_default.sasl_mechanism = dh-blowfish  (default: plain)
+2014-03-05 15:32:30		Option changed: irc.server.freenode.sasl_username = "__cskksc"  (default: (undefined))
+2014-03-05 15:32:39		Option changed: irc.server.freenode.sasl_password = "bazzinga"  (default: (undefined))
+2014-03-05 15:33:43		Options saved to sec.conf
+2014-03-05 15:33:43		Options saved to weechat.conf
+2014-03-05 15:33:43		Options saved to plugins.conf
+2014-03-05 15:33:43		Options saved to irc.conf
+2014-03-05 15:33:43		Options saved to relay.conf
+2014-03-05 15:33:43		Options saved to aspell.conf
+2014-03-05 15:33:43		Options saved to trigger.conf
+2014-03-05 15:33:43		Options saved to logger.conf
+2014-03-05 15:33:43		Options saved to theme.conf
+2014-03-05 15:33:43		Options saved to script.conf
+2014-03-05 15:33:43		Options saved to rmodifier.conf
+2014-03-05 15:33:43		Options saved to alias.conf
+2014-03-05 15:33:43		Options saved to charset.conf
+2014-03-05 15:33:43		Options saved to xfer.conf
+2014-03-05 15:34:15		Options saved to sec.conf
+2014-03-05 15:34:15		Options saved to weechat.conf
+2014-03-05 15:34:15		Options saved to plugins.conf
+2014-03-05 15:34:15		Options saved to irc.conf
+2014-03-05 15:34:15		Options saved to relay.conf
+2014-03-05 15:34:15		Options saved to aspell.conf
+2014-03-05 15:34:15		Options saved to trigger.conf
+2014-03-05 15:34:15		Options saved to logger.conf
+2014-03-05 15:34:15		Options saved to theme.conf
+2014-03-05 15:34:15		Options saved to script.conf
+2014-03-05 15:34:15		Options saved to rmodifier.conf
+2014-03-05 15:34:15		Options saved to alias.conf
+2014-03-05 15:34:15		Options saved to charset.conf
+2014-03-05 15:34:15		Options saved to xfer.conf
+2014-03-05 15:34:54		Option changed: weechat.bar.title.size_max = 2  (default: 0)
+2014-03-05 15:35:01		Option changed: weechat.bar.input.size_max = 3  (default: 0)
+2014-03-05 15:35:13		Option changed: weechat.bar.title.size = 0  (default: 1)
+2014-03-05 15:35:19		Option changed: weechat.bar.input.size = 0  (default: 1)
+2014-03-05 15:35:24		Options saved to sec.conf
+2014-03-05 15:35:24		Options saved to weechat.conf
+2014-03-05 15:35:24		Options saved to plugins.conf
+2014-03-05 15:35:24		Options saved to irc.conf
+2014-03-05 15:35:24		Options saved to relay.conf
+2014-03-05 15:35:24		Options saved to aspell.conf
+2014-03-05 15:35:24		Options saved to trigger.conf
+2014-03-05 15:35:24		Options saved to logger.conf
+2014-03-05 15:35:24		Options saved to theme.conf
+2014-03-05 15:35:24		Options saved to script.conf
+2014-03-05 15:35:24		Options saved to rmodifier.conf
+2014-03-05 15:35:24		Options saved to alias.conf
+2014-03-05 15:35:24		Options saved to charset.conf
+2014-03-05 15:35:24		Options saved to xfer.conf
+2014-03-05 15:36:43		python: scripts unloaded
+2014-03-05 15:36:51		python scripts loaded: theme
+2014-03-05 15:36:51		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:39:29		Option changed: irc.server_default.nicks = "__cskksc"  (default: "")
+2014-03-05 15:39:45		Option changed: irc.server.freenode.nicks = "__cskksc"  (default: (undefined))
+2014-03-05 15:39:52		Options saved to sec.conf
+2014-03-05 15:39:52		Options saved to weechat.conf
+2014-03-05 15:39:52		Options saved to plugins.conf
+2014-03-05 15:39:52		Options saved to irc.conf
+2014-03-05 15:39:52		Options saved to relay.conf
+2014-03-05 15:39:52		Options saved to aspell.conf
+2014-03-05 15:39:52		Options saved to trigger.conf
+2014-03-05 15:39:52		Options saved to logger.conf
+2014-03-05 15:39:52		Options saved to theme.conf
+2014-03-05 15:39:52		Options saved to script.conf
+2014-03-05 15:39:52		Options saved to rmodifier.conf
+2014-03-05 15:39:52		Options saved to alias.conf
+2014-03-05 15:39:52		Options saved to charset.conf
+2014-03-05 15:39:52		Options saved to xfer.conf
+2014-03-05 15:39:55		python: scripts unloaded
+2014-03-05 15:39:56		python scripts loaded: theme
+2014-03-05 15:39:56		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:40:01	=!=	irc: command "who" must be executed on irc buffer (server or channel)
+2014-03-05 15:42:27		Option "irc.server.freenode.autoconnect":
+2014-03-05 15:42:27		  description: automatically connect to server when WeeChat is starting
+2014-03-05 15:42:27		  type: boolean
+2014-03-05 15:42:27		  values: on, off
+2014-03-05 15:42:27		  default value: (undefined)
+2014-03-05 15:42:27		  current value: (undefined)
+2014-03-05 15:42:27		  undefined value allowed (null)
+2014-03-05 15:42:47		Option "irc.server.freenode.autoconnect":
+2014-03-05 15:42:47		  description: automatically connect to server when WeeChat is starting
+2014-03-05 15:42:47		  type: boolean
+2014-03-05 15:42:47		  values: on, off
+2014-03-05 15:42:47		  default value: (undefined)
+2014-03-05 15:42:47		  current value: (undefined)
+2014-03-05 15:42:47		  undefined value allowed (null)
+2014-03-05 15:42:58		Option changed: irc.server.freenode.autoconnect = on  (default: (undefined))
+2014-03-05 15:43:02		Options saved to sec.conf
+2014-03-05 15:43:02		Options saved to weechat.conf
+2014-03-05 15:43:02		Options saved to plugins.conf
+2014-03-05 15:43:02		Options saved to irc.conf
+2014-03-05 15:43:02		Options saved to relay.conf
+2014-03-05 15:43:02		Options saved to aspell.conf
+2014-03-05 15:43:02		Options saved to trigger.conf
+2014-03-05 15:43:02		Options saved to logger.conf
+2014-03-05 15:43:02		Options saved to theme.conf
+2014-03-05 15:43:02		Options saved to script.conf
+2014-03-05 15:43:02		Options saved to rmodifier.conf
+2014-03-05 15:43:02		Options saved to alias.conf
+2014-03-05 15:43:02		Options saved to charset.conf
+2014-03-05 15:43:02		Options saved to xfer.conf
+2014-03-05 15:43:06		python: scripts unloaded
+2014-03-05 15:43:09		python scripts loaded: theme
+2014-03-05 15:43:09		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:43:45	=!=	No help available, "irc.servers.freenode.autojoin" is not a command or an option
+2014-03-05 15:45:48		[look] (irc.conf)
+2014-03-05 15:45:48		  irc.look.buffer_switch_autojoin = on
+2014-03-05 15:45:48		[server_default] (irc.conf)
+2014-03-05 15:45:48		  irc.server_default.autojoin = ""
+2014-03-05 15:45:48		[server] (irc.conf)
+2014-03-05 15:45:48		  irc.server.freenode.autojoin = "#weechat, #weechat-offtopic, #archlinux, #archlinux-offtopic, #clojure"  (default: (undefined))
+2014-03-05 15:45:48		3 options (matching with "*autojoin*")
+2014-03-05 15:45:54		[look] (irc.conf)
+2014-03-05 15:45:54		  irc.look.buffer_switch_autojoin = on
+2014-03-05 15:45:54		[server_default] (irc.conf)
+2014-03-05 15:45:54		  irc.server_default.autojoin = ""
+2014-03-05 15:45:54		[server] (irc.conf)
+2014-03-05 15:45:54		  irc.server.freenode.autojoin = "#weechat, #weechat-offtopic, #archlinux, #archlinux-offtopic, #clojure"  (default: (undefined))
+2014-03-05 15:45:54		3 options (matching with "*autojoin*")
+2014-03-05 15:46:17		[server] (irc.conf)
+2014-03-05 15:46:17		  irc.server.freenode.autojoin = "#weechat, #weechat-offtopic, #archlinux, #archlinux-offtopic, #clojure"  (default: (undefined))
+2014-03-05 15:46:17		1 option (matching with "irc.server.freenode.autojoin")
+2014-03-05 15:46:34		Option changed: irc.server.freenode.autojoin = "+= "#ubuntu""  (default: (undefined))
+2014-03-05 15:47:09		Option changed: irc.server.freenode.autojoin = "#archlinux,#archlinux-offtopic,#clojure,#weechat,#ubuntu"  (default: (undefined))
+2014-03-05 15:47:16		Options saved to sec.conf
+2014-03-05 15:47:16		Options saved to weechat.conf
+2014-03-05 15:47:16		Options saved to plugins.conf
+2014-03-05 15:47:16		Options saved to irc.conf
+2014-03-05 15:47:16		Options saved to relay.conf
+2014-03-05 15:47:16		Options saved to aspell.conf
+2014-03-05 15:47:16		Options saved to trigger.conf
+2014-03-05 15:47:16		Options saved to logger.conf
+2014-03-05 15:47:16		Options saved to theme.conf
+2014-03-05 15:47:16		Options saved to script.conf
+2014-03-05 15:47:16		Options saved to rmodifier.conf
+2014-03-05 15:47:16		Options saved to alias.conf
+2014-03-05 15:47:16		Options saved to charset.conf
+2014-03-05 15:47:16		Options saved to xfer.conf
+2014-03-05 15:47:20		python: scripts unloaded
+2014-03-05 15:47:21		python scripts loaded: theme
+2014-03-05 15:47:21		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:47:56		[script]  /script  list [-o|-i]
+2014-03-05 15:47:56		                   search <text>
+2014-03-05 15:47:56		                   show <script>
+2014-03-05 15:47:56		                   load|unload|reload <script> [<script>...]
+2014-03-05 15:47:56		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2014-03-05 15:47:56		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2014-03-05 15:47:56		                   upgrade
+2014-03-05 15:47:56		                   update
+2014-03-05 15:47:56		WeeChat scripts manager
+2014-03-05 15:47:56		          list: list loaded scripts (all languages)
+2014-03-05 15:47:56		            -o: send list of loaded scripts to buffer
+2014-03-05 15:47:56		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2014-03-05 15:47:56		        search: search scripts by tags or text and display result on scripts buffer
+2014-03-05 15:47:56		          show: show detailed info about a script
+2014-03-05 15:47:56		          load: load script(s)
+2014-03-05 15:47:56		        unload: unload script(s)
+2014-03-05 15:47:56		        reload: reload script(s)
+2014-03-05 15:47:56		      autoload: autoload the script
+2014-03-05 15:47:56		    noautoload: do not autoload the script
+2014-03-05 15:47:56		toggleautoload: toggle autoload
+2014-03-05 15:47:56		       install: install/upgrade script(s)
+2014-03-05 15:47:56		        remove: remove script(s)
+2014-03-05 15:47:56		 installremove: install or remove script(s), depending on current state
+2014-03-05 15:47:56		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2014-03-05 15:47:56		            -q: quiet mode: do not display messages
+2014-03-05 15:47:56		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2014-03-05 15:47:56		        update: update local scripts cache
+2014-03-05 15:47:56		Without argument, this command opens a buffer with list of scripts.
+2014-03-05 15:47:56		On script buffer, the possible status for each script are:
+2014-03-05 15:47:56		  * i a H r N
+2014-03-05 15:47:56		  | | | | | |
+2014-03-05 15:47:56		  | | | | | obsolete (new version available)
+2014-03-05 15:47:56		  | | | | running (loaded)
+2014-03-05 15:47:56		  | | | held
+2014-03-05 15:47:56		  | | autoloaded
+2014-03-05 15:47:56		  | installed
+2014-03-05 15:47:56		  popular script
+2014-03-05 15:47:56		Keys on script buffer:
+2014-03-05 15:47:56		  alt+i  install script
+2014-03-05 15:47:56		  alt+r  remove script
+2014-03-05 15:47:56		  alt+l  load script
+2014-03-05 15:47:56		  alt+L  reload script
+2014-03-05 15:47:56		  alt+u  unload script
+2014-03-05 15:47:56		  alt+A  autoload script
+2014-03-05 15:47:56		  alt+h  (un)hold script
+2014-03-05 15:47:56		  alt+v  view script
+2014-03-05 15:47:56		Input allowed on script buffer:
+2014-03-05 15:47:56		  i/r/l/L/u/h  action on script (same as keys above)
+2014-03-05 15:47:56		  q            close buffer
+2014-03-05 15:47:56		  $            refresh buffer
+2014-03-05 15:47:56		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2014-03-05 15:47:56		  s:           reset sort (use default sort)
+2014-03-05 15:47:56		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2014-03-05 15:47:56		  *            remove filter
+2014-03-05 15:47:56		Mouse actions on script buffer:
+2014-03-05 15:47:56		  wheel         scroll list
+2014-03-05 15:47:56		  left button   select script
+2014-03-05 15:47:56		  right button  install/remove script
+2014-03-05 15:47:56		Examples:
+2014-03-05 15:47:56		  /script search url
+2014-03-05 15:47:56		  /script install iset.pl buffers.pl
+2014-03-05 15:47:56		  /script remove iset.pl
+2014-03-05 15:47:56		  /script hold urlserver.py
+2014-03-05 15:47:56		  /script reload urlserver
+2014-03-05 15:47:56		  /script upgrade
+2014-03-05 15:49:39		script: downloading list of scripts...
+2014-03-05 15:49:41		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-05 15:50:41		perl: loading script "/home/cskksc/.weechat/perl/buffers.pl"
+2014-03-05 15:50:41		perl: registered script "buffers", version 4.5 (Sidebar with list of buffers)
+2014-03-05 15:50:41		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2014-03-05 15:50:41		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2014-03-05 15:51:08		[look] (weechat.conf)
+2014-03-05 15:51:08		  weechat.look.hotlist_names_merged_buffers = off
+2014-03-05 15:51:08		[history] (weechat.conf)
+2014-03-05 15:51:08		  weechat.history.max_visited_buffers = 50
+2014-03-05 15:51:08		[bar] (weechat.conf)
+2014-03-05 15:51:08		  weechat.bar.buffers.color_bg = default
+2014-03-05 15:51:08		  weechat.bar.buffers.color_delim = default
+2014-03-05 15:51:08		  weechat.bar.buffers.color_fg = default
+2014-03-05 15:51:08		  weechat.bar.buffers.conditions = ""
+2014-03-05 15:51:08		  weechat.bar.buffers.filling_left_right = vertical
+2014-03-05 15:51:08		  weechat.bar.buffers.filling_top_bottom = columns_vertical
+2014-03-05 15:51:08		  weechat.bar.buffers.hidden = off
+2014-03-05 15:51:08		  weechat.bar.buffers.items = "buffers"  (default: "")
+2014-03-05 15:51:08		  weechat.bar.buffers.position = left
+2014-03-05 15:51:08		  weechat.bar.buffers.priority = 0
+2014-03-05 15:51:08		  weechat.bar.buffers.separator = on
+2014-03-05 15:51:08		  weechat.bar.buffers.size = 0
+2014-03-05 15:51:08		  weechat.bar.buffers.size_max = 0
+2014-03-05 15:51:08		  weechat.bar.buffers.type = root
+2014-03-05 15:51:08		[color] (buffers.conf)
+2014-03-05 15:51:08		  buffers.color.current_bg = red
+2014-03-05 15:51:08		  buffers.color.current_fg = lightcyan
+2014-03-05 15:51:08		  buffers.color.default_bg = default
+2014-03-05 15:51:08		  buffers.color.default_fg = default
+2014-03-05 15:51:08		  buffers.color.hotlist_highlight_bg = default
+2014-03-05 15:51:08		  buffers.color.hotlist_highlight_fg = magenta
+2014-03-05 15:51:08		  buffers.color.hotlist_low_bg = default
+2014-03-05 15:51:08		  buffers.color.hotlist_low_fg = white
+2014-03-05 15:51:08		  buffers.color.hotlist_message_bg = default
+2014-03-05 15:51:08		  buffers.color.hotlist_message_fg = yellow
+2014-03-05 15:51:08		  buffers.color.hotlist_private_bg = default
+2014-03-05 15:51:08		  buffers.color.hotlist_private_fg = lightgreen
+2014-03-05 15:51:08		  buffers.color.none_channel_bg = default
+2014-03-05 15:51:08		  buffers.color.none_channel_fg = default
+2014-03-05 15:51:08		  buffers.color.number = lightgreen
+2014-03-05 15:51:08		  buffers.color.number_char = lightgreen
+2014-03-05 15:51:08		  buffers.color.prefix_bufname = default
+2014-03-05 15:51:08		  buffers.color.queries_default_bg = default
+2014-03-05 15:51:08		  buffers.color.queries_default_fg = default
+2014-03-05 15:51:08		  buffers.color.queries_highlight_bg = default
+2014-03-05 15:51:08		  buffers.color.queries_highlight_fg = default
+2014-03-05 15:51:08		  buffers.color.queries_message_bg = default
+2014-03-05 15:51:08		  buffers.color.queries_message_fg = default
+2014-03-05 15:51:08		  buffers.color.suffix_bufname = default
+2014-03-05 15:51:08		  buffers.color.whitelist_default_bg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_default_fg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_highlight_bg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_highlight_fg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_low_bg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_low_fg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_message_bg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_message_fg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_private_bg = default
+2014-03-05 15:51:08		  buffers.color.whitelist_private_fg = default
+2014-03-05 15:51:08		[look] (buffers.conf)
+2014-03-05 15:51:08		  buffers.look.core_to_front = off
+2014-03-05 15:51:08		  buffers.look.detach = 0
+2014-03-05 15:51:08		  buffers.look.detach_buffer_immediately = ""
+2014-03-05 15:51:08		  buffers.look.detach_display_window_number = off
+2014-03-05 15:51:08		  buffers.look.detach_displayed_buffers = on
+2014-03-05 15:51:08		  buffers.look.detach_free_content = off
+2014-03-05 15:51:08		  buffers.look.detach_query = off
+2014-03-05 15:51:08		  buffers.look.hide_merged_buffers = none
+2014-03-05 15:51:08		  buffers.look.hotlist_counter = off
+2014-03-05 15:51:08		  buffers.look.immune_detach_buffers = ""
+2014-03-05 15:51:08		  buffers.look.indenting = off
+2014-03-05 15:51:08		  buffers.look.indenting_number = on
+2014-03-05 15:51:08		  buffers.look.jump_prev_next_visited_buffer = off
+2014-03-05 15:51:08		  buffers.look.mark_inactive = off
+2014-03-05 15:51:08		  buffers.look.mouse_move_buffer = on
+2014-03-05 15:51:08		  buffers.look.name_crop_suffix = "+"
+2014-03-05 15:51:08		  buffers.look.name_size_max = 0
+2014-03-05 15:51:08		  buffers.look.number_char = "."
+2014-03-05 15:51:08		  buffers.look.prefix = off
+2014-03-05 15:51:08		  buffers.look.prefix_bufname = ""
+2014-03-05 15:51:08		  buffers.look.prefix_empty = on
+2014-03-05 15:51:08		  buffers.look.prefix_for_query = ""
+2014-03-05 15:51:08		  buffers.look.short_names = on
+2014-03-05 15:51:08		  buffers.look.show_lag = off
+2014-03-05 15:51:08		  buffers.look.show_number = on
+2014-03-05 15:51:08		  buffers.look.sort = number
+2014-03-05 15:51:08		  buffers.look.suffix_bufname = ""
+2014-03-05 15:51:08		  buffers.look.toogle_bar = on
+2014-03-05 15:51:08		  buffers.look.whitelist_buffers = ""
+2014-03-05 15:51:08		79 options (matching with "*buffers*")
+2014-03-05 15:51:14	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2014-03-05 15:52:27		Option changed: weechat.bar.buffers.position = bottom  (default: left)
+2014-03-05 15:52:42	=!=	irc: command "quiet" must be executed on irc buffer (server or channel)
+2014-03-05 15:52:45	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2014-03-05 15:52:49	=!=	irc: command "quiet" must be executed on irc buffer (server or channel)
+2014-03-05 15:54:06		python: scripts unloaded
+2014-03-05 15:54:07		python scripts loaded: theme
+2014-03-05 15:54:07		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-05 15:54:07		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 15:55:57		[color] (weechat.conf)
+2014-03-05 15:55:57		  weechat.color.nicklist_away = 244  (default: cyan)
+2014-03-05 15:55:57		  weechat.color.nicklist_group = green
+2014-03-05 15:55:57		  weechat.color.nicklist_offline = darkgray  (default: blue)
+2014-03-05 15:55:57		[bar] (weechat.conf)
+2014-03-05 15:55:57		  weechat.bar.nicklist.color_bg = default
+2014-03-05 15:55:57		  weechat.bar.nicklist.color_delim = cyan
+2014-03-05 15:55:57		  weechat.bar.nicklist.color_fg = default
+2014-03-05 15:55:57		  weechat.bar.nicklist.conditions = "${nicklist}"
+2014-03-05 15:55:57		  weechat.bar.nicklist.filling_left_right = vertical
+2014-03-05 15:55:57		  weechat.bar.nicklist.filling_top_bottom = columns_vertical
+2014-03-05 15:55:57		  weechat.bar.nicklist.hidden = off
+2014-03-05 15:55:57		  weechat.bar.nicklist.items = "buffer_nicklist"
+2014-03-05 15:55:57		  weechat.bar.nicklist.position = right
+2014-03-05 15:55:57		  weechat.bar.nicklist.priority = 200
+2014-03-05 15:55:57		  weechat.bar.nicklist.separator = on
+2014-03-05 15:55:57		  weechat.bar.nicklist.size = 0
+2014-03-05 15:55:57		  weechat.bar.nicklist.size_max = 0
+2014-03-05 15:55:57		  weechat.bar.nicklist.type = window
+2014-03-05 15:55:57		[look] (irc.conf)
+2014-03-05 15:55:57		  irc.look.color_nicks_in_nicklist = off
+2014-03-05 15:55:57		18 options (matching with "*nicklist*")
+2014-03-05 15:56:36	=!=	Option "weechat.bar.nicklist.hidden=on" not found (tip: you can use "*" at beginning and/or end of option to see a sublist)
+2014-03-05 15:56:39		Options saved to sec.conf
+2014-03-05 15:56:39		Options saved to weechat.conf
+2014-03-05 15:56:39		Options saved to plugins.conf
+2014-03-05 15:56:39		Options saved to irc.conf
+2014-03-05 15:56:39		Options saved to relay.conf
+2014-03-05 15:56:39		Options saved to aspell.conf
+2014-03-05 15:56:39		Options saved to buffers.conf
+2014-03-05 15:56:39		Options saved to trigger.conf
+2014-03-05 15:56:39		Options saved to logger.conf
+2014-03-05 15:56:39		Options saved to theme.conf
+2014-03-05 15:56:39		Options saved to script.conf
+2014-03-05 15:56:39		Options saved to rmodifier.conf
+2014-03-05 15:56:39		Options saved to alias.conf
+2014-03-05 15:56:39		Options saved to charset.conf
+2014-03-05 15:56:39		Options saved to xfer.conf
+2014-03-05 15:58:43		python: scripts unloaded
+2014-03-05 17:57:21		python scripts loaded: theme
+2014-03-05 17:57:21		script: downloading list of scripts...
+2014-03-05 17:57:22		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 17:57:23		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-05 17:59:53		[color] (weechat.conf)
+2014-03-05 17:59:53		  weechat.color.nicklist_away = 244  (default: cyan)
+2014-03-05 17:59:53		  weechat.color.nicklist_group = green
+2014-03-05 17:59:53		  weechat.color.nicklist_offline = darkgray  (default: blue)
+2014-03-05 17:59:53		[bar] (weechat.conf)
+2014-03-05 17:59:53		  weechat.bar.nicklist.color_bg = default
+2014-03-05 17:59:53		  weechat.bar.nicklist.color_delim = cyan
+2014-03-05 17:59:53		  weechat.bar.nicklist.color_fg = default
+2014-03-05 17:59:53		  weechat.bar.nicklist.conditions = "${nicklist}"
+2014-03-05 17:59:53		  weechat.bar.nicklist.filling_left_right = vertical
+2014-03-05 17:59:53		  weechat.bar.nicklist.filling_top_bottom = columns_vertical
+2014-03-05 17:59:53		  weechat.bar.nicklist.hidden = off
+2014-03-05 17:59:53		  weechat.bar.nicklist.items = "buffer_nicklist"
+2014-03-05 17:59:53		  weechat.bar.nicklist.position = right
+2014-03-05 17:59:53		  weechat.bar.nicklist.priority = 200
+2014-03-05 17:59:53		  weechat.bar.nicklist.separator = on
+2014-03-05 17:59:53		  weechat.bar.nicklist.size = 0
+2014-03-05 17:59:53		  weechat.bar.nicklist.size_max = 0
+2014-03-05 17:59:53		  weechat.bar.nicklist.type = window
+2014-03-05 17:59:53		[look] (irc.conf)
+2014-03-05 17:59:53		  irc.look.color_nicks_in_nicklist = off
+2014-03-05 17:59:53		18 options (matching with "*nicklist*")
+2014-03-05 18:00:09		Option changed: weechat.bar.nicklist.hidden = on  (default: off)
+2014-03-05 18:00:17		Options saved to sec.conf
+2014-03-05 18:00:17		Options saved to weechat.conf
+2014-03-05 18:00:17		Options saved to plugins.conf
+2014-03-05 18:00:17		Options saved to irc.conf
+2014-03-05 18:00:17		Options saved to relay.conf
+2014-03-05 18:00:17		Options saved to aspell.conf
+2014-03-05 18:00:17		Options saved to buffers.conf
+2014-03-05 18:00:17		Options saved to trigger.conf
+2014-03-05 18:00:17		Options saved to logger.conf
+2014-03-05 18:00:17		Options saved to theme.conf
+2014-03-05 18:00:17		Options saved to script.conf
+2014-03-05 18:00:17		Options saved to rmodifier.conf
+2014-03-05 18:00:17		Options saved to alias.conf
+2014-03-05 18:00:17		Options saved to charset.conf
+2014-03-05 18:00:17		Options saved to xfer.conf
+2014-03-05 18:06:15		python: scripts unloaded
+2014-03-05 22:09:49		python scripts loaded: theme
+2014-03-05 22:09:49		script: downloading list of scripts...
+2014-03-05 22:09:49		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 22:09:53		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-05 22:35:33		python: scripts unloaded
+2014-03-05 22:35:47		python scripts loaded: theme
+2014-03-05 22:35:47		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-05 22:35:47		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-05 22:46:46		python: scripts unloaded
+2014-03-06 19:10:23		python scripts loaded: theme
+2014-03-06 19:10:23		script: downloading list of scripts...
+2014-03-06 19:10:24		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-06 19:10:31	=!=	irc: command "quiet" must be executed on connected irc server
+2014-03-06 19:10:34		python: scripts unloaded
+2014-03-06 19:29:25		python scripts loaded: theme
+2014-03-06 19:29:25		script: downloading list of scripts...
+2014-03-06 19:29:25		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-06 19:29:28		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-06 20:00:19		python: scripts unloaded
+2014-03-06 20:01:06		python scripts loaded: theme
+2014-03-06 20:01:07		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-06 20:01:07		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-06 22:09:33		python: scripts unloaded
+2014-03-07 13:32:19		python scripts loaded: theme
+2014-03-07 13:32:19		script: downloading list of scripts...
+2014-03-07 13:32:20		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-07 13:32:22		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-07 13:56:30		python: scripts unloaded
+2014-03-07 13:56:33		python scripts loaded: theme
+2014-03-07 13:56:33		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-07 13:56:33		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-07 14:32:02	=!=	Error with command "/server add irc.oftc.net" (help on command: /help server)
+2014-03-07 14:32:16		[irc]  /server  list|listfull [<server>]
+2014-03-07 14:32:16		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2014-03-07 14:32:16		                copy|rename <server> <new_name>
+2014-03-07 14:32:16		                del|keep <server>
+2014-03-07 14:32:16		                deloutq|jump|raw
+2014-03-07 14:32:16		list, add or remove IRC servers
+2014-03-07 14:32:16		    list: list servers (without argument, this list is displayed)
+2014-03-07 14:32:16		listfull: list servers with detailed info for each server
+2014-03-07 14:32:16		     add: create a new server
+2014-03-07 14:32:16		  server: server name, for internal and display use
+2014-03-07 14:32:16		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2014-03-07 14:32:16		    temp: create temporary server (not saved)
+2014-03-07 14:32:16		  option: set option for server (for boolean option, value can be omitted)
+2014-03-07 14:32:16		nooption: set boolean option to 'off' (for example: -nossl)
+2014-03-07 14:32:16		    copy: duplicate a server
+2014-03-07 14:32:16		  rename: rename a server
+2014-03-07 14:32:16		    keep: keep server in config file (for temporary servers only)
+2014-03-07 14:32:16		     del: delete a server
+2014-03-07 14:32:16		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2014-03-07 14:32:16		    jump: jump to server buffer
+2014-03-07 14:32:16		     raw: open buffer with raw IRC data
+2014-03-07 14:32:16		Examples:
+2014-03-07 14:32:16		  /server listfull
+2014-03-07 14:32:16		  /server add oftc irc.oftc.net/6697 -ssl -autoconnect
+2014-03-07 14:32:16		  /server add oftc6 irc6.oftc.net/6697 -ipv6 -ssl
+2014-03-07 14:32:16		  /server add freenode2 chat.eu.freenode.net/6667,chat.us.freenode.net/6667
+2014-03-07 14:32:16		  /server add freenode3 irc.freenode.net -password=mypass
+2014-03-07 14:32:16		  /server copy oftc oftcbis
+2014-03-07 14:32:16		  /server rename oftc newoftc
+2014-03-07 14:32:16		  /server del freenode
+2014-03-07 14:32:16		  /server deloutq
+2014-03-07 14:32:48		irc: server oftc created
+2014-03-07 14:37:46		Option changed: irc.server.oftc.ssl_cert = "/home/cskksc/.weechat/ssl/__cskksc.pem"  (default: (undefined))
+2014-03-07 14:37:50	=!=	irc: already connected to server "oftc"!
+2014-03-07 14:37:50	=!=	Error with command "/connect oftc" (help on command: /help connect)
+2014-03-07 14:40:02		irc: server oftc has been deleted
+2014-03-07 14:40:49		irc: server oftc created
+2014-03-07 14:41:19		Option changed: irc.server.oftc.ssl_cert = "%h/ssl/__cskksc.pem"  (default: (undefined))
+2014-03-07 14:41:47		irc: server oftc has been deleted
+2014-03-07 21:28:19		Options saved to sec.conf
+2014-03-07 21:28:19		Options saved to weechat.conf
+2014-03-07 21:28:19		Options saved to plugins.conf
+2014-03-07 21:28:19		Options saved to irc.conf
+2014-03-07 21:28:19		Options saved to relay.conf
+2014-03-07 21:28:19		Options saved to aspell.conf
+2014-03-07 21:28:19		Options saved to buffers.conf
+2014-03-07 21:28:19		Options saved to trigger.conf
+2014-03-07 21:28:19		Options saved to logger.conf
+2014-03-07 21:28:19		Options saved to theme.conf
+2014-03-07 21:28:19		Options saved to script.conf
+2014-03-07 21:28:19		Options saved to rmodifier.conf
+2014-03-07 21:28:19		Options saved to alias.conf
+2014-03-07 21:28:19		Options saved to charset.conf
+2014-03-07 21:28:19		Options saved to xfer.conf
+2014-03-07 21:28:25		Options saved to sec.conf
+2014-03-07 21:28:25		Options saved to weechat.conf
+2014-03-07 21:28:25		Options saved to plugins.conf
+2014-03-07 21:28:25		Options saved to irc.conf
+2014-03-07 21:28:25		Options saved to relay.conf
+2014-03-07 21:28:25		Options saved to aspell.conf
+2014-03-07 21:28:25		Options saved to buffers.conf
+2014-03-07 21:28:25		Options saved to trigger.conf
+2014-03-07 21:28:25		Options saved to logger.conf
+2014-03-07 21:28:25		Options saved to theme.conf
+2014-03-07 21:28:25		Options saved to script.conf
+2014-03-07 21:28:25		Options saved to rmodifier.conf
+2014-03-07 21:28:25		Options saved to alias.conf
+2014-03-07 21:28:25		Options saved to charset.conf
+2014-03-07 21:28:25		Options saved to xfer.conf
+2014-03-07 22:40:15		python: scripts unloaded
+2014-03-14 07:55:56		python scripts loaded: theme
+2014-03-14 07:55:56		perl scripts loaded: buffers
+2014-03-14 07:55:56		script: 272 scripts for WeeChat 0.4.4-dev
+2014-03-14 07:55:56		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-14 07:58:10		fifo: pipe closed
+2014-03-14 07:58:10		perl: scripts unloaded
+2014-03-14 07:58:10		python: scripts unloaded
+2014-03-14 09:14:25		python scripts loaded: theme
+2014-03-14 09:14:25		perl scripts loaded: buffers
+2014-03-14 09:14:25		script: downloading list of scripts...
+2014-03-14 09:14:25		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-14 09:14:32		script: 273 scripts for WeeChat 0.4.4-dev
+2014-03-14 09:15:27		irc: server oftc created
+2014-03-14 09:16:43		Options saved to sec.conf
+2014-03-14 09:16:43		Options saved to weechat.conf
+2014-03-14 09:16:43		Options saved to plugins.conf
+2014-03-14 09:16:43		Options saved to charset.conf
+2014-03-14 09:16:43		Options saved to logger.conf
+2014-03-14 09:16:43		Options saved to trigger.conf
+2014-03-14 09:16:43		Options saved to xfer.conf
+2014-03-14 09:16:43		Options saved to rmodifier.conf
+2014-03-14 09:16:43		Options saved to irc.conf
+2014-03-14 09:16:43		Options saved to theme.conf
+2014-03-14 09:16:43		Options saved to buffers.conf
+2014-03-14 09:16:43		Options saved to relay.conf
+2014-03-14 09:16:43		Options saved to script.conf
+2014-03-14 09:16:43		Options saved to alias.conf
+2014-03-14 09:16:43		Options saved to aspell.conf
+2014-03-14 09:17:03	=!=	Option "**autoconnect**" not found (tip: you can use "*" at beginning and/or end of option to see a sublist)
+2014-03-14 09:17:22		[server_default] (irc.conf)
+2014-03-14 09:17:22		  irc.server_default.autoconnect = off
+2014-03-14 09:17:22		[server] (irc.conf)
+2014-03-14 09:17:22		  irc.server.freenode.autoconnect = on  (default: (undefined))
+2014-03-14 09:17:22		  irc.server.oftc.autoconnect
+2014-03-14 09:17:22		3 options (matching with "*autoconnect*")
+2014-03-14 09:17:52		Option changed: irc.server.oftc.autoconnect = on  (default: (undefined))
+2014-03-14 09:18:04	=!=	Option "*autocjoin*" not found (tip: you can use "*" at beginning and/or end of option to see a sublist)
+2014-03-14 09:18:10		[look] (irc.conf)
+2014-03-14 09:18:10		  irc.look.buffer_switch_autojoin = on
+2014-03-14 09:18:10		[server_default] (irc.conf)
+2014-03-14 09:18:10		  irc.server_default.autojoin = ""
+2014-03-14 09:18:10		[server] (irc.conf)
+2014-03-14 09:18:10		  irc.server.freenode.autojoin = "#archlinux,#archlinux-offtopic,#clojure,#weechat,#ubuntu"  (default: (undefined))
+2014-03-14 09:18:10		  irc.server.oftc.autojoin
+2014-03-14 09:18:10		4 options (matching with "*autojoin*")
+2014-03-14 09:18:56		Option changed: irc.server.oftc.autojoin = "#pcl"  (default: (undefined))
+2014-03-14 09:19:01		Options saved to sec.conf
+2014-03-14 09:19:01		Options saved to weechat.conf
+2014-03-14 09:19:01		Options saved to plugins.conf
+2014-03-14 09:19:01		Options saved to charset.conf
+2014-03-14 09:19:01		Options saved to logger.conf
+2014-03-14 09:19:01		Options saved to trigger.conf
+2014-03-14 09:19:01		Options saved to xfer.conf
+2014-03-14 09:19:01		Options saved to rmodifier.conf
+2014-03-14 09:19:01		Options saved to irc.conf
+2014-03-14 09:19:01		Options saved to theme.conf
+2014-03-14 09:19:01		Options saved to buffers.conf
+2014-03-14 09:19:01		Options saved to relay.conf
+2014-03-14 09:19:01		Options saved to script.conf
+2014-03-14 09:19:01		Options saved to alias.conf
+2014-03-14 09:19:01		Options saved to aspell.conf
+2014-03-14 10:05:41		fifo: pipe closed
+2014-03-14 10:05:41		perl: scripts unloaded
+2014-03-14 10:05:41		python: scripts unloaded
+2014-03-14 10:05:43		python scripts loaded: theme
+2014-03-14 10:05:43		perl scripts loaded: buffers
+2014-03-14 10:05:43		script: 273 scripts for WeeChat 0.4.4-dev
+2014-03-14 10:05:43		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-14 10:07:09		fifo: pipe closed
+2014-03-14 10:07:09		perl: scripts unloaded
+2014-03-14 10:07:09		python: scripts unloaded
+2014-03-14 10:45:31		python scripts loaded: theme
+2014-03-14 10:45:31		perl scripts loaded: buffers
+2014-03-14 10:45:31		script: downloading list of scripts...
+2014-03-14 10:45:31		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-14 10:45:33		script: 273 scripts for WeeChat 0.4.4-dev
+2014-03-14 10:46:12	=!=	irc: you can not delete server "oftc" because you are connected to. Try "/disconnect oftc" before.
+2014-03-14 10:46:18		Options saved to sec.conf
+2014-03-14 10:46:18		Options saved to weechat.conf
+2014-03-14 10:46:18		Options saved to plugins.conf
+2014-03-14 10:46:18		Options saved to charset.conf
+2014-03-14 10:46:18		Options saved to logger.conf
+2014-03-14 10:46:18		Options saved to trigger.conf
+2014-03-14 10:46:18		Options saved to xfer.conf
+2014-03-14 10:46:18		Options saved to rmodifier.conf
+2014-03-14 10:46:18		Options saved to irc.conf
+2014-03-14 10:46:18		Options saved to theme.conf
+2014-03-14 10:46:18		Options saved to buffers.conf
+2014-03-14 10:46:18		Options saved to relay.conf
+2014-03-14 10:46:18		Options saved to script.conf
+2014-03-14 10:46:18		Options saved to alias.conf
+2014-03-14 10:46:18		Options saved to aspell.conf
+2014-03-14 10:46:29		fifo: pipe closed
+2014-03-14 10:46:29		perl: scripts unloaded
+2014-03-14 10:46:29		python: scripts unloaded
+2014-03-14 10:46:31		python scripts loaded: theme
+2014-03-14 10:46:31		perl scripts loaded: buffers
+2014-03-14 10:46:31		script: 273 scripts for WeeChat 0.4.4-dev
+2014-03-14 10:46:31		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-14 10:46:48	=!=	irc: you can not delete server "oftc" because you are connected to. Try "/disconnect oftc" before.
+2014-03-14 10:46:59		irc: server oftc has been deleted
+2014-03-14 10:47:06		Options saved to sec.conf
+2014-03-14 10:47:06		Options saved to weechat.conf
+2014-03-14 10:47:06		Options saved to plugins.conf
+2014-03-14 10:47:06		Options saved to charset.conf
+2014-03-14 10:47:06		Options saved to logger.conf
+2014-03-14 10:47:06		Options saved to trigger.conf
+2014-03-14 10:47:06		Options saved to xfer.conf
+2014-03-14 10:47:06		Options saved to rmodifier.conf
+2014-03-14 10:47:06		Options saved to irc.conf
+2014-03-14 10:47:06		Options saved to theme.conf
+2014-03-14 10:47:06		Options saved to buffers.conf
+2014-03-14 10:47:06		Options saved to relay.conf
+2014-03-14 10:47:06		Options saved to script.conf
+2014-03-14 10:47:06		Options saved to alias.conf
+2014-03-14 10:47:06		Options saved to aspell.conf
+2014-03-14 10:48:13		irc: server oftc created
+2014-03-14 10:48:37		Option changed: irc.server.oftc.addresses = "chat.oftc.net/6697"  (default: (undefined))
+2014-03-14 10:48:49		Option changed: irc.server.oftc.ssl = on  (default: (undefined))
+2014-03-14 10:48:56		Option changed: irc.server.oftc.ssl_verify = on  (default: (undefined))
+2014-03-14 10:49:06		Option changed: irc.server.oftc.ssl_dhkey_size = 1024  (default: (undefined))
+2014-03-14 10:49:20		Option changed: irc.server.oftc.autojoin = "#pcl"  (default: (undefined))
+2014-03-14 10:49:40		Option changed: irc.server_default.sasl_mechanism = dh-blowfish  (default: plain)
+2014-03-14 10:49:57		Option changed: irc.server.oftc.sasl_username = "__cskksc"  (default: (undefined))
+2014-03-14 10:50:06		Option changed: irc.server.oftc.sasl_password = "bazzinga"  (default: (undefined))
+2014-03-14 10:51:59		irc: server oftc has been deleted
+2014-03-14 10:59:16		irc: server oftc created
+2014-03-14 11:00:26		Option changed: irc.server.oftc.ssl_cert = "~/.weechat/certs/__cskksc.pem"  (default: (undefined))
+2014-03-14 11:01:56		Options saved to sec.conf
+2014-03-14 11:01:56		Options saved to weechat.conf
+2014-03-14 11:01:56		Options saved to plugins.conf
+2014-03-14 11:01:56		Options saved to charset.conf
+2014-03-14 11:01:56		Options saved to logger.conf
+2014-03-14 11:01:56		Options saved to trigger.conf
+2014-03-14 11:01:56		Options saved to xfer.conf
+2014-03-14 11:01:56		Options saved to rmodifier.conf
+2014-03-14 11:01:56		Options saved to irc.conf
+2014-03-14 11:01:56		Options saved to theme.conf
+2014-03-14 11:01:56		Options saved to buffers.conf
+2014-03-14 11:01:56		Options saved to relay.conf
+2014-03-14 11:01:56		Options saved to script.conf
+2014-03-14 11:01:56		Options saved to alias.conf
+2014-03-14 11:01:56		Options saved to aspell.conf
+2014-03-14 11:03:04		irc: server oftc has been deleted
+2014-03-14 11:03:30		irc: server oftc created
+2014-03-14 11:04:16		Option changed: irc.server.oftc.ssl_cert = "~/.weechat/certs/__cskksc.pem"  (default: (undefined))
+2014-03-14 11:06:49		Options saved to sec.conf
+2014-03-14 11:06:49		Options saved to weechat.conf
+2014-03-14 11:06:49		Options saved to plugins.conf
+2014-03-14 11:06:49		Options saved to charset.conf
+2014-03-14 11:06:49		Options saved to logger.conf
+2014-03-14 11:06:49		Options saved to trigger.conf
+2014-03-14 11:06:49		Options saved to xfer.conf
+2014-03-14 11:06:49		Options saved to rmodifier.conf
+2014-03-14 11:06:49		Options saved to irc.conf
+2014-03-14 11:06:49		Options saved to theme.conf
+2014-03-14 11:06:49		Options saved to buffers.conf
+2014-03-14 11:06:49		Options saved to relay.conf
+2014-03-14 11:06:49		Options saved to script.conf
+2014-03-14 11:06:49		Options saved to alias.conf
+2014-03-14 11:06:49		Options saved to aspell.conf
+2014-03-14 11:07:37		Option changed: irc.server.oftc.autojoin = "#pcl"  (default: (undefined))
+2014-03-14 11:07:46		Options saved to sec.conf
+2014-03-14 11:07:46		Options saved to weechat.conf
+2014-03-14 11:07:46		Options saved to plugins.conf
+2014-03-14 11:07:46		Options saved to charset.conf
+2014-03-14 11:07:46		Options saved to logger.conf
+2014-03-14 11:07:46		Options saved to trigger.conf
+2014-03-14 11:07:46		Options saved to xfer.conf
+2014-03-14 11:07:46		Options saved to rmodifier.conf
+2014-03-14 11:07:46		Options saved to irc.conf
+2014-03-14 11:07:46		Options saved to theme.conf
+2014-03-14 11:07:46		Options saved to buffers.conf
+2014-03-14 11:07:46		Options saved to relay.conf
+2014-03-14 11:07:46		Options saved to script.conf
+2014-03-14 11:07:46		Options saved to alias.conf
+2014-03-14 11:07:46		Options saved to aspell.conf
+2014-03-23 14:32:13		python scripts loaded: theme
+2014-03-23 14:32:13		perl scripts loaded: buffers
+2014-03-23 14:32:13		script: downloading list of scripts...
+2014-03-23 14:32:13		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-03-23 14:32:17		script: 274 scripts for WeeChat 0.4.4-dev
+2014-03-23 15:18:25		fifo: pipe closed
+2014-03-23 15:18:25		perl: scripts unloaded
+2014-03-23 15:18:25		python: scripts unloaded
+2014-04-09 09:48:17		python scripts loaded: theme
+2014-04-09 09:48:17		perl scripts loaded: buffers
+2014-04-09 09:48:17		script: downloading list of scripts...
+2014-04-09 09:48:17		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-04-09 09:48:19		script: 277 scripts for WeeChat 0.4.4-dev
+2014-04-09 10:02:01	=!=	Error with command "/msg" (help on command: /help msg)
+2014-04-09 10:41:33		fifo: pipe closed
+2014-04-09 10:41:33		perl: scripts unloaded
+2014-04-09 10:41:33		python: scripts unloaded
