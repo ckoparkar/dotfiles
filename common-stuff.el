@@ -1,28 +1,28 @@
-(add-to-list 'load-path "~/.emacs.d/plugins/")
-(add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors/")
-(add-to-list 'load-path "~/.emacs.d/plugins/cider/")
-(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete-1.3.1/")
-(add-to-list 'load-path "~/.emacs.d/plugins/clojure-mode/")
-(add-to-list 'load-path "~/.emacs.d/plugins/dash/")
-(add-to-list 'load-path "~/.emacs.d/plugins/pkg-info/")
-(add-to-list 'load-path "~/.emacs.d/plugins/epl/")
-(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet/")
-(add-to-list 'load-path "~/.emacs.d/plugins/pretty-mode-plus/")
-(add-to-list 'load-path "~/.emacs.d/plugins/color-theme")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/multiple-cursors/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/cider/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/auto-complete-1.3.1/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/clojure-mode/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/dash/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/pkg-info/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/epl/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/pretty-mode-plus/")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/color-theme")
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-(load-file "~/.emacs.d/plugins/smex.el")
-(load-file "~/.emacs.d/plugins/highlight-parenthesis.el")
-(load-file "~/.emacs.d/plugins/paredit.el")
-(load-file "~/.emacs.d/plugins/sml-modeline.el")
-(load-file "~/.emacs.d/plugins/rainbow-delimiters.el")
-(load-file "~/.emacs.d/plugins/s.el")
-(load-file "~/.emacs.d/plugins/clj-refactor.el")
-(load-file "~/.emacs.d/plugins/xclip.el")
-(load-file "~/.emacs.d/plugins/smartparens.el")
-(load-file "~/.emacs.d/plugins/four-clj.el")
-(load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
-(load-file "~/.emacs.d/plugins/iy-go-to-char.el")
+;; (load-file "~/.emacs.d/plugins/smex.el")
+;; (load-file "~/.emacs.d/plugins/highlight-parenthesis.el")
+;; (load-file "~/.emacs.d/plugins/paredit.el")
+;; (load-file "~/.emacs.d/plugins/sml-modeline.el")
+;; (load-file "~/.emacs.d/plugins/rainbow-delimiters.el")
+;; (load-file "~/.emacs.d/plugins/s.el")
+;; (load-file "~/.emacs.d/plugins/clj-refactor.el")
+;; (load-file "~/.emacs.d/plugins/xclip.el")
+;; (load-file "~/.emacs.d/plugins/smartparens.el")
+;; (load-file "~/.emacs.d/plugins/four-clj.el")
+;; (load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
+;; (load-file "~/.emacs.d/plugins/iy-go-to-char.el")
 
 ;;(load-file "~/.emacs.d/plugins/auto-indent-mode.el")
 ;;(load-file "~/.emacs.d/plugins/pymacs.el")
@@ -31,6 +31,8 @@
 ;;(load-file "~/.emacs.d/arduino-mode/arduino-mode.el")
 ;;(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 ;;(load-file "~/.emacs.d/cedet/cedet-devel-load.el")
+
+(load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
 
 ;; Requires
 (require 'auto-complete)
@@ -46,25 +48,17 @@
 (require 'cider)
 (require 'yasnippet)
 (require 'pretty-mode-plus)
-(require 'four-clj)
 (require 'color-theme)
 (require 'highlight-parentheses)
-
-(sml-modeline-mode)
-(global-rainbow-delimiters-mode)
-
-;; Linum
-(make-face 'linum-face)
-(set-face-attribute 'linum-face nil
-:foreground "#718c00"
-:weight 'bold
-)
+;;(require 'four-clj)
 
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn t)
 ;;(load-theme 'dorsey t)
 ;;(load-theme 'brin t)
@@ -73,10 +67,19 @@
 ;;(load-theme 'odersky t)
 
 
+;; Linum
+(make-face 'linum-face)
+(set-face-attribute 'linum-face nil
+					:foreground "#718c00"
+					:weight 'bold
+					)
+
 (setq linum-format
 	  (propertize "%4d  " 'face 'linum-face)
   )
 
+(sml-modeline-mode)
+(global-rainbow-delimiters-mode)
 
 (global-auto-complete-mode t)
 (global-linum-mode 1)

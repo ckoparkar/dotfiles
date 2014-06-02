@@ -26,7 +26,29 @@ Return a list of installed packages or nil for every skipped package."
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
 
-(ensure-package-installed 'rainbow-delimiters) ;  --> (nil nil) if iedit and magit are already installed
+(ensure-package-installed 'auto-complete
+						  'ido
+						  'rainbow-delimiters
+						  'cc-mode
+						  'paredit
+						  'multiple-cursors
+						  'dash
+						  'pkg-info
+						  'clojure-mode
+						  'epl
+						  'cider
+						  'yasnippet
+						  'pretty-mode-plus
+						  'color-theme
+						  'highlight-parentheses
+						  'smex
+						  'sml-modeline
+						  's
+						  'clj-refactor
+						  'xclip
+						  'smartparens
+						  'iy-go-to-char
+						  'zenburn-theme)
 
 ;; activate installed packages
 (package-initialize)
