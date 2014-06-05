@@ -12,14 +12,14 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious   = require("vicious")
 
-require("volume")
+--require("volume")
 local scratch   = require("scratch")
 -- local yawn      = require("yawn")
 
-awful.util.spawn_with_shell("xrdb /home/cskksc/.Xresources")
-awful.util.spawn_with_shell("xmodmap /home/cskksc/.Xmodmap")
-awful.util.spawn_with_shell("compton &")
-awful.util.spawn_with_shell("devilspie -a &")
+--awful.util.spawn_with_shell("xrdb /home/cskksc/.Xresources")
+--awful.util.spawn_with_shell("xmodmap /home/cskksc/.Xmodmap")
+--awful.util.spawn_with_shell("compton &")
+--awful.util.spawn_with_shell("devilspie -a &")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -409,7 +409,7 @@ globalkeys = awful.util.table.join(
             if client.focus then client.focus:raise() end
         end),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end),
-awful.key({ modkey }, "F12", function () scratch.drop("lilyterm", "top","centre",1,0.4) end),
+awful.key({ modkey }, "o", function () scratch.drop("lilyterm", "top","centre",1,0.4) end),
 
 
     -- Layout manipulation
