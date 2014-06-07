@@ -6,7 +6,8 @@ ZSH=/home/cskksc/.oh-my-zsh/
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="csk_bira"
+ZSH_THEME="csk"
+#ZSH_THEME="agnoster"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -136,7 +137,7 @@ alias rmr='rm -r'
 ### Zsh
 alias eZ='emacsclient -t ~/.zshrc'
 alias Z='source ~/.zshrc'
-alias eB='emacsclient -t ~/.oh-my-zsh/themes/csk_bira.zsh-theme'
+alias eB='emacsclient -t ~/.oh-my-zsh/themes/csk.zsh-theme'
 alias eXT='emacsclient -t ~/.Xresources'
 
 
