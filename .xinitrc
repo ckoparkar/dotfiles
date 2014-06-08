@@ -13,11 +13,6 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xmodmap ~/.Xmodmap
-compton &
-devilspie -a &
-#xsetroot -cursor_name x_black_blue
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
+# compton &
+# devilspie -a &
 exec awesome
