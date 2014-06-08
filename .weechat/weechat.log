@@ -1,35 +1,50 @@
-[2014-04-09 09:48:16] WeeChat 0.4.4-dev (git: v0.4.3-200-gbd06f0f) (compiled on Mar 13 2014 20:31:51)
-[2014-04-09 09:48:16] Reading configuration file sec.conf
-[2014-04-09 09:48:16] Reading configuration file weechat.conf
-[2014-04-09 09:48:16] Reading configuration file plugins.conf
-[2014-04-09 09:48:16] Reading configuration file charset.conf
-[2014-04-09 09:48:16] Reading configuration file logger.conf
-[2014-04-09 09:48:16] Reading configuration file trigger.conf
-[2014-04-09 09:48:16] Reading configuration file xfer.conf
-[2014-04-09 09:48:16] Reading configuration file rmodifier.conf
-[2014-04-09 09:48:17] Reading configuration file irc.conf
-[2014-04-09 09:48:17] irc: connecting to server chat.freenode.net/6697 (SSL)...
-[2014-04-09 09:48:17] irc: connecting to server irc.oftc.net/6697 (SSL)...
-[2014-04-09 09:48:17] Reading configuration file theme.conf
-[2014-04-09 09:48:17] Reading configuration file buffers.conf
-[2014-04-09 09:48:17] Reading configuration file relay.conf
-[2014-04-09 09:48:17] Reading configuration file script.conf
-[2014-04-09 09:48:17] Reading configuration file alias.conf
-[2014-04-09 09:48:17] Reading configuration file aspell.conf
-[2014-04-09 10:36:41] irc: connecting to server chat.freenode.net/6697 (SSL)...
-[2014-04-09 10:36:56] irc: connecting to server irc.oftc.net/6697 (SSL)...
-[2014-04-09 10:41:33] Writing configuration file plugins.conf 
-[2014-04-09 10:41:33] Writing configuration file aspell.conf 
-[2014-04-09 10:41:33] Writing configuration file alias.conf 
-[2014-04-09 10:41:33] Writing configuration file script.conf 
-[2014-04-09 10:41:33] Writing configuration file relay.conf 
-[2014-04-09 10:41:33] Writing configuration file buffers.conf 
-[2014-04-09 10:41:33] Writing configuration file theme.conf 
-[2014-04-09 10:41:33] Writing configuration file irc.conf 
-[2014-04-09 10:41:33] Writing configuration file rmodifier.conf 
-[2014-04-09 10:41:33] Writing configuration file xfer.conf 
-[2014-04-09 10:41:33] Writing configuration file trigger.conf 
-[2014-04-09 10:41:33] Writing configuration file logger.conf 
-[2014-04-09 10:41:33] Writing configuration file charset.conf 
-[2014-04-09 10:41:33] Writing configuration file weechat.conf 
-[2014-04-09 10:41:33] Writing configuration file sec.conf 
+[2014-06-08 23:02:12] WeeChat 0.4.4-dev (git: v0.4.3-200-gbd06f0f) (compiled on Mar 13 2014 20:31:51)
+[2014-06-08 23:02:12] Reading configuration file sec.conf
+[2014-06-08 23:02:12] Reading configuration file weechat.conf
+[2014-06-08 23:02:12] Reading configuration file plugins.conf
+[2014-06-08 23:02:12] Reading configuration file charset.conf
+[2014-06-08 23:02:12] Reading configuration file logger.conf
+[2014-06-08 23:02:12] Reading configuration file trigger.conf
+[2014-06-08 23:02:12] Reading configuration file xfer.conf
+[2014-06-08 23:02:12] Reading configuration file rmodifier.conf
+[2014-06-08 23:02:12] Reading configuration file irc.conf
+[2014-06-08 23:02:12] irc: connecting to server chat.freenode.net/6697 (SSL)...
+[2014-06-08 23:02:12] irc: connecting to server irc.oftc.net/6697 (SSL)...
+[2014-06-08 23:02:12] Reading configuration file theme.conf
+[2014-06-08 23:02:12] Reading configuration file buffers.conf
+[2014-06-08 23:02:12] Reading configuration file relay.conf
+[2014-06-08 23:02:12] Reading configuration file script.conf
+[2014-06-08 23:02:12] Reading configuration file alias.conf
+[2014-06-08 23:02:12] Reading configuration file aspell.conf
+[2014-06-08 23:02:38] Signal SIGHUP received, reloading configuration files
+[2014-06-08 23:02:38] Reloading configuration file sec.conf
+[2014-06-08 23:02:38] Reloading configuration file weechat.conf
+[2014-06-08 23:02:38] Reloading configuration file plugins.conf
+[2014-06-08 23:02:38] Reloading configuration file charset.conf
+[2014-06-08 23:02:38] Reloading configuration file logger.conf
+[2014-06-08 23:02:38] Reloading configuration file trigger.conf
+[2014-06-08 23:02:38] Reloading configuration file xfer.conf
+[2014-06-08 23:02:38] Reloading configuration file rmodifier.conf
+[2014-06-08 23:02:38] Reloading configuration file irc.conf
+[2014-06-08 23:02:38] Reading configuration file theme.conf
+[2014-06-08 23:02:38] Reloading configuration file buffers.conf
+[2014-06-08 23:02:38] Reloading configuration file relay.conf
+[2014-06-08 23:02:38] Reloading configuration file script.conf
+[2014-06-08 23:02:38] Reloading configuration file alias.conf
+[2014-06-08 23:02:38] Reloading configuration file aspell.conf
+[2014-06-08 23:02:38] Terminal lost, exiting WeeChat...
+[2014-06-08 23:02:38] Writing configuration file plugins.conf 
+[2014-06-08 23:02:38] Writing configuration file aspell.conf 
+[2014-06-08 23:02:38] Writing configuration file alias.conf 
+[2014-06-08 23:02:38] Writing configuration file script.conf 
+[2014-06-08 23:02:38] Writing configuration file relay.conf 
+[2014-06-08 23:02:38] Writing configuration file buffers.conf 
+[2014-06-08 23:02:38] Writing configuration file theme.conf 
+[2014-06-08 23:02:38] Writing configuration file irc.conf 
+[2014-06-08 23:02:38] Writing configuration file rmodifier.conf 
+[2014-06-08 23:02:38] Writing configuration file xfer.conf 
+[2014-06-08 23:02:38] Writing configuration file trigger.conf 
+[2014-06-08 23:02:38] Writing configuration file logger.conf 
+[2014-06-08 23:02:38] Writing configuration file charset.conf 
+[2014-06-08 23:02:38] Writing configuration file weechat.conf 
+[2014-06-08 23:02:38] Writing configuration file sec.conf 

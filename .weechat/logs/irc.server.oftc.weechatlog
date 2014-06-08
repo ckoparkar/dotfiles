@@ -1157,3 +1157,227 @@
 2014-04-09 10:36:58	--	NickServ (services@services.oftc.net): You are connected using SSL and have provided a matching client certificate
 2014-04-09 10:36:58	--	NickServ (services@services.oftc.net): for nickname __cskksc.  You have been automatically identified.
 2014-04-09 10:41:33	--	irc: disconnected from server
+2014-06-08 22:59:45	--	irc: connecting to server irc.oftc.net/6697 (SSL)...
+2014-06-08 22:59:46	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2014-06-08 22:59:46	--	gnutls: receiving 4 certificates
+2014-06-08 22:59:46	--	 - certificate[1] info:
+2014-06-08 22:59:46	--	   - subject `CN=solenoid.oftc.net', issuer `O=Open and Free Technology Community,OU=certification authority for irc,CN=irc.ca.oftc.net,EMAIL=support@oftc.net', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-05-22 08:11:09 UTC', expires `2015-05-22 08:11:09 UTC', SHA-1 fingerprint `1c2b4ccc5f4c46ce625268a35063e6353971242a'
+2014-06-08 22:59:46	--	 - certificate[2] info:
+2014-06-08 22:59:46	--	   - subject `O=Open and Free Technology Community,OU=certification authority for irc,CN=irc.ca.oftc.net,EMAIL=support@oftc.net', issuer `O=Open and Free Technology Community,OU=Certification Authority,CN=ca.oftc.net,EMAIL=support@oftc.net', RSA key 2048 bits, signed using RSA-SHA1, activated `2013-05-25 07:18:34 UTC', expires `2017-01-21 07:18:34 UTC', SHA-1 fingerprint `0e40e9c995231815fb6e176cbaccd637e225c624'
+2014-06-08 22:59:46	--	 - certificate[3] info:
+2014-06-08 22:59:46	--	   - subject `O=Open and Free Technology Community,OU=Certification Authority,CN=ca.oftc.net,EMAIL=support@oftc.net', issuer `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', RSA key 2048 bits, signed using RSA-SHA1, activated `2013-05-24 18:27:07 UTC', expires `2017-01-20 18:27:07 UTC', SHA-1 fingerprint `31052eab8107421c033d622d7fd2767541c32c24'
+2014-06-08 22:59:46	--	 - certificate[4] info:
+2014-06-08 22:59:46	--	   - subject `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', issuer `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', RSA key 4096 bits, signed using RSA-SHA1, activated `2008-05-13 08:07:56 UTC', expires `2018-05-11 08:07:56 UTC', SHA-1 fingerprint `af70884383820215cd61c6bcecfd3724a990431c'
+2014-06-08 22:59:46	--	gnutls: peer's certificate is trusted
+2014-06-08 22:59:46	--	gnutls: sending one certificate
+2014-06-08 22:59:46	--	 - client certificate info (/home/cskksc/.weechat/certs/__cskksc.pem):
+2014-06-08 22:59:46	--	  - subject `C=IN,ST=Maharashtra,O=Internet Widgits Pty Ltd,OU=OFTC,CN=cskksc', issuer `C=IN,ST=Maharashtra,O=Internet Widgits Pty Ltd,OU=OFTC,CN=cskksc', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-03-14 05:24:23 UTC', expires `2016-04-02 05:24:23 UTC', SHA-1 fingerprint `d5b34eb48d322e13cb718e7f9aa7b0986a071ae8'
+2014-06-08 22:59:47	--	irc: connected to irc.oftc.net/6697 (130.239.18.160)
+2014-06-08 22:59:47	--	solenoid.oftc.net (solenoid.oftc.net): *** Looking up your hostname...
+2014-06-08 22:59:47	--	solenoid.oftc.net (solenoid.oftc.net): *** Checking Ident
+2014-06-08 22:59:47	--	solenoid.oftc.net (solenoid.oftc.net): *** No Ident response
+2014-06-08 22:59:47	--	solenoid.oftc.net (solenoid.oftc.net): *** Found your hostname
+2014-06-08 22:59:47	--	solenoid.oftc.net (solenoid.oftc.net): *** Connected securely via TLSv1 AES128-SHA-128
+2014-06-08 22:59:47	--	solenoid.oftc.net (solenoid.oftc.net): *** Your client certificate fingerprint is D5B34EB48D322E13CB718E7F9AA7B0986A071AE8
+2014-06-08 22:59:47	--	Welcome to the OFTC Internet Relay Chat Network __cskksc
+2014-06-08 22:59:47	--	Your host is solenoid.oftc.net[130.239.18.160/6697], running version hybrid-7.2.2+oftc1.6.10
+2014-06-08 22:59:47	--	This server was created Jan 30 2013 at 10:35:26
+2014-06-08 22:59:47	--	solenoid.oftc.net hybrid-7.2.2+oftc1.6.10 CDGPRSabcdfgiklnorsuwxyz biklmnopstveI bkloveI
+2014-06-08 22:59:47	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=390 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2014-06-08 22:59:47	--	CHANLIMIT=#:70 CHANNELLEN=50 CHANMODES=eIqb,k,l,imnpstMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2014-06-08 22:59:47	--	659AAK1VI :your unique ID
+2014-06-08 22:59:47	--	There are 45 users and 10012 invisible on 16 servers
+2014-06-08 22:59:47	--	20 :IRC Operators online
+2014-06-08 22:59:47	--	4 :unknown connection(s)
+2014-06-08 22:59:47	--	2215 :channels formed
+2014-06-08 22:59:47	--	I have 1368 clients and 1 servers
+2014-06-08 22:59:47	--	Current local users: 1368  Max: 1716
+2014-06-08 22:59:47	--	Current global users: 10057  Max: 11416
+2014-06-08 22:59:47	--	Highest connection count: 1717 (1716 clients) (502317 connections received)
+2014-06-08 22:59:47	--	- solenoid.oftc.net Message of the Day -
+2014-06-08 22:59:47	--	- Welcome to OFTC - The Open and Free Technology Community
+2014-06-08 22:59:47	--	-
+2014-06-08 22:59:47	--	- You have connected to OFTC's IRC services.
+2014-06-08 22:59:47	--	-
+2014-06-08 22:59:47	--	- We are not a general purpose chat platform, but a topical
+2014-06-08 22:59:47	--	- network intent on providing the open source and free
+2014-06-08 22:59:47	--	- software communities a means to cooperate and communicate.
+2014-06-08 22:59:47	--	- As such, illegal and off-topic activity, such as warez
+2014-06-08 22:59:47	--	- trading, may result in being barred from access.
+2014-06-08 22:59:47	--	-
+2014-06-08 22:59:47	--	- The Open and Free Technology Community was founded at the
+2014-06-08 22:59:47	--	- end of 2001 by a group of experienced members of the Open
+2014-06-08 22:59:47	--	- Source and Free Software communities; it is aimed at
+2014-06-08 22:59:47	--	- providing these communities with better communication,
+2014-06-08 22:59:47	--	- development, and support infrastructure. Our goal is to
+2014-06-08 22:59:47	--	- provide stable services to members of the community in any
+2014-06-08 22:59:47	--	- part of the world, while listening closely to their needs
+2014-06-08 22:59:47	--	- and desires.
+2014-06-08 22:59:47	--	-
+2014-06-08 22:59:47	--	- For more information on OFTC please visit http://www.oftc.net/.
+2014-06-08 22:59:47	--	-
+2014-06-08 22:59:47	--	- If you require assistance stop by in channel #oftc, or email
+2014-06-08 22:59:47	--	- support@oftc.net with details.
+2014-06-08 22:59:47	--	-
+2014-06-08 22:59:47	--	- Thanks and enjoy your stay,
+2014-06-08 22:59:47	--	-
+2014-06-08 22:59:47	--	-         The OFTC team
+2014-06-08 22:59:47	--	End of /MOTD command.
+2014-06-08 22:59:47	--	User mode [+i] by __cskksc
+2014-06-08 22:59:47	--	NickServ (services@services.oftc.net): This nickname is registered and protected.  If it is your nickname, you may
+2014-06-08 22:59:47	--	NickServ (services@services.oftc.net): authenticate yourself to services with the IDENTIFY command.  You are
+2014-06-08 22:59:47	--	NickServ (services@services.oftc.net): getting this message because you are not on the access list for the
+2014-06-08 22:59:47	--	NickServ (services@services.oftc.net): __cskksc nickname.
+2014-06-08 22:59:47	--	User mode [+R] by __cskksc
+2014-06-08 22:59:47	--	NickServ (services@services.oftc.net): You are connected using SSL and have provided a matching client certificate
+2014-06-08 22:59:47	--	NickServ (services@services.oftc.net): for nickname __cskksc.  You have been automatically identified.
+2014-06-08 23:01:16	--	irc: disconnected from server
+2014-06-08 23:01:31	--	irc: connecting to server irc.oftc.net/6697 (SSL)...
+2014-06-08 23:01:33	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2014-06-08 23:01:33	--	gnutls: receiving 4 certificates
+2014-06-08 23:01:33	--	 - certificate[1] info:
+2014-06-08 23:01:33	--	   - subject `CN=solenoid.oftc.net', issuer `O=Open and Free Technology Community,OU=certification authority for irc,CN=irc.ca.oftc.net,EMAIL=support@oftc.net', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-05-22 08:11:09 UTC', expires `2015-05-22 08:11:09 UTC', SHA-1 fingerprint `1c2b4ccc5f4c46ce625268a35063e6353971242a'
+2014-06-08 23:01:33	--	 - certificate[2] info:
+2014-06-08 23:01:33	--	   - subject `O=Open and Free Technology Community,OU=certification authority for irc,CN=irc.ca.oftc.net,EMAIL=support@oftc.net', issuer `O=Open and Free Technology Community,OU=Certification Authority,CN=ca.oftc.net,EMAIL=support@oftc.net', RSA key 2048 bits, signed using RSA-SHA1, activated `2013-05-25 07:18:34 UTC', expires `2017-01-21 07:18:34 UTC', SHA-1 fingerprint `0e40e9c995231815fb6e176cbaccd637e225c624'
+2014-06-08 23:01:33	--	 - certificate[3] info:
+2014-06-08 23:01:33	--	   - subject `O=Open and Free Technology Community,OU=Certification Authority,CN=ca.oftc.net,EMAIL=support@oftc.net', issuer `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', RSA key 2048 bits, signed using RSA-SHA1, activated `2013-05-24 18:27:07 UTC', expires `2017-01-20 18:27:07 UTC', SHA-1 fingerprint `31052eab8107421c033d622d7fd2767541c32c24'
+2014-06-08 23:01:33	--	 - certificate[4] info:
+2014-06-08 23:01:33	--	   - subject `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', issuer `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', RSA key 4096 bits, signed using RSA-SHA1, activated `2008-05-13 08:07:56 UTC', expires `2018-05-11 08:07:56 UTC', SHA-1 fingerprint `af70884383820215cd61c6bcecfd3724a990431c'
+2014-06-08 23:01:33	--	gnutls: peer's certificate is trusted
+2014-06-08 23:01:33	--	gnutls: sending one certificate
+2014-06-08 23:01:33	--	 - client certificate info (/home/cskksc/.weechat/certs/__cskksc.pem):
+2014-06-08 23:01:33	--	  - subject `C=IN,ST=Maharashtra,O=Internet Widgits Pty Ltd,OU=OFTC,CN=cskksc', issuer `C=IN,ST=Maharashtra,O=Internet Widgits Pty Ltd,OU=OFTC,CN=cskksc', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-03-14 05:24:23 UTC', expires `2016-04-02 05:24:23 UTC', SHA-1 fingerprint `d5b34eb48d322e13cb718e7f9aa7b0986a071ae8'
+2014-06-08 23:01:33	--	irc: connected to irc.oftc.net/6697 (130.239.18.160)
+2014-06-08 23:01:33	--	solenoid.oftc.net (solenoid.oftc.net): *** Looking up your hostname...
+2014-06-08 23:01:33	--	solenoid.oftc.net (solenoid.oftc.net): *** Checking Ident
+2014-06-08 23:01:33	--	solenoid.oftc.net (solenoid.oftc.net): *** Found your hostname
+2014-06-08 23:01:33	--	solenoid.oftc.net (solenoid.oftc.net): *** No Ident response
+2014-06-08 23:01:34	--	solenoid.oftc.net (solenoid.oftc.net): *** Connected securely via TLSv1 AES128-SHA-128
+2014-06-08 23:01:34	--	solenoid.oftc.net (solenoid.oftc.net): *** Your client certificate fingerprint is D5B34EB48D322E13CB718E7F9AA7B0986A071AE8
+2014-06-08 23:01:34	--	Welcome to the OFTC Internet Relay Chat Network __cskksc
+2014-06-08 23:01:34	--	Your host is solenoid.oftc.net[130.239.18.160/6697], running version hybrid-7.2.2+oftc1.6.10
+2014-06-08 23:01:34	--	This server was created Jan 30 2013 at 10:35:26
+2014-06-08 23:01:34	--	solenoid.oftc.net hybrid-7.2.2+oftc1.6.10 CDGPRSabcdfgiklnorsuwxyz biklmnopstveI bkloveI
+2014-06-08 23:01:34	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=390 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2014-06-08 23:01:34	--	CHANLIMIT=#:70 CHANNELLEN=50 CHANMODES=eIqb,k,l,imnpstMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2014-06-08 23:01:34	--	659AAK1VM :your unique ID
+2014-06-08 23:01:34	--	There are 45 users and 10013 invisible on 16 servers
+2014-06-08 23:01:34	--	20 :IRC Operators online
+2014-06-08 23:01:34	--	1 :unknown connection(s)
+2014-06-08 23:01:34	--	2216 :channels formed
+2014-06-08 23:01:34	--	I have 1369 clients and 1 servers
+2014-06-08 23:01:34	--	Current local users: 1369  Max: 1716
+2014-06-08 23:01:34	--	Current global users: 10058  Max: 11416
+2014-06-08 23:01:34	--	Highest connection count: 1717 (1716 clients) (502321 connections received)
+2014-06-08 23:01:34	--	- solenoid.oftc.net Message of the Day -
+2014-06-08 23:01:34	--	- Welcome to OFTC - The Open and Free Technology Community
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- You have connected to OFTC's IRC services.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- We are not a general purpose chat platform, but a topical
+2014-06-08 23:01:34	--	- network intent on providing the open source and free
+2014-06-08 23:01:34	--	- software communities a means to cooperate and communicate.
+2014-06-08 23:01:34	--	- As such, illegal and off-topic activity, such as warez
+2014-06-08 23:01:34	--	- trading, may result in being barred from access.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- The Open and Free Technology Community was founded at the
+2014-06-08 23:01:34	--	- end of 2001 by a group of experienced members of the Open
+2014-06-08 23:01:34	--	- Source and Free Software communities; it is aimed at
+2014-06-08 23:01:34	--	- providing these communities with better communication,
+2014-06-08 23:01:34	--	- development, and support infrastructure. Our goal is to
+2014-06-08 23:01:34	--	- provide stable services to members of the community in any
+2014-06-08 23:01:34	--	- part of the world, while listening closely to their needs
+2014-06-08 23:01:34	--	- and desires.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- For more information on OFTC please visit http://www.oftc.net/.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- If you require assistance stop by in channel #oftc, or email
+2014-06-08 23:01:34	--	- support@oftc.net with details.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- Thanks and enjoy your stay,
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	-         The OFTC team
+2014-06-08 23:01:34	--	End of /MOTD command.
+2014-06-08 23:01:34	--	User mode [+i] by __cskksc
+2014-06-08 23:01:34	--	NickServ (services@services.oftc.net): This nickname is registered and protected.  If it is your nickname, you may
+2014-06-08 23:01:34	--	NickServ (services@services.oftc.net): authenticate yourself to services with the IDENTIFY command.  You are
+2014-06-08 23:01:34	--	NickServ (services@services.oftc.net): getting this message because you are not on the access list for the
+2014-06-08 23:01:34	--	NickServ (services@services.oftc.net): __cskksc nickname.
+2014-06-08 23:01:34	--	User mode [+R] by __cskksc
+2014-06-08 23:01:34	--	NickServ (services@services.oftc.net): You are connected using SSL and have provided a matching client certificate
+2014-06-08 23:01:34	--	NickServ (services@services.oftc.net): for nickname __cskksc.  You have been automatically identified.
+2014-06-08 23:02:09	--	irc: disconnected from server
+2014-06-08 23:02:12	--	irc: connecting to server irc.oftc.net/6697 (SSL)...
+2014-06-08 23:02:13	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2014-06-08 23:02:13	--	gnutls: receiving 4 certificates
+2014-06-08 23:02:13	--	 - certificate[1] info:
+2014-06-08 23:02:13	--	   - subject `CN=oxygen.oftc.net', issuer `O=Open and Free Technology Community,OU=certification authority for irc,CN=irc.ca.oftc.net,EMAIL=support@oftc.net', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-05-22 08:09:32 UTC', expires `2015-05-22 08:09:32 UTC', SHA-1 fingerprint `634fa43a22de1038a5a2b6e7a7d1cf9e11bab52e'
+2014-06-08 23:02:13	--	 - certificate[2] info:
+2014-06-08 23:02:13	--	   - subject `O=Open and Free Technology Community,OU=certification authority for irc,CN=irc.ca.oftc.net,EMAIL=support@oftc.net', issuer `O=Open and Free Technology Community,OU=Certification Authority,CN=ca.oftc.net,EMAIL=support@oftc.net', RSA key 2048 bits, signed using RSA-SHA1, activated `2013-05-25 07:18:34 UTC', expires `2017-01-21 07:18:34 UTC', SHA-1 fingerprint `0e40e9c995231815fb6e176cbaccd637e225c624'
+2014-06-08 23:02:13	--	 - certificate[3] info:
+2014-06-08 23:02:13	--	   - subject `O=Open and Free Technology Community,OU=Certification Authority,CN=ca.oftc.net,EMAIL=support@oftc.net', issuer `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', RSA key 2048 bits, signed using RSA-SHA1, activated `2013-05-24 18:27:07 UTC', expires `2017-01-20 18:27:07 UTC', SHA-1 fingerprint `31052eab8107421c033d622d7fd2767541c32c24'
+2014-06-08 23:02:13	--	 - certificate[4] info:
+2014-06-08 23:02:13	--	   - subject `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', issuer `C=US,ST=Indiana,L=Indianapolis,O=Software in the Public Interest,OU=hostmaster,CN=Certificate Authority,EMAIL=hostmaster@spi-inc.org', RSA key 4096 bits, signed using RSA-SHA1, activated `2008-05-13 08:07:56 UTC', expires `2018-05-11 08:07:56 UTC', SHA-1 fingerprint `af70884383820215cd61c6bcecfd3724a990431c'
+2014-06-08 23:02:13	--	gnutls: peer's certificate is trusted
+2014-06-08 23:02:13	--	gnutls: sending one certificate
+2014-06-08 23:02:13	--	 - client certificate info (/home/cskksc/.weechat/certs/__cskksc.pem):
+2014-06-08 23:02:13	--	  - subject `C=IN,ST=Maharashtra,O=Internet Widgits Pty Ltd,OU=OFTC,CN=cskksc', issuer `C=IN,ST=Maharashtra,O=Internet Widgits Pty Ltd,OU=OFTC,CN=cskksc', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-03-14 05:24:23 UTC', expires `2016-04-02 05:24:23 UTC', SHA-1 fingerprint `d5b34eb48d322e13cb718e7f9aa7b0986a071ae8'
+2014-06-08 23:02:13	--	irc: connected to irc.oftc.net/6697 (50.197.126.29)
+2014-06-08 23:02:13	--	oxygen.oftc.net (oxygen.oftc.net): *** Looking up your hostname...
+2014-06-08 23:02:13	--	oxygen.oftc.net (oxygen.oftc.net): *** Checking Ident
+2014-06-08 23:02:13	--	oxygen.oftc.net (oxygen.oftc.net): *** No Ident response
+2014-06-08 23:02:14	--	oxygen.oftc.net (oxygen.oftc.net): *** Found your hostname
+2014-06-08 23:02:14	--	oxygen.oftc.net (oxygen.oftc.net): *** Connected securely via TLSv1 AES128-SHA-128
+2014-06-08 23:02:14	--	oxygen.oftc.net (oxygen.oftc.net): *** Your client certificate fingerprint is D5B34EB48D322E13CB718E7F9AA7B0986A071AE8
+2014-06-08 23:02:14	--	Welcome to the OFTC Internet Relay Chat Network __cskksc
+2014-06-08 23:02:14	--	Your host is oxygen.oftc.net[50.197.126.29/6697], running version hybrid-7.2.2+oftc1.6.11
+2014-06-08 23:02:14	--	This server was created Mar 10 2013 at 19:57:43
+2014-06-08 23:02:14	--	oxygen.oftc.net hybrid-7.2.2+oftc1.6.11 CDGPRSabcdfgiklnorsuwxyz biklmnopstveI bkloveI
+2014-06-08 23:02:14	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=390 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2014-06-08 23:02:14	--	CHANLIMIT=#:70 CHANNELLEN=50 CHANMODES=eIqb,k,l,imnpstMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2014-06-08 23:02:14	--	8JQAAKA4A :your unique ID
+2014-06-08 23:02:14	--	There are 45 users and 10012 invisible on 16 servers
+2014-06-08 23:02:14	--	20 :IRC Operators online
+2014-06-08 23:02:14	--	2216 :channels formed
+2014-06-08 23:02:14	--	I have 1371 clients and 1 servers
+2014-06-08 23:02:14	--	Current local users: 1371  Max: 1709
+2014-06-08 23:02:14	--	Current global users: 10057  Max: 11532
+2014-06-08 23:02:14	--	Highest connection count: 1710 (1709 clients) (467641 connections received)
+2014-06-08 23:02:14	--	- oxygen.oftc.net Message of the Day -
+2014-06-08 23:02:14	--	- Welcome to OFTC - The Open and Free Technology Community
+2014-06-08 23:02:14	--	-
+2014-06-08 23:02:14	--	- You have connected to OFTC's IRC services.
+2014-06-08 23:02:14	--	-
+2014-06-08 23:02:14	--	- We are not a general purpose chat platform, but a topical
+2014-06-08 23:02:14	--	- network intent on providing the open source and free
+2014-06-08 23:02:14	--	- software communities a means to cooperate and communicate.
+2014-06-08 23:02:14	--	- As such, illegal and off-topic activity, such as warez
+2014-06-08 23:02:14	--	- trading, may result in being barred from access.
+2014-06-08 23:02:14	--	-
+2014-06-08 23:02:14	--	- The Open and Free Technology Community was founded at the
+2014-06-08 23:02:14	--	- end of 2001 by a group of experienced members of the Open
+2014-06-08 23:02:14	--	- Source and Free Software communities; it is aimed at
+2014-06-08 23:02:14	--	- providing these communities with better communication,
+2014-06-08 23:02:14	--	- development, and support infrastructure. Our goal is to
+2014-06-08 23:02:14	--	- provide stable services to members of the community in any
+2014-06-08 23:02:14	--	- part of the world, while listening closely to their needs
+2014-06-08 23:02:14	--	- and desires.
+2014-06-08 23:02:14	--	-
+2014-06-08 23:02:14	--	- For more information on OFTC please visit http://www.oftc.net/.
+2014-06-08 23:02:14	--	-
+2014-06-08 23:02:14	--	- If you require assistance stop by in channel #oftc, or email
+2014-06-08 23:02:14	--	- support@oftc.net with details.
+2014-06-08 23:02:14	--	-
+2014-06-08 23:02:14	--	- Thanks and enjoy your stay,
+2014-06-08 23:02:14	--	-
+2014-06-08 23:02:14	--	-         The OFTC team
+2014-06-08 23:02:14	--	End of /MOTD command.
+2014-06-08 23:02:14	--	User mode [+i] by __cskksc
+2014-06-08 23:02:14	--	NickServ (services@services.oftc.net): This nickname is registered and protected.  If it is your nickname, you may
+2014-06-08 23:02:14	--	NickServ (services@services.oftc.net): authenticate yourself to services with the IDENTIFY command.  You are
+2014-06-08 23:02:14	--	NickServ (services@services.oftc.net): getting this message because you are not on the access list for the
+2014-06-08 23:02:14	--	NickServ (services@services.oftc.net): __cskksc nickname.
+2014-06-08 23:02:14	--	User mode [+R] by __cskksc
+2014-06-08 23:02:14	--	NickServ (services@services.oftc.net): You are connected using SSL and have provided a matching client certificate
+2014-06-08 23:02:14	--	NickServ (services@services.oftc.net): for nickname __cskksc.  You have been automatically identified.
+2014-06-08 23:02:38	--	irc: disconnected from server

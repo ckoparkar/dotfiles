@@ -6700,3 +6700,58 @@
 2014-04-09 10:41:31	barka0487	THank you
 2014-04-09 10:41:32	<--	holomorph (~holomorph@unaffiliated/holomorph) has quit (Quit: holomorph)
 2014-04-09 10:41:33	--	irc: disconnected from server
+2014-06-08 22:59:54	-->	__cskksc (~cskksc@triband-mum-59.184.8.107.mtnl.net.in) has joined #archlinux
+2014-06-08 22:59:54	--	Topic for #archlinux is "Welcome to Arch Linux World Domination, Inc. <☃ > Remember, Arch doesn’t like being neglected <❤ > Due to spam you now must be identified with NickServ to join the channel"
+2014-06-08 22:59:54	--	Topic set by demize on Sun, 08 Jun 2014 21:09:24
+2014-06-08 22:59:54	--	Channel #archlinux: 1241 nicks (0 ops, 0 voices, 1241 normals)
+2014-06-08 22:59:55	--	Mode #archlinux [+Cnrt]
+2014-06-08 22:59:55	--	Channel created on Sun, 15 Feb 2004 10:38:31
+2014-06-08 23:00:03	jaksi	but it works with GRUB as I said
+2014-06-08 23:00:06	potmo	and i cant copy paste into the virtualbox until i install the addons which i cant do until i install the os
+2014-06-08 23:00:08	MrElendig	harpyon: if you learn C and code it in, sure
+2014-06-08 23:00:14	<--	ethanol (~rob@unaffiliated/alcohol) has quit (*.net *.split)
+2014-06-08 23:00:14	<--	Munrek (~Munrek@5.135.179.166) has quit (*.net *.split)
+2014-06-08 23:00:14	<--	CTtechguy (~CTtechguy@unaffiliated/cttechguy) has quit (*.net *.split)
+2014-06-08 23:00:14	<--	avd (~joker@brainiac.averred.net) has quit (*.net *.split)
+2014-06-08 23:00:15	eto	tanath: tools are mostly fine but if you are on old bios mbr works, it's also simpler
+2014-06-08 23:00:29	<--	masterslave89 (~belial@178.126.80.220) has quit (Quit: Leaving.)
+2014-06-08 23:00:37	MrElendig	no it is not simpler
+2014-06-08 23:00:38	ben_h	thanks for your help, all
+2014-06-08 23:00:40	ben_h	o/
+2014-06-08 23:00:45	MrElendig	specially not if you want > 4 partitions
+2014-06-08 23:00:47	potmo	i mean i think  i can do uefi ifi want too with the vm but all that stuff is gobbledy gook to me
+2014-06-08 23:00:54	-->	CTtechguy (~CTtechguy@unaffiliated/cttechguy) has joined #archlinux
+2014-06-08 23:00:57	-->	masterslave89 (~belial@178.126.80.220) has joined #archlinux
+2014-06-08 23:00:59	tanath	eto, well i thought you had to use mbr for non-uefi
+2014-06-08 23:01:04	MrElendig	tanath: no
+2014-06-08 23:01:08	potmo	well thats when u use logical partitions right MrElendig
+2014-06-08 23:01:09	-->	avd (~joker@brainiac.averred.net) has joined #archlinux
+2014-06-08 23:01:10	potmo	?
+2014-06-08 23:01:15	MrElendig	tanath: only if you want to boot stupid operating systems like windows
+2014-06-08 23:01:16	--	irc: disconnected from server
+2014-06-08 23:01:40	-->	__cskksc (~cskksc@triband-mum-59.184.8.107.mtnl.net.in) has joined #archlinux
+2014-06-08 23:01:40	--	Topic for #archlinux is "Welcome to Arch Linux World Domination, Inc. <☃ > Remember, Arch doesn’t like being neglected <❤ > Due to spam you now must be identified with NickServ to join the channel"
+2014-06-08 23:01:40	--	Topic set by demize on Sun, 08 Jun 2014 21:09:24
+2014-06-08 23:01:40	--	Channel #archlinux: 1238 nicks (0 ops, 0 voices, 1238 normals)
+2014-06-08 23:01:41	--	Mode #archlinux [+Cnrt]
+2014-06-08 23:01:41	--	Channel created on Sun, 15 Feb 2004 10:38:31
+2014-06-08 23:01:41	MrElendig	brainwave: bpaste.net
+2014-06-08 23:01:46	MrElendig	!pastebin.com
+2014-06-08 23:01:47	eto	MrElendig: what average user has more than 4 parts ?
+2014-06-08 23:01:47	phrik	Don't use it. Use some sane pastebin like bpaste.net gist.github.com, sprunge.us ix.io . Also see !badpastebin
+2014-06-08 23:01:48	potmo	well good news is its a virtual disk so i can mess with that stuff later if need arises
+2014-06-08 23:02:01	MrElendig	eto: a lot
+2014-06-08 23:02:04	eto	MrElendig: /, swap, home
+2014-06-08 23:02:09	--	irc: disconnected from server
+2014-06-08 23:02:21	-->	__cskksc (~cskksc@triband-mum-59.184.8.107.mtnl.net.in) has joined #archlinux
+2014-06-08 23:02:21	--	Topic for #archlinux is "Welcome to Arch Linux World Domination, Inc. <☃ > Remember, Arch doesn’t like being neglected <❤ > Due to spam you now must be identified with NickServ to join the channel"
+2014-06-08 23:02:21	--	Topic set by demize on Sun, 08 Jun 2014 21:09:24
+2014-06-08 23:02:21	--	Channel #archlinux: 1238 nicks (0 ops, 0 voices, 1238 normals)
+2014-06-08 23:02:21	phrik	brainwave: An easy way to pastebin output from the command line. Pipe your output via curl to the sprunge pastebin: <command> |& curl -F sprunge=@- sprunge.us
+2014-06-08 23:02:21	--	Mode #archlinux [+Cnrt]
+2014-06-08 23:02:21	--	Channel created on Sun, 15 Feb 2004 10:38:31
+2014-06-08 23:02:23	MrElendig	and really, there isn't any good reason not to use gpt
+2014-06-08 23:02:31	MrElendig	the tools are identical
+2014-06-08 23:02:34	<--	Greylocks (~Greylocks@66-87-91-217.pools.spcsdns.net) has quit (Quit: WeeChat 0.4.3)
+2014-06-08 23:02:35	MrElendig	but you can do labels etc
+2014-06-08 23:02:38	--	irc: disconnected from server

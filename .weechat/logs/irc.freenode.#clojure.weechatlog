@@ -3206,3 +3206,29 @@
 2014-04-09 10:41:14	<--	stettix (~stettix@cpc16-walt13-2-0-cust227.13-2.cable.virginm.net) has quit (Ping timeout: 255 seconds)
 2014-04-09 10:41:15	-->	aconbere (~aconbere@174-31-180-162.tukw.qwest.net) has joined #clojure
 2014-04-09 10:41:33	--	irc: disconnected from server
+2014-06-08 22:59:54	-->	__cskksc (~cskksc@triband-mum-59.184.8.107.mtnl.net.in) has joined #clojure
+2014-06-08 22:59:54	--	Topic for #clojure is "Clojure, the language http://clojure.org | Currently at 1.6.0; top analysts expect this to be followed by newer versions with still higher numbers: https://github.com/clojure/clojure/blob/master/changes.md | discussion: http://groups.google.com/group/clojure"
+2014-06-08 22:59:54	--	Topic set by technomancy (~user@ec2-54-244-178-65.us-west-2.compute.amazonaws.com) on Wed, 26 Mar 2014 22:03:15
+2014-06-08 22:59:54	--	Channel #clojure: 713 nicks (1 op, 0 voices, 712 normals)
+2014-06-08 22:59:58	--	Mode #clojure [+cnt]
+2014-06-08 22:59:58	--	Channel created on Wed, 12 Dec 2007 03:34:26
+2014-06-08 23:00:14	<--	mwelt_ (~mwelt@p548FD962.dip0.t-ipconnect.de) has quit (*.net *.split)
+2014-06-08 23:00:14	<--	Foxboron (~fox@146.185.137.105) has quit (*.net *.split)
+2014-06-08 23:00:14	<--	kjnilsson (~kjn@cpc1-brig5-0-0-cust112.3-3.cable.virginm.net) has quit (*.net *.split)
+2014-06-08 23:00:28	-->	gcatlin (~gcatlin@cpe-076-182-052-002.nc.res.rr.com) has joined #clojure
+2014-06-08 23:01:03	-->	kjnilsson (~kjn@cpc1-brig5-0-0-cust112.3-3.cable.virginm.net) has joined #clojure
+2014-06-08 23:01:16	--	irc: disconnected from server
+2014-06-08 23:01:40	-->	__cskksc (~cskksc@triband-mum-59.184.8.107.mtnl.net.in) has joined #clojure
+2014-06-08 23:01:40	--	Topic for #clojure is "Clojure, the language http://clojure.org | Currently at 1.6.0; top analysts expect this to be followed by newer versions with still higher numbers: https://github.com/clojure/clojure/blob/master/changes.md | discussion: http://groups.google.com/group/clojure"
+2014-06-08 23:01:40	--	Topic set by technomancy (~user@ec2-54-244-178-65.us-west-2.compute.amazonaws.com) on Wed, 26 Mar 2014 22:03:15
+2014-06-08 23:01:40	--	Channel #clojure: 712 nicks (1 op, 0 voices, 711 normals)
+2014-06-08 23:01:45	--	Mode #clojure [+cnt]
+2014-06-08 23:01:45	--	Channel created on Wed, 12 Dec 2007 03:34:26
+2014-06-08 23:02:09	--	irc: disconnected from server
+2014-06-08 23:02:21	-->	__cskksc (~cskksc@triband-mum-59.184.8.107.mtnl.net.in) has joined #clojure
+2014-06-08 23:02:21	--	Topic for #clojure is "Clojure, the language http://clojure.org | Currently at 1.6.0; top analysts expect this to be followed by newer versions with still higher numbers: https://github.com/clojure/clojure/blob/master/changes.md | discussion: http://groups.google.com/group/clojure"
+2014-06-08 23:02:21	--	Topic set by technomancy (~user@ec2-54-244-178-65.us-west-2.compute.amazonaws.com) on Wed, 26 Mar 2014 22:03:15
+2014-06-08 23:02:21	--	Channel #clojure: 712 nicks (1 op, 0 voices, 711 normals)
+2014-06-08 23:02:25	--	Mode #clojure [+cnt]
+2014-06-08 23:02:25	--	Channel created on Wed, 12 Dec 2007 03:34:26
+2014-06-08 23:02:38	--	irc: disconnected from server

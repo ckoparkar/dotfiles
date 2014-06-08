@@ -2377,3 +2377,230 @@
 2014-04-09 10:36:44	--	End of /MOTD command.
 2014-04-09 10:36:44	--	User mode [+Zi] by __cskksc
 2014-04-09 10:41:33	--	irc: disconnected from server
+2014-06-08 22:59:45	--	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2014-06-08 22:59:46	--	gnutls: connected using 1024-bit Diffie-Hellman shared secret exchange
+2014-06-08 22:59:46	--	gnutls: receiving 2 certificates
+2014-06-08 22:59:46	--	 - certificate[1] info:
+2014-06-08 22:59:46	--	   - subject `OU=Domain Control Validated,OU=Gandi Standard Wildcard SSL,CN=*.freenode.net', issuer `C=FR,O=GANDI SAS,CN=Gandi Standard SSL CA', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-01-13 00:00:00 UTC', expires `2015-01-14 23:59:59 UTC', SHA-1 fingerprint `2df8bb8922e69f781ef5abcd234fffde0490be21'
+2014-06-08 22:59:46	--	 - certificate[2] info:
+2014-06-08 22:59:46	--	   - subject `C=FR,O=GANDI SAS,CN=Gandi Standard SSL CA', issuer `C=US,ST=UT,L=Salt Lake City,O=The USERTRUST Network,OU=http://www.usertrust.com,CN=UTN-USERFirst-Hardware', RSA key 2048 bits, signed using RSA-SHA1, activated `2008-10-23 00:00:00 UTC', expires `2020-05-30 10:48:38 UTC', SHA-1 fingerprint `a9f79883a075ce82d20d274d1368e876140d33b3'
+2014-06-08 22:59:46	--	gnutls: peer's certificate is trusted
+2014-06-08 22:59:46	--	irc: connected to chat.freenode.net/6697 (62.231.75.133)
+2014-06-08 22:59:46	--	hobana.freenode.net (hobana.freenode.net): *** Looking up your hostname...
+2014-06-08 22:59:46	--	hobana.freenode.net (hobana.freenode.net): *** Checking Ident
+2014-06-08 22:59:46	--	hobana.freenode.net (hobana.freenode.net): *** No Ident response
+2014-06-08 22:59:47	--	hobana.freenode.net (hobana.freenode.net): *** Found your hostname
+2014-06-08 22:59:47	--	irc: client capability, server supports: account-notify extended-join identify-msg multi-prefix sasl
+2014-06-08 22:59:47	--	irc: client capability, requesting: sasl
+2014-06-08 22:59:47	--	irc: client capability, enabled: sasl
+2014-06-08 22:59:48	--	You are now logged in as __cskksc. (__cskksc!cskksc@triband-mum-59.184.8.107.mtnl.net.in)
+2014-06-08 22:59:48	--	SASL authentication successful
+2014-06-08 22:59:48	--	Welcome to the freenode Internet Relay Chat Network __cskksc
+2014-06-08 22:59:48	--	Your host is hobana.freenode.net[62.231.75.133/6697], running version ircd-seven-1.1.3
+2014-06-08 22:59:48	--	This server was created Tue Jul 23 2013 at 10:16:18 UTC
+2014-06-08 22:59:48	--	hobana.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2014-06-08 22:59:48	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2014-06-08 22:59:48	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2014-06-08 22:59:48	--	EXTBAN=$,arxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2014-06-08 22:59:48	--	There are 192 users and 84641 invisible on 27 servers
+2014-06-08 22:59:48	--	28 :IRC Operators online
+2014-06-08 22:59:48	--	14 :unknown connection(s)
+2014-06-08 22:59:48	--	50988 :channels formed
+2014-06-08 22:59:48	--	I have 6102 clients and 1 servers
+2014-06-08 22:59:48	--	6102 12000 :Current local users 6102, max 12000
+2014-06-08 22:59:48	--	84833 98406 :Current global users 84833, max 98406
+2014-06-08 22:59:48	--	Highest connection count: 12001 (12000 clients) (1157867 connections received)
+2014-06-08 22:59:48	--	- hobana.freenode.net Message of the Day -
+2014-06-08 22:59:48	--	- Welcome to hobana.freenode.net in Pitesti, Romania! Thank
+2014-06-08 22:59:48	--	- you to RCS-RDS for sponsoring this server!
+2014-06-08 22:59:48	--	-
+2014-06-08 22:59:48	--	- Ion Hobana (1931-2011) was a Romanian science fiction writer,
+2014-06-08 22:59:48	--	- literary critic and ufologist. Ion Hobana is a literary
+2014-06-08 22:59:48	--	- pseudonym, the writer's real name being Aurelian Manta Rosie.
+2014-06-08 22:59:48	--	-
+2014-06-08 22:59:48	--	- Welcome to freenode - supporting the free and open source
+2014-06-08 22:59:48	--	- software communities since 1998.
+2014-06-08 22:59:48	--	-
+2014-06-08 22:59:48	--	- By connecting to freenode you indicate that you have read and
+2014-06-08 22:59:48	--	- accept our policies as set out on http://www.freenode.net
+2014-06-08 22:59:48	--	- freenode runs an open proxy scanner. Please join #freenode for
+2014-06-08 22:59:48	--	- any network-related questions or queries, where a number of
+2014-06-08 22:59:48	--	- volunteer staff and helpful users will be happy to assist you.
+2014-06-08 22:59:48	--	-
+2014-06-08 22:59:48	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2014-06-08 22:59:48	--	- together with like-minded FOSS enthusiasts for talks and
+2014-06-08 22:59:48	--	- real-life collaboration.
+2014-06-08 22:59:48	--	-
+2014-06-08 22:59:48	--	- We would like to thank Private Internet Access
+2014-06-08 22:59:48	--	- (https://www.privateinternetaccess.com/) and the other
+2014-06-08 22:59:48	--	- organisations that help keep freenode and our other projects
+2014-06-08 22:59:48	--	- running for their sustained support.
+2014-06-08 22:59:48	--	-
+2014-06-08 22:59:48	--	- In particular we would like to thank the sponsor
+2014-06-08 22:59:48	--	- of this server, details of which can be found above.
+2014-06-08 22:59:48	--	-
+2014-06-08 22:59:48	--	- ***************************************************************
+2014-06-08 22:59:48	--	- Please read http://blog.freenode.net/2010/11/be-safe-out-there/
+2014-06-08 22:59:48	--	- ***************************************************************
+2014-06-08 22:59:48	--	End of /MOTD command.
+2014-06-08 22:59:48	--	User mode [+Zi] by __cskksc
+2014-06-08 23:00:04	--	WHO: Not enough parameters
+2014-06-08 23:00:17	--	[__cskksc] (~cskksc@triband-mum-59.184.8.107.mtnl.net.in): cskksc
+2014-06-08 23:00:17	--	[__cskksc] #clojure-android #ubuntu #weechat #clojure #archlinux-offtopic #archlinux
+2014-06-08 23:00:17	--	[__cskksc] hobana.freenode.net (Bucharest, RO)
+2014-06-08 23:00:17	--	[__cskksc] is using a secure connection
+2014-06-08 23:00:17	--	[__cskksc] is connecting from *@triband-mum-59.184.8.107.mtnl.net.in 59.184.8.107
+2014-06-08 23:00:17	--	[__cskksc] idle: 00 hours 00 minutes 29 seconds, signon at: Sun, 08 Jun 2014 22:59:48
+2014-06-08 23:00:17	--	[__cskksc] is logged in as __cskksc
+2014-06-08 23:00:17	--	[__cskksc] End of /WHOIS list.
+2014-06-08 23:00:23	--	[__cskksc] (~cskksc@triband-mum-59.184.8.107.mtnl.net.in): cskksc
+2014-06-08 23:00:23	--	[__cskksc] #clojure-android #ubuntu #weechat #clojure #archlinux-offtopic #archlinux
+2014-06-08 23:00:23	--	[__cskksc] hobana.freenode.net (Bucharest, RO)
+2014-06-08 23:00:23	--	[__cskksc] is using a secure connection
+2014-06-08 23:00:23	--	[__cskksc] is connecting from *@triband-mum-59.184.8.107.mtnl.net.in 59.184.8.107
+2014-06-08 23:00:23	--	[__cskksc] idle: 00 hours 00 minutes 35 seconds, signon at: Sun, 08 Jun 2014 22:59:48
+2014-06-08 23:00:23	--	[__cskksc] is logged in as __cskksc
+2014-06-08 23:00:23	--	[__cskksc] End of /WHOIS list.
+2014-06-08 23:01:16	--	irc: disconnected from server
+2014-06-08 23:01:31	--	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2014-06-08 23:01:32	--	gnutls: connected using 1024-bit Diffie-Hellman shared secret exchange
+2014-06-08 23:01:32	--	gnutls: receiving 2 certificates
+2014-06-08 23:01:32	--	 - certificate[1] info:
+2014-06-08 23:01:32	--	   - subject `OU=Domain Control Validated,OU=Gandi Standard Wildcard SSL,CN=*.freenode.net', issuer `C=FR,O=GANDI SAS,CN=Gandi Standard SSL CA', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-01-13 00:00:00 UTC', expires `2015-01-14 23:59:59 UTC', SHA-1 fingerprint `2df8bb8922e69f781ef5abcd234fffde0490be21'
+2014-06-08 23:01:32	--	 - certificate[2] info:
+2014-06-08 23:01:32	--	   - subject `C=FR,O=GANDI SAS,CN=Gandi Standard SSL CA', issuer `C=US,ST=UT,L=Salt Lake City,O=The USERTRUST Network,OU=http://www.usertrust.com,CN=UTN-USERFirst-Hardware', RSA key 2048 bits, signed using RSA-SHA1, activated `2008-10-23 00:00:00 UTC', expires `2020-05-30 10:48:38 UTC', SHA-1 fingerprint `a9f79883a075ce82d20d274d1368e876140d33b3'
+2014-06-08 23:01:32	--	gnutls: peer's certificate is trusted
+2014-06-08 23:01:32	--	irc: connected to chat.freenode.net/6697 (193.219.128.49)
+2014-06-08 23:01:32	--	sendak.freenode.net (sendak.freenode.net): *** Looking up your hostname...
+2014-06-08 23:01:32	--	sendak.freenode.net (sendak.freenode.net): *** Checking Ident
+2014-06-08 23:01:32	--	sendak.freenode.net (sendak.freenode.net): *** No Ident response
+2014-06-08 23:01:33	--	sendak.freenode.net (sendak.freenode.net): *** Found your hostname
+2014-06-08 23:01:33	--	irc: client capability, server supports: account-notify extended-join identify-msg multi-prefix sasl
+2014-06-08 23:01:33	--	irc: client capability, requesting: sasl
+2014-06-08 23:01:33	--	irc: client capability, enabled: sasl
+2014-06-08 23:01:34	--	You are now logged in as __cskksc. (__cskksc!cskksc@triband-mum-59.184.8.107.mtnl.net.in)
+2014-06-08 23:01:34	--	SASL authentication successful
+2014-06-08 23:01:34	--	Welcome to the freenode Internet Relay Chat Network __cskksc
+2014-06-08 23:01:34	--	Your host is sendak.freenode.net[193.219.128.49/6697], running version ircd-seven-1.1.3
+2014-06-08 23:01:34	--	This server was created Tue Apr 8 2014 at 17:59:15 EEST
+2014-06-08 23:01:34	--	sendak.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2014-06-08 23:01:34	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2014-06-08 23:01:34	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2014-06-08 23:01:34	--	EXTBAN=$,arxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2014-06-08 23:01:34	--	There are 192 users and 84478 invisible on 27 servers
+2014-06-08 23:01:34	--	28 :IRC Operators online
+2014-06-08 23:01:34	--	14 :unknown connection(s)
+2014-06-08 23:01:34	--	50964 :channels formed
+2014-06-08 23:01:34	--	I have 6876 clients and 1 servers
+2014-06-08 23:01:34	--	6876 7466 :Current local users 6876, max 7466
+2014-06-08 23:01:34	--	84670 97611 :Current global users 84670, max 97611
+2014-06-08 23:01:34	--	Highest connection count: 7467 (7466 clients) (442310 connections received)
+2014-06-08 23:01:34	--	- sendak.freenode.net Message of the Day -
+2014-06-08 23:01:34	--	- Welcome to sendak.freenode.net in Vilnius, Lithuania, EU.
+2014-06-08 23:01:34	--	- Thanks to Microlink Lietuva (http://www.microlink.lt) for providing this
+2014-06-08 23:01:34	--	- server!
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- SENDAK, MAURICE [1928-2012].  The author of Seven Little
+2014-06-08 23:01:34	--	- Monsters and Where the Wild Things Are, Maurice Sendak was
+2014-06-08 23:01:34	--	- born in Brooklyn, NY, US, to a family of poor Polish
+2014-06-08 23:01:34	--	- immigrants who moved to the US before World War II.  He
+2014-06-08 23:01:34	--	- became an illustrator while in high school.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- Welcome to freenode - supporting the free and open source
+2014-06-08 23:01:34	--	- software communities since 1998.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- By connecting to freenode you indicate that you have read and
+2014-06-08 23:01:34	--	- accept our policies as set out on http://www.freenode.net
+2014-06-08 23:01:34	--	- freenode runs an open proxy scanner. Please join #freenode for
+2014-06-08 23:01:34	--	- any network-related questions or queries, where a number of
+2014-06-08 23:01:34	--	- volunteer staff and helpful users will be happy to assist you.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2014-06-08 23:01:34	--	- together with like-minded FOSS enthusiasts for talks and
+2014-06-08 23:01:34	--	- real-life collaboration.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- We would like to thank Private Internet Access
+2014-06-08 23:01:34	--	- (https://www.privateinternetaccess.com/) and the other
+2014-06-08 23:01:34	--	- organisations that help keep freenode and our other projects
+2014-06-08 23:01:34	--	- running for their sustained support.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- In particular we would like to thank the sponsor
+2014-06-08 23:01:34	--	- of this server, details of which can be found above.
+2014-06-08 23:01:34	--	-
+2014-06-08 23:01:34	--	- ***************************************************************
+2014-06-08 23:01:34	--	- Please read http://blog.freenode.net/2010/11/be-safe-out-there/
+2014-06-08 23:01:34	--	- ***************************************************************
+2014-06-08 23:01:34	--	End of /MOTD command.
+2014-06-08 23:01:34	--	User mode [+Zi] by __cskksc
+2014-06-08 23:02:09	--	irc: disconnected from server
+2014-06-08 23:02:12	--	irc: connecting to server chat.freenode.net/6697 (SSL)...
+2014-06-08 23:02:12	--	gnutls: connected using 1024-bit Diffie-Hellman shared secret exchange
+2014-06-08 23:02:12	--	gnutls: receiving 2 certificates
+2014-06-08 23:02:12	--	 - certificate[1] info:
+2014-06-08 23:02:12	--	   - subject `OU=Domain Control Validated,OU=Gandi Standard Wildcard SSL,CN=*.freenode.net', issuer `C=FR,O=GANDI SAS,CN=Gandi Standard SSL CA', RSA key 2048 bits, signed using RSA-SHA1, activated `2014-01-13 00:00:00 UTC', expires `2015-01-14 23:59:59 UTC', SHA-1 fingerprint `2df8bb8922e69f781ef5abcd234fffde0490be21'
+2014-06-08 23:02:12	--	 - certificate[2] info:
+2014-06-08 23:02:12	--	   - subject `C=FR,O=GANDI SAS,CN=Gandi Standard SSL CA', issuer `C=US,ST=UT,L=Salt Lake City,O=The USERTRUST Network,OU=http://www.usertrust.com,CN=UTN-USERFirst-Hardware', RSA key 2048 bits, signed using RSA-SHA1, activated `2008-10-23 00:00:00 UTC', expires `2020-05-30 10:48:38 UTC', SHA-1 fingerprint `a9f79883a075ce82d20d274d1368e876140d33b3'
+2014-06-08 23:02:12	--	gnutls: peer's certificate is trusted
+2014-06-08 23:02:13	--	irc: connected to chat.freenode.net/6697 (130.239.18.172)
+2014-06-08 23:02:13	--	leguin.freenode.net (leguin.freenode.net): *** Looking up your hostname...
+2014-06-08 23:02:13	--	leguin.freenode.net (leguin.freenode.net): *** Checking Ident
+2014-06-08 23:02:13	--	leguin.freenode.net (leguin.freenode.net): *** Found your hostname
+2014-06-08 23:02:13	--	leguin.freenode.net (leguin.freenode.net): *** No Ident response
+2014-06-08 23:02:13	--	irc: client capability, server supports: account-notify extended-join identify-msg multi-prefix sasl
+2014-06-08 23:02:13	--	irc: client capability, requesting: sasl
+2014-06-08 23:02:13	--	irc: client capability, enabled: sasl
+2014-06-08 23:02:14	--	You are now logged in as __cskksc. (__cskksc!cskksc@triband-mum-59.184.8.107.mtnl.net.in)
+2014-06-08 23:02:14	--	SASL authentication successful
+2014-06-08 23:02:15	--	Welcome to the freenode Internet Relay Chat Network __cskksc
+2014-06-08 23:02:15	--	Your host is leguin.freenode.net[130.239.18.172/6697], running version ircd-seven-1.1.3
+2014-06-08 23:02:15	--	This server was created Mon Dec 31 2012 at 22:37:58 CET
+2014-06-08 23:02:15	--	leguin.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2014-06-08 23:02:15	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2014-06-08 23:02:15	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2014-06-08 23:02:15	--	EXTBAN=$,arxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2014-06-08 23:02:15	--	There are 192 users and 84502 invisible on 27 servers
+2014-06-08 23:02:15	--	28 :IRC Operators online
+2014-06-08 23:02:15	--	23 :unknown connection(s)
+2014-06-08 23:02:15	--	50970 :channels formed
+2014-06-08 23:02:15	--	I have 9497 clients and 1 servers
+2014-06-08 23:02:15	--	9497 12001 :Current local users 9497, max 12001
+2014-06-08 23:02:15	--	84694 101329 :Current global users 84694, max 101329
+2014-06-08 23:02:15	--	Highest connection count: 12002 (12001 clients) (4755227 connections received)
+2014-06-08 23:02:15	--	- leguin.freenode.net Message of the Day -
+2014-06-08 23:02:15	--	- Welcome to leguin.freenode.net in Umeå, Sweden, EU! Thanks to
+2014-06-08 23:02:15	--	- the Academic Computer Club at Umeå University for sponsoring
+2014-06-08 23:02:15	--	- this server!
+2014-06-08 23:02:15	--	-
+2014-06-08 23:02:15	--	- LE GUIN, URSULA K. (1929-) Born in Berkeley, California,
+2014-06-08 23:02:15	--	- Ursula Le Guin is an american author primarily known for
+2014-06-08 23:02:15	--	- her Science Fiction and Fantasy. She has been awarded the
+2014-06-08 23:02:15	--	- Hugo and Nebula awards, and is best known for her Earthsea
+2014-06-08 23:02:15	--	- and Hainish series.
+2014-06-08 23:02:15	--	-
+2014-06-08 23:02:15	--	- Welcome to freenode - supporting the free and open source
+2014-06-08 23:02:15	--	- software communities since 1998.
+2014-06-08 23:02:15	--	-
+2014-06-08 23:02:15	--	- By connecting to freenode you indicate that you have read and
+2014-06-08 23:02:15	--	- accept our policies as set out on http://www.freenode.net
+2014-06-08 23:02:15	--	- freenode runs an open proxy scanner. Please join #freenode for
+2014-06-08 23:02:15	--	- any network-related questions or queries, where a number of
+2014-06-08 23:02:15	--	- volunteer staff and helpful users will be happy to assist you.
+2014-06-08 23:02:15	--	-
+2014-06-08 23:02:15	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2014-06-08 23:02:15	--	- together with like-minded FOSS enthusiasts for talks and
+2014-06-08 23:02:15	--	- real-life collaboration.
+2014-06-08 23:02:15	--	-
+2014-06-08 23:02:15	--	- We would like to thank Private Internet Access
+2014-06-08 23:02:15	--	- (https://www.privateinternetaccess.com/) and the other
+2014-06-08 23:02:15	--	- organisations that help keep freenode and our other projects
+2014-06-08 23:02:15	--	- running for their sustained support.
+2014-06-08 23:02:15	--	-
+2014-06-08 23:02:15	--	- In particular we would like to thank the sponsor
+2014-06-08 23:02:15	--	- of this server, details of which can be found above.
+2014-06-08 23:02:15	--	-
+2014-06-08 23:02:15	--	- ***************************************************************
+2014-06-08 23:02:15	--	- Please read http://blog.freenode.net/2010/11/be-safe-out-there/
+2014-06-08 23:02:15	--	- ***************************************************************
+2014-06-08 23:02:15	--	End of /MOTD command.
+2014-06-08 23:02:15	--	User mode [+Zi] by __cskksc
+2014-06-08 23:02:38	--	irc: disconnected from server

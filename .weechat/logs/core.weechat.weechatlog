@@ -970,3 +970,69 @@
 2014-04-09 10:41:33		fifo: pipe closed
 2014-04-09 10:41:33		perl: scripts unloaded
 2014-04-09 10:41:33		python: scripts unloaded
+2014-06-08 22:59:45		python scripts loaded: theme
+2014-06-08 22:59:45		perl scripts loaded: buffers
+2014-06-08 22:59:45		script: 277 scripts for WeeChat 0.4.4-dev
+2014-06-08 22:59:45		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-06-08 23:01:15		Options reloaded from sec.conf
+2014-06-08 23:01:15		Options reloaded from weechat.conf
+2014-06-08 23:01:15		Options reloaded from plugins.conf
+2014-06-08 23:01:15		Options reloaded from charset.conf
+2014-06-08 23:01:15		Options reloaded from logger.conf
+2014-06-08 23:01:15		Options reloaded from trigger.conf
+2014-06-08 23:01:15		Options reloaded from xfer.conf
+2014-06-08 23:01:15		Options reloaded from rmodifier.conf
+2014-06-08 23:01:15		Options reloaded from irc.conf
+2014-06-08 23:01:15		Options reloaded from theme.conf
+2014-06-08 23:01:15		Options reloaded from buffers.conf
+2014-06-08 23:01:15		Options reloaded from relay.conf
+2014-06-08 23:01:15		Options reloaded from script.conf
+2014-06-08 23:01:15		Options reloaded from alias.conf
+2014-06-08 23:01:15		Options reloaded from aspell.conf
+2014-06-08 23:01:15		fifo: pipe closed
+2014-06-08 23:01:15		perl: scripts unloaded
+2014-06-08 23:01:15		python: scripts unloaded
+2014-06-08 23:01:31		python scripts loaded: theme
+2014-06-08 23:01:31		perl scripts loaded: buffers
+2014-06-08 23:01:31		script: 277 scripts for WeeChat 0.4.4-dev
+2014-06-08 23:01:31		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-06-08 23:02:09		Options reloaded from sec.conf
+2014-06-08 23:02:09		Options reloaded from weechat.conf
+2014-06-08 23:02:09		Options reloaded from plugins.conf
+2014-06-08 23:02:09		Options reloaded from charset.conf
+2014-06-08 23:02:09		Options reloaded from logger.conf
+2014-06-08 23:02:09		Options reloaded from trigger.conf
+2014-06-08 23:02:09		Options reloaded from xfer.conf
+2014-06-08 23:02:09		Options reloaded from rmodifier.conf
+2014-06-08 23:02:09		Options reloaded from irc.conf
+2014-06-08 23:02:09		Options reloaded from theme.conf
+2014-06-08 23:02:09		Options reloaded from buffers.conf
+2014-06-08 23:02:09		Options reloaded from relay.conf
+2014-06-08 23:02:09		Options reloaded from script.conf
+2014-06-08 23:02:09		Options reloaded from alias.conf
+2014-06-08 23:02:09		Options reloaded from aspell.conf
+2014-06-08 23:02:09		fifo: pipe closed
+2014-06-08 23:02:09		perl: scripts unloaded
+2014-06-08 23:02:09		python: scripts unloaded
+2014-06-08 23:02:12		python scripts loaded: theme
+2014-06-08 23:02:12		perl scripts loaded: buffers
+2014-06-08 23:02:12		script: 277 scripts for WeeChat 0.4.4-dev
+2014-06-08 23:02:12		Plugins loaded: alias, aspell, charset, fifo, guile, irc, logger, lua, perl, python, relay, rmodifier, ruby, script, tcl, trigger, xfer
+2014-06-08 23:02:38		Options reloaded from sec.conf
+2014-06-08 23:02:38		Options reloaded from weechat.conf
+2014-06-08 23:02:38		Options reloaded from plugins.conf
+2014-06-08 23:02:38		Options reloaded from charset.conf
+2014-06-08 23:02:38		Options reloaded from logger.conf
+2014-06-08 23:02:38		Options reloaded from trigger.conf
+2014-06-08 23:02:38		Options reloaded from xfer.conf
+2014-06-08 23:02:38		Options reloaded from rmodifier.conf
+2014-06-08 23:02:38		Options reloaded from irc.conf
+2014-06-08 23:02:38		Options reloaded from theme.conf
+2014-06-08 23:02:38		Options reloaded from buffers.conf
+2014-06-08 23:02:38		Options reloaded from relay.conf
+2014-06-08 23:02:38		Options reloaded from script.conf
+2014-06-08 23:02:38		Options reloaded from alias.conf
+2014-06-08 23:02:38		Options reloaded from aspell.conf
+2014-06-08 23:02:38		fifo: pipe closed
+2014-06-08 23:02:38		perl: scripts unloaded
+2014-06-08 23:02:38		python: scripts unloaded
