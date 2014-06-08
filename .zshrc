@@ -113,12 +113,11 @@ export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
 
 ### Pacman/Yaourt
 alias Y='yaourt'
-alias P='packer-color'
-alias PI='packer-color -S'
 alias pac='sudo packman -S'
-alias pac-r='sudo pacman -Rs'
+alias pac-remove='sudo pacman -Rs'
 alias pac-search='sudo pacman -Ss'
 alias pac-list='sudo pacman -Ql'
+alias pac-installed='sudo pacman -Qe'
 
 ### Directories
 alias ll='ls -l'
@@ -131,7 +130,6 @@ alias E='sudo emacsclient -t'
 alias home='cd ~'
 alias ..='cd ..'
 alias k='exit'
-alias sD='ls ~/Downloads'
 alias rmr='rm -r'
 
 ### Zsh
@@ -143,26 +141,21 @@ alias eXT='emacsclient -t ~/.Xresources'
 
 ## Apps
 alias m='mplayer'
-alias trpu='trash-put'
-alias trrm='trash-rm'
-alias trem='trash-empty'
-alias trli='trash-list'
 alias twitter='turses'
 alias news='newsbeuter'
 alias irc='weechat-curses'
 alias torrentz='~/scripts/torrentz_eu.sh'
 alias tpb='~/scripts/tpb.sh'
 alias py27='python2.7'
-alias music='cmus'
-alias files='ranger'
 alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
+alias netbeans='~/netbeans-8.0/bin/netbeans'
 discover ()
 {
 	keyword=$(echo "$@" |  sed 's/ /.*/g' | sed 's:|:\\|:g' | sed 's:(:\\(:g' | sed 's:):\\):g')
 	locate -ir $keyword
 }
 
-screencast ()
+record ()
 {
 	ffmpeg -f x11grab -r 30 -s 1600x900 -i :0.0 -vcodec libx264 -threads 0 "$1" 
 }
@@ -179,8 +172,6 @@ tsm-clearcompleted()
     awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r ;
 }
 
-tsm() { transmission-remote --list ;}
-
 tsm-count()
 {
 	echo "Blocklist rules:" $(curl -s --data \
@@ -188,7 +179,7 @@ tsm-count()
 								   "$(curl -s -D - localhost:9091/transmission/rpc | grep X-Transmission-Session-Id)" \
 							  | cut -d: -f 11 | cut -d, -f1) ;
 }
-
+tsm() { transmission-remote --list ;}
 tsm-blocklist() { $PATH_SCRIPTS/blocklist.sh ;}
 tsm-daemon() { transmission-daemon ;}
 tsm-quit() { killall transmission-daemon ;}
@@ -211,11 +202,9 @@ tsm-ncurse() { transmission-remote-cli ;}
 
 ## PCL
 alias pv='pcl_viewer'
-alias cdp='cd ~/chai/my_pcl'
-alias cdpd='cd ~/chai/my_pcl/data'
 export pcl_home='/home/cskksc/chai/my_pcl'
 export pcl_data='/home/cskksc/chai/my_pcl/data'
-record()
+kinect_record()
 {
 	cmd='$pcl_home/save_cloud/build/save_cloud'
 	if [[ -n $2 ]]; then
@@ -228,6 +217,10 @@ record()
 
 	eval ${cmd}
 }
+
+
+## git
+alias metamug_push='jgit push amazon-s3://.jgit_s3_public@metamug.gitrepo/projects/MetaScrapper cskksc'
 
 
 ###################################################################

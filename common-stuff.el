@@ -81,6 +81,7 @@
 (sml-modeline-mode)
 (global-rainbow-delimiters-mode)
 
+(yas-global-mode 1)
 (global-auto-complete-mode t)
 (global-linum-mode 1)
 (global-pretty-mode 1)
