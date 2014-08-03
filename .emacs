@@ -48,7 +48,9 @@ Return a list of installed packages or nil for every skipped package."
 						  'xclip
 						  'smartparens
 						  'iy-go-to-char
-						  'zenburn-theme)
+						  'zenburn-theme
+						  'auto-auto-indent
+						  'inf-ruby)
 
 ;; activate installed packages
 (package-initialize)

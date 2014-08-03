@@ -183,6 +183,10 @@
 (add-hook 'lisp-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))
 
+
+(add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
@@ -213,6 +217,29 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;     Java     ;;;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+(add-hook 'java-mode-hook 'auto-auto-indent-mode)
+(setq-default c-basic-offset 4 c-default-style "linux")
+(setq-default tab-width 4 indent-tabs-mode t)
+
+
+;; Rainbow-delimeters
+(add-hook 'java-mode-hook 'rainbow-delimiters-mode)
+
+;; Auto-complete
+(add-hook 'java-mode-hook 'auto-complete-mode)
+
+;; Paredit
+(add-hook 'java-mode-hook (lambda () (smartparens-mode 1)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Python     ;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
@@ -226,6 +253,22 @@
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;     Ruby     ;;;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+(add-hook 'ruby-mode-hook 'auto-complete-mode)
+
+;; Paredit
+;;(add-hook 'python-mode-hook 'enable-paredit-mode)
+(add-hook 'ruby-mode-hook (lambda () (smartparens-mode 1)))
+
+;; inf-ruby
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 
 ;; --------------------------------------------------

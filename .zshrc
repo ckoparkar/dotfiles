@@ -64,6 +64,16 @@ else
 	export TERM='xterm-color'
 fi
 
+export M2_HOME=/opt/maven
+
+export PATH=$PATH:/root/.gem/ruby/2.1.0/bin
+
+######################### Android
+
+export PATH=$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/
+export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
+
+
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -100,11 +110,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-######################### Android
-
-export PATH=$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/
-
-export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
 
 #######################################################################
 ############################ Aliases ##################################
