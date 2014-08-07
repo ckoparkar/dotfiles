@@ -67,6 +67,7 @@ fi
 export M2_HOME=/opt/maven
 
 export PATH=$PATH:/root/.gem/ruby/2.1.0/bin
+export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
 
 ######################### Android
 

@@ -196,7 +196,7 @@
 ;; C/C++ mode settings
 (setq-default c-basic-offset 4 c-default-style "linux")
 (setq-default tab-width 4 indent-tabs-mode t)
-;;(define-key c-mode-base-map (kbd "RET") 'newline-and-indent) taken care by auto-indent CHECK;;
+(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 (setq mf--source-file-extension "cpp")
 (add-hook 'c++-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
 
