@@ -167,7 +167,7 @@ record ()
 }
 
 ### Advanced Copy/Move ###
-alias cp='~/scripts/cp -gR'
+#alias cp='~/scripts/cp -gR'
 #alias mv='~/scripts/mv -gR'
 
 ###### Transmission CLI ######
