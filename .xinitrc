@@ -13,6 +13,6 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xmodmap ~/.Xmodmap
-# compton &
-# devilspie -a &
+xcompmgr &
+devilspie -a &
 exec awesome

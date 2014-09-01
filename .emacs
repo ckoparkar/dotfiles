@@ -36,7 +36,8 @@ Return a list of installed packages or nil for every skipped package."
 						  'pkg-info
 						  'clojure-mode
 						  'epl
-						  'cider
+						  ;; 'cider
+						  ;; 'ac-cider
 						  'yasnippet
 						  'pretty-mode-plus
 						  'color-theme
@@ -50,7 +51,9 @@ Return a list of installed packages or nil for every skipped package."
 						  'iy-go-to-char
 						  'zenburn-theme
 						  'auto-auto-indent
-						  'inf-ruby)
+						  'inf-ruby
+						  'lua-mode
+						  'projectile)
 
 ;; activate installed packages
 (package-initialize)

@@ -33,7 +33,7 @@
 ;;(load-file "~/.emacs.d/cedet/cedet-devel-load.el")
 
 (load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
-
+(add-to-list 'load-path "~/.emacs.d/plugins/cider")
 ;; Requires
 (require 'auto-complete)
 (require 'ido)
@@ -183,8 +183,12 @@
 (add-hook 'lisp-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))
 
-
 (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))
+
+;; (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
+;; (add-hook 'cider-mode-hook 'ac-cider-setup)
+;; (eval-after-load "auto-complete"
+;;   '(add-to-list 'ac-modes 'cider-repl-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -266,6 +270,7 @@
 
 ;; inf-ruby
 (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+(add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -280,3 +285,9 @@
 (autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;     Lua     ;;;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+(add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))

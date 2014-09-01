@@ -47,12 +47,13 @@ DISABLE_LS_COLORS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git themes zsh-completions archlinux)
+plugins=(git themes zsh-completions archlinux ruby)
 
 
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/home/cskksc/chai/vagrant/opt/vagrant/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF8
 export EDITOR='emacsclient -t'
@@ -66,11 +67,10 @@ fi
 
 export M2_HOME=/opt/maven
 
-export PATH=$PATH:/root/.gem/ruby/2.1.0/bin
+#export PATH=$PATH:/root/.gem/ruby/2.1.0/bin
 export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
 
-######################### Android
-
+######################## #Android
 export PATH=$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/
 export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
 
@@ -126,9 +126,9 @@ alias pac-list='sudo pacman -Ql'
 alias pac-installed='sudo pacman -Qe'
 
 ### Directories
-alias ll='ls -l'
-alias la='ls -a'
-alias l='ls'
+alias ll='ls -lh'
+alias la='ls -ah'
+alias l='ls -lah'
 alias c='clear'
 alias ed='emacs --daemon'
 alias e='emacsclient -t'
