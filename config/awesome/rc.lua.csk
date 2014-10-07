@@ -15,6 +15,7 @@ local vicious   = require("vicious")
 require("volume")
 local scratch   = require("scratch")
 -- local yawn      = require("yawn")
+local lain      = require("lain")
 
 --awful.util.spawn_with_shell("xrdb /home/cskksc/.Xresources")
 --awful.util.spawn_with_shell("xmodmap /home/cskksc/.Xmodmap")
@@ -129,7 +130,8 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Wibox
 
 local util = awful.util
-
+markup = lain.util.markup
+gray   = "#94928F"
 -- Colours
 -- coldef  = "</span>"
 -- white  = "<span color='#FFFFFF'>"
@@ -188,11 +190,21 @@ vicious.register(memwidget, vicious.widgets.mem, "$1", 1)
 
 -----------------------------------------------------------------------------------------
 -- Volume
-vltxt = wibox.widget.textbox()
-vicious.register(vltxt,vicious.widgets.mem,blue .. "VOL: " .. coldef,5)
 
-vltxt1 = wibox.widget.textbox()
-vicious.register(vltxt1,vicious.widgets.mem,blue .. " %" .. coldef,5)
+-- vltxt = wibox.widget.textbox()
+-- vicious.register(vltxt,vicious.widgets.mem,blue .. "VOL: " .. coldef,5)
+
+-- vltxt1 = wibox.widget.textbox()
+-- vicious.register(vltxt1,vicious.widgets.mem,blue .. " %" .. coldef,5)
+
+voltxt = wibox.widget.textbox()
+vicious.register(voltxt, vicious.widgets.mem, blue .. "  VOL : " .. coldef, 5)
+
+volume = lain.widgets.alsabar({ ticks = true })
+volmargin = wibox.layout.margin(volume.bar, 5, 8, 80)
+volmargin:set_top(7)
+volmargin:set_bottom(7)
+volumewidget = wibox.widget.background(volmargin)
 
 -----------------------------------------------------------------------------------------
 
@@ -215,6 +227,23 @@ cpuwidget_graph:set_color({ type = "linear", from = { 0, 0 }, to = { 10,0 }, sto
           {1, "#4CB7DB" }}})
 -- Register widget
 vicious.register(cpuwidget_graph, vicious.widgets.cpu, "$1", 1)
+
+
+-----------------------------------------------------------------------------------------
+
+
+nettxt = wibox.widget.textbox()
+vicious.register(nettxt, vicious.widgets.mem, blue .. "  NET : " .. coldef, 5)
+
+netwidget = wibox.widget.background(lain.widgets.net({
+   settings = function()
+       widget:set_markup(markup("#7AC82E", " " .. net_now.received)
+                         .. " " ..
+                         markup("#4CB7DB", " " .. net_now.sent .. " "))
+   end
+}), "#313131")
+
+
 
 
 -----------------------------------------------------------------------------------------
@@ -244,6 +273,7 @@ bottom_bar:set_image(beautiful.bottom_bar)
 -----------------------------------------------------------------------------------------
 
 -- Create a wibox for each screen and add it
+
 mywibox = {}
 mybottomwibox = {}
 mypromptbox = {}
@@ -350,12 +380,10 @@ for s = 1, screen.count() do
     bottom_left_layout:add(spr)
     bottom_left_layout:add(memtxt)
     bottom_left_layout:add(memwidget)
---    bottom_left_layout:add(first)
---    bottom_left_layout:add(spr)
---    bottom_left_layout:add(first)
---	bottom_left_layout:add(vltxt)		
---    bottom_left_layout:add(volume_widget)
---	bottom_left_layout:add(vltxt1)
+    bottom_left_layout:add(first)
+    bottom_left_layout:add(spr)
+    bottom_left_layout:add(nettxt)
+    bottom_left_layout:add(netwidget)
     bottom_left_layout:add(first)
     bottom_left_layout:add(spr)
     bottom_left_layout:add(first)
@@ -364,7 +392,15 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the bottom right
     bottom_right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then bottom_right_layout:add(wibox.widget.systray()) end
+
+    bottom_right_layout:add(first)
+    bottom_right_layout:add(spr)
+    bottom_right_layout:add(voltxt)
+    bottom_right_layout:add(volumewidget)
+    bottom_right_layout:add(first)
+    bottom_right_layout:add(spr)
     -- bottom_right_layout:add(calendar_icon)
+    bottom_right_layout:add(first)
     bottom_right_layout:add(calendarwidget)
     bottom_right_layout:add(first)
     bottom_right_layout:add(spr)
