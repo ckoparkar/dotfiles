@@ -6,19 +6,20 @@ UXTerm*VT100.geometry: 80x30
 *visualBell: on
 UXTerm*cursorBlink: true
 UXTerm.VT100.renderFont: true
-UXTerm*faceName: Terminus:size=10.5
+!UXTerm*faceName: Terminus:size=11.5
+UXTerm*faceName: DejavuSansMono:size=10.5
 UXTerm*utf8: 1
 UXTerm*transparent : True
-UXTerm*shading: 20 
+UXTerm*shading: 20
 
 !!!  Dunzor
 !!UXTerm*background: #000000
 !!UXTerm*foreground: #AAAAAA
-! 
+!
 !!!  Zenburn
 !UXTerm*background: #3F3F3F
 !UXTerm*foreground: #87D787
-! 
+!
 !!!Darkburn
 !xterm*background: #1A1817
 !xterm*foreground: #B5927D

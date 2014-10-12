@@ -143,7 +143,7 @@ alias eZ='emacsclient -t ~/.zshrc'
 alias Z='source ~/.zshrc'
 alias eB='emacsclient -t ~/.oh-my-zsh/themes/csk.zsh-theme'
 alias eXT='emacsclient -t ~/.Xresources'
-
+alias v='vim'
 
 ## Apps
 alias m='mplayer'
@@ -154,7 +154,7 @@ alias torrentz='~/scripts/torrentz_eu.sh'
 alias tpb='~/scripts/tpb.sh'
 alias py27='python2.7'
 alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
-alias netbeans='~/netbeans-8.0/bin/netbeans'
+alias ssha='eval "$(ssh-agent -s)"'
 discover ()
 {
 	keyword=$(echo "$@" |  sed 's/ /.*/g' | sed 's:|:\\|:g' | sed 's:(:\\(:g' | sed 's:):\\):g')

@@ -50,6 +50,7 @@
 (require 'pretty-mode-plus)
 (require 'color-theme)
 (require 'highlight-parentheses)
+(require 'xclip)
 ;;(require 'four-clj)
 
 
@@ -57,6 +58,7 @@
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
+(turn-on-xclip)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn t)
