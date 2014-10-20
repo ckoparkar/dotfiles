@@ -36,8 +36,8 @@ Return a list of installed packages or nil for every skipped package."
 						  'pkg-info
 						  'clojure-mode
 						  'epl
-						  ;; 'cider
-						  ;; 'ac-cider
+						  'cider
+						  'ac-cider
 						  'yasnippet
 						  'pretty-mode-plus
 						  'color-theme
@@ -58,10 +58,12 @@ Return a list of installed packages or nil for every skipped package."
 ;; activate installed packages
 (package-initialize)
 
+(set-default-font "DejavuSansMono 11")
+
 (load-file "~/.emacs.d/common-stuff.el")
 (load-file "~/.emacs.d/keybindings.el")
-
 (if window-system
-	(load-file "~/.emacs.d/modeline-window.el")
-	(load-file "~/.emacs.d/modeline-no-window.el")
-	)
+	(load-theme 'hickey t)
+  (progn (load-file "~/.emacs.d/modeline-no-window.el")
+  (load-theme 'zenburn t))
+  )
