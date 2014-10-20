@@ -6,8 +6,8 @@ UXTerm*VT100.geometry: 80x30
 *visualBell: on
 UXTerm*cursorBlink: true
 UXTerm.VT100.renderFont: true
-!UXTerm*faceName: Terminus:size=11.5
-UXTerm*faceName: DejavuSansMono:size=10.5
+UXTerm*faceName: Dejavu Sans Mono:size=10.5:antialias=true
+UXTerm*letterSpace: -1
 UXTerm*utf8: 1
 UXTerm*transparent : True
 UXTerm*shading: 20
@@ -27,51 +27,6 @@ UXTerm*shading: 20
 !!!Arch
 !xterm*background: #000000
 !xterm*foreground: #1793D1
-!
-!!MY
-!!UXTerm*background:            S_base03
-!!UXTerm*foreground:            S_base0
-!
-!UXTerm*fading:                40
-!UXTerm*fadeColor:             S_base03
-!UXTerm*cursorColor:           S_base1
-!UXTerm*pointerColorBackground:S_base01
-!UXTerm*pointerColorForeground:S_base1
-!
-!!! black dark/light
-!UXTerm*color0:                S_base02
-!UXTerm*color8:                S_base03
-!
-!!! red dark/light
-!UXTerm*color1:                S_red
-!UXTerm*color9:                S_orange
-!
-!!! green dark/light
-!UXTerm*color2:                S_green
-!UXTerm*color10:               S_base01
-!
-!!! yellow dark/light
-!UXTerm*color3:                S_yellow
-!UXTerm*color11:               S_base00
-!
-!!! blue dark/light
-!UXTerm*color4:                S_blue
-!UXTerm*color12:               S_base0
-!
-!!! magenta dark/light
-!UXTerm*color5:                S_magenta
-!UXTerm*color13:               S_violet
-!
-!!! cyan dark/light
-!UXTerm*color6:                S_cyan
-!UXTerm*color14:               S_base1
-!
-!!! white dark/light
-!UXTerm*color7:                S_base2
-!UXTerm*color15:               S_base3
-
-
-!---------zenburn
 
 UXTerm*background : #404040
 UXTerm*foreground : #F6F3E8
@@ -96,8 +51,6 @@ UXTerm*color3 : #EFEFAF
 UXTerm*color11 : #fff796
 
 ! blue
-!UXTerm*color4 : #414171
-!UXTerm*color12 : #4186be
 UXTerm*color4 : #53DCCD
 UXTerm*color12 : #8ACCCF
 
@@ -112,4 +65,51 @@ UXTerm*color14 : #71bebe
 ! white
 UXTerm*color7 : #bebebe
 UXTerm*color15 : #ffffff
+
+!--------------------------------Urxvt-------------------------------------
+
+URxvt.scrollstyle: false
+URxvt.scrollBar: false
+URxvt.scrollWithBuffer: true
+URxvt.font: xft:DejavuSansMono:size=11
+! URxvt.letterSpace: -1
+
+URxvt.depth: 32
+URxvt.background: [90]#404040
+URxvt.foreground: #F6F3E8
+
+URxvt.colorBD: #FFFFFF
+URxvt.colorUL: #CCCC66
+
+! black
+URxvt.color0 : #2E3436
+URxvt.color8 : #555753
+
+! red
+URxvt.color1 : #9e1828
+URxvt.color9 : #cf6171
+
+! green
+URxvt.color2 : #aece92
+URxvt.color10 : #c5f779
+
+! yellow
+URxvt.color3 : #EFEFAF
+URxvt.color11 : #fff796
+
+! blue
+URxvt.color4 : #53DCCD
+URxvt.color12 : #8ACCCF
+
+! magenta
+URxvt.color5 : #963c59
+URxvt.color13 : #cf9ebe
+
+! cyan
+URxvt.color6 : #418179
+URxvt.color14 : #71bebe
+
+! white
+URxvt.color7 : #bebebe
+URxvt.color15 : #ffffff
 
