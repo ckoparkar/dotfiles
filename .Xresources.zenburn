@@ -71,11 +71,16 @@ UXTerm*color15 : #ffffff
 URxvt.scrollstyle: false
 URxvt.scrollBar: false
 URxvt.scrollWithBuffer: true
-URxvt.font: xft:DejavuSansMono:size=11
-! URxvt.letterSpace: -1
+URxvt.font: xft:DejavuSansMono:size=11:antialias=true
+URxvt.geometry: 95x32
+URxvt.cursorBlink: true
+URxvt.letterSpace: -1
+URxvt.metaSendsEscape: true
+URxvt.saveLines: 65536
+URxvt.utf8: 1
 
 URxvt.depth: 32
-URxvt.background: [90]#404040
+URxvt.background: [85]#404040
 URxvt.foreground: #F6F3E8
 
 URxvt.colorBD: #FFFFFF
