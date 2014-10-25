@@ -53,18 +53,19 @@ UXTerm*color15 : #ffffff
 !--------------------------------Urxvt-------------------------------------
 
 URxvt.font: xft:DejavuSansMono:size=11:antialias=true
-URxvt.geometry: 95x32
-URxvt.cursorBlink: true
+URxvt.geometry: 95x33
+URxvt.cursorBlink: false
 URxvt.letterSpace: -1
 URxvt.metaSendsEscape: true
 URxvt.saveLines: 65536
 URxvt.utf8: 1
 
-URxvt.scrollstyle: false
+!URxvt.scrollstyle: false
 URxvt.scrollBar: false
-URxvt*scrollTtyOutput: false
-URxvt*scrollWithBuffer: true
-URxvt*scrollTtyKeypress: true
+URxvt.secondaryScroll: true
+URxvt*scrollTtyOutput: true
+!URxvt*scrollWithBuffer: true
+!URxvt*scrollTtyKeypress: true
 
 URxvt.perl-ext-common: ...,tabbedex,...
 URxvt.tabbed.autohide: true
@@ -115,3 +116,5 @@ URxvt.color14 : #71bebe
 URxvt.color7 : #bebebe
 URxvt.color15 : #ffffff
 
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~
