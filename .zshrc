@@ -47,14 +47,12 @@ DISABLE_LS_COLORS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git themes zsh-completions archlinux ruby)
+plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting)
 
 
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/home/cskksc/chai/vagrant/opt/vagrant/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF8
 export EDITOR='emacsclient -t'
 export BROWSER='luakit'
@@ -65,9 +63,6 @@ else
 	export TERM='xterm-color'
 fi
 
-export M2_HOME=/opt/maven
-
-#export PATH=$PATH:/root/.gem/ruby/2.1.0/bin
 export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
 
 ######################## #Android
