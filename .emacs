@@ -55,7 +55,10 @@ Return a list of installed packages or nil for every skipped package."
 						  'lua-mode
 						  'projectile
 						  'key-chord
-						  'ace-jump-mode)
+						  'ace-jump-mode
+						  'magit
+						  'magit-filenotify
+						  'magit-push-remote)
 
 ;; activate installed packages
 (package-initialize)
