@@ -81,7 +81,8 @@
 
 ;;;;;;;;;
 
-(global-set-key (kbd "M-m") 'iy-go-to-char)
+(key-chord-define-global "fg" 'iy-go-to-char)
+(key-chord-define-global "df" 'iy-go-to-char-backward)
 
 ;;;; Commenting stuff
 

@@ -41,6 +41,8 @@
 					:weight 'bold
 					)
 
+(key-chord-mode 1)
+
 (setq linum-format
 	  (propertize "%4d  " 'face 'linum-face)
   )

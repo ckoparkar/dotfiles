@@ -53,7 +53,8 @@ Return a list of installed packages or nil for every skipped package."
 						  'auto-auto-indent
 						  'inf-ruby
 						  'lua-mode
-						  'projectile)
+						  'projectile
+						  'key-chord)
 
 ;; activate installed packages
 (package-initialize)
