@@ -84,6 +84,8 @@
 (key-chord-define-global "fg" 'iy-go-to-char)
 (key-chord-define-global "df" 'iy-go-to-char-backward)
 
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+
 ;;;; Commenting stuff
 
 (defun comment-dwim-line (&optional arg)
