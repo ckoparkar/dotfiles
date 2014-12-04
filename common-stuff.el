@@ -1,4 +1,5 @@
 (load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
+(load-file "~/.emacs.d/plugins/feature-mode/feature-mode.el")
 
 ;; Requires
 (require 'auto-complete)
@@ -17,6 +18,7 @@
 (require 'color-theme)
 (require 'highlight-parentheses)
 (require 'xclip)
+(require 'feature-mode)
 ;;(require 'four-clj)
 
 
@@ -240,6 +242,8 @@
 ;; inf-ruby
 (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
 (add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))
+
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
