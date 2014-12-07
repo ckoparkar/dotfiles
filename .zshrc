@@ -47,7 +47,7 @@ DISABLE_LS_COLORS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting)
+plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
 
 
 # User configuration
@@ -228,3 +228,5 @@ alias metamug_push='jgit push amazon-s3://.jgit_s3_public@metamug.gitrepo/projec
 
 source $ZSH/oh-my-zsh.sh
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
