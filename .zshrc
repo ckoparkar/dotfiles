@@ -64,7 +64,7 @@ else
 fi
 
 export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
-
+export PATH="/home/cskksc/.cask/bin:$PATH"
 ######################## #Android
 export PATH=$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/
 export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
