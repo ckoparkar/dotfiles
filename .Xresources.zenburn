@@ -59,6 +59,7 @@ URxvt.letterSpace: -1
 URxvt.metaSendsEscape: true
 URxvt.saveLines: 65536
 URxvt.utf8: 1
+URxvt*loginShell: true
 
 !URxvt.scrollstyle: false
 URxvt.scrollBar: false
