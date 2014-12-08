@@ -1,5 +1,5 @@
-(load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
-(load-file "~/.emacs.d/plugins/feature-mode/feature-mode.el")
+;(load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
+;(load-file "~/.emacs.d/plugins/feature-mode/feature-mode.el")
 
 ;; Requires
 (require 'auto-complete)
@@ -50,7 +50,6 @@
   )
 
 (sml-modeline-mode)
-(global-rainbow-delimiters-mode)
 
 (yas-global-mode 1)
 (global-auto-complete-mode t)
@@ -234,9 +233,9 @@
 ;; --------------------------------------------------
 
 (add-hook 'ruby-mode-hook 'auto-complete-mode)
+(add-hook 'ruby-mode-hook 'rainbow-delimiters-mode)
 
-;; Paredit
-;;(add-hook 'python-mode-hook 'enable-paredit-mode)
+;; Smartparens
 (add-hook 'ruby-mode-hook (lambda () (smartparens-mode 1)))
 
 ;; inf-ruby
