@@ -28,7 +28,6 @@
 (depends-on "iy-go-to-char")
 (depends-on "zenburn-theme")
 (depends-on "auto-auto-indent")
-(depends-on "inf-ruby")
 (depends-on "lua-mode")
 (depends-on "projectile")
 (depends-on "key-chord")

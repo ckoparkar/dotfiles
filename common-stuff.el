@@ -1,7 +1,7 @@
 ;(load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
 ;(load-file "~/.emacs.d/plugins/feature-mode/feature-mode.el")
 
-;;(load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
+(load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
 
 ;; Requires
 (require 'auto-complete)
@@ -240,8 +240,7 @@
 ;; Smartparens
 (add-hook 'ruby-mode-hook (lambda () (smartparens-mode 1)))
 
-;; inf-ruby
-(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+;; Indent
 (add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))
 
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
