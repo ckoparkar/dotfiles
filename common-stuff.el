@@ -36,6 +36,8 @@
 ;;(load-theme 'junio t)
 ;;(load-theme 'odersky t)
 
+(set-face-attribute 'default nil :font "Monaco-12")
+
 ;; Linum
 (make-face 'linum-face)
 (set-face-attribute 'linum-face nil

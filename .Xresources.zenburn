@@ -52,7 +52,7 @@ UXTerm*color15 : #ffffff
 
 !--------------------------------Urxvt-------------------------------------
 
-URxvt.font: xft:DejavuSansMono:size=11:antialias=true
+URxvt.font: xft:Monaco:size=12:antialias=true
 URxvt.geometry: 95x33
 URxvt.cursorBlink: false
 URxvt.letterSpace: -1

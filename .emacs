@@ -14,8 +14,7 @@
 
 (load-file "~/.emacs.d/common-stuff.el")
 (load-file "~/.emacs.d/keybindings.el")
-(if window-system
-	(load-theme 'hickey t)
+(if (not window-system)
   (progn (load-file "~/.emacs.d/modeline-no-window.el")
   (load-theme 'zenburn t))
   )
