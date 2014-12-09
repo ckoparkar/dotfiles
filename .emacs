@@ -14,7 +14,8 @@
 
 (load-file "~/.emacs.d/common-stuff.el")
 (load-file "~/.emacs.d/keybindings.el")
-(if (not window-system)
+(if window-system
+  (set-face-attribute 'default nil :font "Monaco-12")
   (progn (load-file "~/.emacs.d/modeline-no-window.el")
   (load-theme 'zenburn t))
   )

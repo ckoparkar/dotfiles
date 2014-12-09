@@ -1,6 +1,8 @@
 ;(load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
 ;(load-file "~/.emacs.d/plugins/feature-mode/feature-mode.el")
 
+;;(load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
+
 ;; Requires
 (require 'auto-complete)
 (require 'ido)
@@ -35,8 +37,6 @@
 ;;(load-theme 'hickey t)
 ;;(load-theme 'junio t)
 ;;(load-theme 'odersky t)
-
-(set-face-attribute 'default nil :font "Monaco-12")
 
 ;; Linum
 (make-face 'linum-face)
