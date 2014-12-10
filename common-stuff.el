@@ -21,6 +21,10 @@
 (require 'highlight-parentheses)
 (require 'xclip)
 (require 'feature-mode)
+(require 'projectile)
+(require 'flx-ido)
+(require 'ido-vertical-mode)
+
 ;;(require 'four-clj)
 
 
@@ -39,6 +43,9 @@
 					:weight 'bold
 					)
 
+(projectile-global-mode)
+(flx-ido-mode 1)
+(ido-vertical-mode 1)
 (key-chord-mode 1)
 
 (setq linum-format

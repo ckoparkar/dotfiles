@@ -38,6 +38,8 @@
 (depends-on "feature-mode")
 (depends-on "nyan-mode")
 (depends-on "pallet")
+(depends-on "flx-ido")
+(depends-on "ido-vertical-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
