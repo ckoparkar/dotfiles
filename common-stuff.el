@@ -2,6 +2,7 @@
 ;(load-file "~/.emacs.d/plugins/feature-mode/feature-mode.el")
 
 (load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; Requires
 (require 'auto-complete)
@@ -27,7 +28,6 @@
 (require 'guide-key)
 ;;(require 'four-clj)
 
-
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
@@ -41,8 +41,6 @@
   (load-file "~/.emacs.d/modeline-no-window.el")
   (load-theme 'zenburn t)
   (turn-on-xclip)))
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; Linum
 (make-face 'linum-face)
