@@ -32,7 +32,15 @@
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
-(turn-on-xclip)
+(cond
+ (window-system
+  (set-face-attribute 'default nil :font "Monaco-12")
+  (load-theme 'default-black t))
+
+ (t
+  (load-file "~/.emacs.d/modeline-no-window.el")
+  (load-theme 'zenburn t)
+  (turn-on-xclip)))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
@@ -53,6 +61,7 @@
 (guide-key-mode 1)
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
+
 (setq linum-format
 	  (propertize "%4d  " 'face 'linum-face)
   )

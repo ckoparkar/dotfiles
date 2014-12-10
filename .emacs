@@ -14,12 +14,3 @@
 
 (load-file "~/.emacs.d/common-stuff.el")
 (load-file "~/.emacs.d/keybindings.el")
-
-(cond
- (window-system
-  (set-face-attribute 'default nil :font "Monaco-12")
-  (load-theme 'default-black t))
-
- (t
-  (load-file "~/.emacs.d/modeline-no-window.el")
-  (load-theme 'zenburn t)))
