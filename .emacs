@@ -10,7 +10,5 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
-(set-default-font "DejavuSansMono 11")
-
 (load-file "~/.emacs.d/common-stuff.el")
 (load-file "~/.emacs.d/keybindings.el")
