@@ -141,14 +141,6 @@
 (add-hook 'lisp-mode-hook 'auto-complete-mode)
 (add-hook 'lisp-interaction-mode-hook 'auto-complete-mode)
 
-;; Paredit
-;;(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
-;;(add-hook 'clojure-mode-hook 'paredit-mode)
-;;(add-hook 'cider-repl-mode-hook 'paredit-mode)
-;;(add-hook 'lisp-mode-hook 'enable-paredit-mode)
-;;(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
-
-
 ;; Smartparens
 (add-hook 'clojure-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'cider-repl-mode-hook (lambda () (smartparens-mode 1)))
@@ -185,9 +177,7 @@
 (add-hook 'c-mode-hook 'auto-complete-mode)
 (add-hook 'c++-mode-hook 'auto-complete-mode)
 
-;; Paredit
-;;(add-hook 'c-mode-hook 'paredit-mode)
-;;(add-hook 'c++-mode-hook 'paredit-mode)
+;; Smartparens
 (add-hook 'c++-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'c-mode-hook (lambda () (smartparens-mode 1)))
 
@@ -211,10 +201,10 @@
 ;; Auto-complete
 (add-hook 'java-mode-hook 'auto-complete-mode)
 
-;; Paredit
+;; Smartparens
 (add-hook 'java-mode-hook (lambda () (smartparens-mode 1)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;; --------------------------------------------------
@@ -223,10 +213,8 @@
 
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
 (add-hook 'python-mode-hook 'auto-complete-mode)
-;;(add-hook 'python-mode-hook 'jedi:ac-setup)
 
-;; Paredit
-;;(add-hook 'python-mode-hook 'enable-paredit-mode)
+;; Smartparens
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
