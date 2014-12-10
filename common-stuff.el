@@ -31,12 +31,6 @@
 (turn-on-xclip)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-;; (load-theme 'zenburn t)
-;;(load-theme 'dorsey t)
-;; (load-theme 'brin t)
-;;(load-theme 'hickey t)
-;;(load-theme 'junio t)
-;;(load-theme 'odersky t)
 
 ;; Linum
 (make-face 'linum-face)
