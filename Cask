@@ -40,6 +40,7 @@
 (depends-on "pallet")
 (depends-on "flx-ido")
 (depends-on "ido-vertical-mode")
+(depends-on "guide-key")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
