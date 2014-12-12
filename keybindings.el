@@ -36,7 +36,7 @@
 
 (global-set-key (kbd "C-x d") 'duplicate-line)
 
-;;;; Multiple Cursors ;;;;;
+;; multiple-cursors
 
 (global-set-key (kbd "M->") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-<") 'mc/mark-previous-like-this)
@@ -46,6 +46,8 @@
 (global-set-key (kbd "M-.") 'mc/unmark-next-like-this)
 (global-set-key (kbd "M-,") 'mc/unmark-previous-like-this)
 
+;; expand-region
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; iy-go-to-char
 

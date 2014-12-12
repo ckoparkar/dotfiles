@@ -26,6 +26,7 @@
 (require 'flx-ido)
 (require 'ido-vertical-mode)
 (require 'guide-key)
+(require 'expand-region)
 ;;(require 'four-clj)
 
 ;; --------------------------------------------------
@@ -48,6 +49,9 @@
 					:foreground "#718c00"
 					:weight 'bold
 					)
+(setq linum-format
+	  (propertize "%4d  " 'face 'linum-face)
+	  )
 
 (projectile-global-mode)
 (flx-ido-mode 1)
@@ -55,14 +59,16 @@
 
 (key-chord-mode 1)
 
+(blink-cursor-mode 0)
+
+(delete-selection-mode 1)
+
+;; guide-mode
 (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
 (guide-key-mode 1)
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
 
-(setq linum-format
-	  (propertize "%4d  " 'face 'linum-face)
-  )
 
 (sml-modeline-mode)
 

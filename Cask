@@ -41,6 +41,7 @@
 (depends-on "flx-ido")
 (depends-on "ido-vertical-mode")
 (depends-on "guide-key")
+(depends-on "expand-region")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
