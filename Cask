@@ -42,6 +42,7 @@
 (depends-on "ido-vertical-mode")
 (depends-on "guide-key")
 (depends-on "expand-region")
+(depends-on "idle-highlight-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")

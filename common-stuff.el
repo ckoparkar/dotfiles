@@ -1,13 +1,9 @@
-;(load-file "~/.emacs.d/plugins/nyan-mode/nyan-mode.el")
-;(load-file "~/.emacs.d/plugins/feature-mode/feature-mode.el")
-
 (load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; Requires
 (require 'auto-complete)
 (require 'ido)
-(require 'rainbow-delimiters)
 (require 'cc-mode)
 (require 'paredit)
 (require 'multiple-cursors)
@@ -27,7 +23,6 @@
 (require 'ido-vertical-mode)
 (require 'guide-key)
 (require 'expand-region)
-;;(require 'four-clj)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -116,17 +111,6 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-;; Smartparens settings
-
-;;(require 'smartparens-config)
-;;(smartparens-global-mode t)
-;;(show-smartparens-global-mode t)
-;;(sp-with-modes sp--lisp-modes (sp-local-pair "(" nil :bind "C-("))
-;;(add-hook 'c++-mode-hook (lambda () (smartparens-mode 1)))
-;;(add-hook 'c-mode-hook (lambda () (smartparens-mode 1)))
-;;(add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
-
-
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     clojure     ;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
@@ -149,11 +133,6 @@
 (setq cider-repl-pop-to-buffer-on-connect nil)
 (setq cider-popup-stacktraces nil)
 
-;; Rainbow-delimeters
-(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'lisp-interaction-mode-hook 'rainbow-delimiters-mode)
-
 ;; Auto-complete
 (add-hook 'clojure-mode-hook 'auto-complete-mode)
 (add-hook 'lisp-mode-hook 'auto-complete-mode)
@@ -162,17 +141,10 @@
 ;; Smartparens
 (add-hook 'clojure-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'cider-repl-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'emacs-lisp-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'lisp-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))
-
 (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))
 
-;; (add-hook 'cider-repl-mode-hook 'ac-cider-setup)
-;; (add-hook 'cider-mode-hook 'ac-cider-setup)
-;; (eval-after-load "auto-complete"
-;;   '(add-to-list 'ac-modes 'cider-repl-mode))
-
+;; Idle highlight
+(add-hook 'clojure-mode-hook 'idle-highlight-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -187,10 +159,6 @@
 (setq mf--source-file-extension "cpp")
 (add-hook 'c++-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
 
-;; Rainbow-delimeters
-(add-hook 'c-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'c++-mode-hook 'rainbow-delimiters-mode)
-
 ;; Auto-complete
 (add-hook 'c-mode-hook 'auto-complete-mode)
 (add-hook 'c++-mode-hook 'auto-complete-mode)
@@ -199,8 +167,9 @@
 (add-hook 'c++-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'c-mode-hook (lambda () (smartparens-mode 1)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;; Idle highlight
+(add-hook 'c-mode-hook 'idle-highlight-mode)
+(add-hook 'c++-mode-hook 'idle-highlight-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -212,18 +181,16 @@
 (setq-default c-basic-offset 4 c-default-style "linux")
 (setq-default tab-width 4 indent-tabs-mode t)
 
-
-;; Rainbow-delimeters
-(add-hook 'java-mode-hook 'rainbow-delimiters-mode)
-
 ;; Auto-complete
 (add-hook 'java-mode-hook 'auto-complete-mode)
 
 ;; Smartparens
 (add-hook 'java-mode-hook (lambda () (smartparens-mode 1)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Idle highlight
+(add-hook 'java-mode-hook 'idle-highlight-mode)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Python     ;;;;;;;;;;;;;;;;;;;;
@@ -235,6 +202,9 @@
 ;; Smartparens
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
 
+;; Idle highlight
+(add-hook 'python-mode-hook 'idle-highlight-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
@@ -242,7 +212,6 @@
 ;; --------------------------------------------------
 
 (add-hook 'ruby-mode-hook 'auto-complete-mode)
-(add-hook 'ruby-mode-hook 'rainbow-delimiters-mode)
 
 ;; Smartparens
 (add-hook 'ruby-mode-hook (lambda () (smartparens-mode 1)))
@@ -250,19 +219,11 @@
 ;; Indent
 (add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))
 
+;; Cucumber
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Arduino     ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(setq ede-arduino-appdir "/usr/share/arduino")
-(setq auto-mode-alist (cons '("\\.\\(pde\\|ino\\)$" . arduino-mode) auto-mode-alist))
-(autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
+;; Idle highlight
+(add-hook 'ruby-mode-hook 'idle-highlight-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -271,3 +232,23 @@
 ;; --------------------------------------------------
 
 (add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;     Emacs-lisp     ;;;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+;; Smartparens
+(add-hook 'emacs-lisp-mode-hook (lambda () (smartparens-mode 1)))
+(add-hook 'lisp-mode-hook (lambda () (smartparens-mode 1)))
+(add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))
+
+
+;; Autocomplete
+(add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
+
+;; Idle highlight
+(add-hook 'emacs-lisp-mode-hook 'idle-highlight-mode)
+(add-hook 'lisp-mode-hook 'idle-highlight-mode)
+(add-hook 'lisp-interaction-mode-hook 'idle-highlight-mode)
