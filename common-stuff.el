@@ -225,6 +225,9 @@
 ;; Idle highlight
 (add-hook 'ruby-mode-hook 'idle-highlight-mode)
 
+;; Flycheck
+;; (add-hook 'ruby-mode-hook 'flycheck-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
