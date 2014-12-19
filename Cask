@@ -46,6 +46,7 @@
 (depends-on "flycheck")
 (depends-on "rvm")
 (depends-on "markdown-mode")
+(depends-on "yaml-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
