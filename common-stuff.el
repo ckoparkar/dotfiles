@@ -23,6 +23,7 @@
 (require 'ido-vertical-mode)
 (require 'guide-key)
 (require 'expand-region)
+(require 'markdown-mode)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -64,6 +65,9 @@
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
 
+;; markdown-mode
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (sml-modeline-mode)
 

@@ -44,6 +44,8 @@
 (depends-on "expand-region")
 (depends-on "idle-highlight-mode")
 (depends-on "flycheck")
+(depends-on "rvm")
+(depends-on "markdown-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
