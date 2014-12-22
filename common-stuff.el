@@ -24,6 +24,7 @@
 (require 'guide-key)
 (require 'expand-region)
 (require 'markdown-mode)
+(require 'go-mode)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -259,3 +260,12 @@
 (add-hook 'emacs-lisp-mode-hook 'idle-highlight-mode)
 (add-hook 'lisp-mode-hook 'idle-highlight-mode)
 (add-hook 'lisp-interaction-mode-hook 'idle-highlight-mode)
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;        Go        ;;;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+(defun csk-go-mode-hooks ()
+  (add-hook 'before-save-hook 'gofmt-before-save))
+
+(add-hook 'go-mode-hook 'csk-go-mode-hooks)
