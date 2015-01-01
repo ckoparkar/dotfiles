@@ -48,7 +48,9 @@
 (depends-on "markdown-mode")
 (depends-on "yaml-mode")
 (depends-on "go-mode")
-
+(depends-on "inf-ruby")
+(depends-on "haskell-mode")
+(depends-on "undo-tree")
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
 ;; (depends-on "exec-path-from-shell")
