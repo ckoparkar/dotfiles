@@ -72,6 +72,7 @@ export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
 export GOPATH=/home/cskksc/go
 export PATH=$PATH:$GOPATH/bin
 
+export PATH=$PATH:/home/cskksc/.cabal/bin/
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -160,7 +161,7 @@ discover ()
 
 record ()
 {
-	ffmpeg -f x11grab -r 30 -s 1600x900 -i :0.0 -vcodec libx264 -threads 0 "$1" 
+	ffmpeg -f x11grab -r 30 -s 1600x900 -i :0.0 -vcodec libx264 -threads 0 "$1"
 }
 
 ### Advanced Copy/Move ###
@@ -232,3 +233,7 @@ source $ZSH/oh-my-zsh.sh
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+export PATH="$PATH:$HOME/google-cloud-sdk/bin"
+export CLOUDSDK_PYTHON=/usr/bin/python2.7
