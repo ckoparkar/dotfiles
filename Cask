@@ -51,6 +51,8 @@
 (depends-on "inf-ruby")
 (depends-on "haskell-mode")
 (depends-on "undo-tree")
+(depends-on "ghc")
+
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
 ;; (depends-on "exec-path-from-shell")

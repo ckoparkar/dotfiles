@@ -269,3 +269,11 @@
   (add-hook 'before-save-hook 'gofmt-before-save))
 
 (add-hook 'go-mode-hook 'csk-go-mode-hooks)
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;      Haskell    ;;;;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+(add-hook 'haskell-mode-hook 'auto-complete-mode)
+(add-hook 'haskell-mode-hook (lambda () (smartparens-mode 1)))
