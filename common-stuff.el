@@ -269,6 +269,8 @@
   (add-hook 'before-save-hook 'gofmt-before-save))
 
 (add-hook 'go-mode-hook 'csk-go-mode-hooks)
+(add-hook 'go-mode-hook (lambda () (smartparens-mode 1)))
+(add-hook 'go-mode-hook 'auto-complete-mode)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;      Haskell    ;;;;;;;;;;;;;;;;;;;;;
