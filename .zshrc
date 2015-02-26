@@ -69,7 +69,7 @@ export PATH="/home/cskksc/.cask/bin:$PATH"
 export PATH=$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/
 export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
 
-export GOPATH=/home/cskksc/go
+export GOPATH=/home/cskksc/chai/go
 export PATH=$PATH:$GOPATH/bin
 
 export PATH=$PATH:/home/cskksc/.cabal/bin/
