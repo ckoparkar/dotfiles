@@ -1,0 +1,6 @@
+##### connection settings #####
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_music_dir = "/media/stuff/Music/"
+mpd_connection_timeout = "5"
+mpd_crossfade_time = "1"
