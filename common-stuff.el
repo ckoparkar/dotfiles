@@ -270,6 +270,7 @@
 
 (defun csk-go-mode-hooks ()
   (setq gofmt-command "goimports")
+  (setq tab-width 8 indent-tabs-mode 1)
   (add-hook 'before-save-hook 'gofmt-before-save))
 
 (add-hook 'go-mode-hook 'csk-go-mode-hooks)
