@@ -18,8 +18,13 @@ export LANG=en_US.UTF8
 export EDITOR='vim'
 export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 
+
+## PATH settings
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/Users/chaitanya/.cask/bin:$PATH"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$HOME/chai/go
+export PATH="$GOPATH/bin:$PATH"
 
 #Color Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
