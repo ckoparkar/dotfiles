@@ -31,6 +31,7 @@
 ;; --------------------------------------------------
 
 (set-face-attribute 'default nil :font "Monaco-13")
+(load-theme 'default-black t)
 
 ;; Linum
 (make-face 'linum-face)
