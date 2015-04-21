@@ -30,7 +30,9 @@
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
-(set-face-attribute 'default nil :font "Monaco-13")
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+(set-face-attribute 'default nil :font "Monaco-14")
 (load-theme 'default-black t)
 
 ;; Linum

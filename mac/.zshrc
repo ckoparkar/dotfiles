@@ -15,7 +15,8 @@ plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF8
-export EDITOR='emacsclient -t'
+export EDITOR='vim'
+export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/Users/chaitanya/.cask/bin:$PATH"
