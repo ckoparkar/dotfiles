@@ -1,14 +1,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=/Users/chaitanya/.oh-my-zsh/
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="csk"
 
 # Uncomment this to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-DISABLE_LS_COLORS="true"
-
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
  COMPLETION_WAITING_DOTS="true"
