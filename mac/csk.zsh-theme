@@ -7,7 +7,7 @@ local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 
-PROMPT="${ret_status} ${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
+PROMPT="${ret_status} ${user_host} ${current_dir} ${git_branch}
 %# "
 RPS1="%{$reset_color%}${return_code} %{$terminfo[bold]$fg[yellow]%} [%T] %{$reset_color%}"
 
