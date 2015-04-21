@@ -4,6 +4,7 @@
     co = checkout
     di = diff
     dc = diff --cached
+    ds = diff --staged
     pom = push origin master
     pum = pull origin master
     b = branch
