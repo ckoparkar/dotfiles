@@ -31,9 +31,9 @@
 ;; --------------------------------------------------
 
 (cond
- (window-system
-  (set-face-attribute 'default nil :font "Monaco-12")
-  (load-theme 'default-black t))
+ ((memq window-system '(mac ns x))
+	(load-theme 'default-black t)
+	(set-face-attribute 'default nil :font "Monaco-14"))
 
  (t
   (load-file "~/.emacs.d/modeline-no-window.el")
