@@ -52,6 +52,7 @@
 (depends-on "haskell-mode")
 (depends-on "undo-tree")
 (depends-on "ghc")
+(depends-on "inf-ruby")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")

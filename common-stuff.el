@@ -26,6 +26,8 @@
 (require 'markdown-mode)
 (require 'go-mode)
 (require 'undo-tree)
+(require 'inf-ruby)
+(require 'rvm)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -224,6 +226,14 @@
 
 ;; Cucumber
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
+;; inf-ruby
+(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+
+;; use rvm
+(add-hook 'ruby-mode-hook
+          (lambda () (rvm-activate-corresponding-ruby)))
 
 ;; Flycheck
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
