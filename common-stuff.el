@@ -155,8 +155,6 @@
 (add-hook 'cider-repl-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))
 
-;; Idle highlight
-(add-hook 'clojure-mode-hook 'idle-highlight-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -179,9 +177,6 @@
 (add-hook 'c++-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'c-mode-hook (lambda () (smartparens-mode 1)))
 
-;; Idle highlight
-(add-hook 'c-mode-hook 'idle-highlight-mode)
-(add-hook 'c++-mode-hook 'idle-highlight-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -199,9 +194,6 @@
 ;; Smartparens
 (add-hook 'java-mode-hook (lambda () (smartparens-mode 1)))
 
-;; Idle highlight
-(add-hook 'java-mode-hook 'idle-highlight-mode)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
@@ -214,8 +206,6 @@
 ;; Smartparens
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
 
-;; Idle highlight
-(add-hook 'python-mode-hook 'idle-highlight-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -233,9 +223,6 @@
 
 ;; Cucumber
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-
-;; Idle highlight
-(add-hook 'ruby-mode-hook 'idle-highlight-mode)
 
 ;; Flycheck
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
@@ -262,11 +249,6 @@
 
 ;; Autocomplete
 (add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
-
-;; Idle highlight
-(add-hook 'emacs-lisp-mode-hook 'idle-highlight-mode)
-(add-hook 'lisp-mode-hook 'idle-highlight-mode)
-(add-hook 'lisp-interaction-mode-hook 'idle-highlight-mode)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;        Go        ;;;;;;;;;;;;;;;;;;;;
