@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=/Users/chaitanya/.oh-my-zsh/
 
-ZSH_THEME="csk"
+ZSH_THEME="csk-rr"
 
 # Uncomment this to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
@@ -14,7 +14,7 @@ plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export LANG=en_US.UTF8
+export LANG=en_US.UTF-8
 export EDITOR='vim'
 export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 
@@ -25,6 +25,11 @@ export PATH="/Users/chaitanya/.cask/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/chai/go
 export PATH="$GOPATH/bin:$PATH"
+
+## boot2docker
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/chaitanya/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 #Color Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
