@@ -25,6 +25,7 @@
 (require 'expand-region)
 (require 'markdown-mode)
 (require 'go-mode)
+(require 'undo-tree)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -63,6 +64,8 @@
 (blink-cursor-mode 0)
 
 (delete-selection-mode 1)
+
+(global-undo-tree-mode)
 
 ;; guide-mode
 (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
