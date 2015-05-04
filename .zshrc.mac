@@ -63,19 +63,14 @@ alias ll='ls -lh'
 alias la='ls -ah'
 alias l='ls -lah'
 alias c='clear'
-alias ed='emacs --daemon'
-alias e='emacsclient -t'
-alias E='sudo emacsclient -t'
 alias home='cd ~'
 alias ..='cd ..'
 alias k='exit'
 alias rmr='rm -r'
 
 ### Zsh
-alias eZ='emacsclient -t ~/.zshrc'
+alias eZ='vim ~/.zshrc'
 alias Z='source ~/.zshrc'
-#alias eB='emacsclient -t ~/.oh-my-zsh/themes/csk.zsh-theme'
-alias eXT='emacsclient -t ~/.Xresources'
 alias v='vim'
 
 ##
