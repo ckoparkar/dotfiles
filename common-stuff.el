@@ -38,6 +38,7 @@
 
  ((memq window-system '(mac ns))
   (load-theme 'default-black t)
+  (exec-path-from-shell-initialize)
   (set-face-attribute 'default nil :font "Monaco-14"))
 
  (t
