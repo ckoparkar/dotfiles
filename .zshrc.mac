@@ -21,6 +21,8 @@ export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 
 ## PATH settings
 export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 export PATH="/Users/chaitanya/.cask/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/chai/go
