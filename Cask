@@ -53,6 +53,7 @@
 (depends-on "undo-tree")
 (depends-on "ghc")
 (depends-on "inf-ruby")
+(depends-on "nyan-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")

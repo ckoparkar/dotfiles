@@ -1,4 +1,6 @@
 (load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
+(load-file "~/.emacs.d/rutable/rutable.el")
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; Requires
@@ -28,6 +30,7 @@
 (require 'undo-tree)
 (require 'inf-ruby)
 (require 'rvm)
+(require 'nyan-mode)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -35,8 +38,8 @@
 
 (cond
  ((memq window-system '(x))
-	(load-theme 'default-black t)
-	(set-face-attribute 'default nil :font "Monaco-12"))
+  (load-theme 'default-black t)
+  (set-face-attribute 'default nil :font "Monaco-12"))
 
  ((memq window-system '(mac ns))
   (load-theme 'default-black t)
@@ -81,6 +84,7 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (sml-modeline-mode)
+(nyan-mode)
 
 (yas-global-mode 1)
 (global-auto-complete-mode t)
@@ -117,14 +121,6 @@
 (set-keyboard-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
-
-;;   Autosave settings
-(defvar temporary-file-directory "~/emacs-temporary-files/")
-
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     clojure     ;;;;;;;;;;;;;;;;;;;;
