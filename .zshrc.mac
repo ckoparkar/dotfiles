@@ -71,11 +71,12 @@ alias k='exit'
 alias rmr='rm -r'
 
 ### Zsh
-alias eZ='vim ~/.zshrc'
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
+alias ed='emacs --daemon'
+alias e='emacsclient -t'
+alias eZ='emacsclient -t ~/.zshrc'
 alias Z='source ~/.zshrc'
 alias v='vim'
-
-##
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 
 source $ZSH/oh-my-zsh.sh
