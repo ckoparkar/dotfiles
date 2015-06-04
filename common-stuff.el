@@ -31,6 +31,8 @@
 (require 'inf-ruby)
 (require 'rvm)
 (require 'nyan-mode)
+(require 'prodigy)
+(require 'restclient)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -99,7 +101,7 @@
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
   (lambda ()
-    (highlight-parentheses-mode t)
+	(highlight-parentheses-mode t)
 	))
 (global-highlight-parentheses-mode t)
 
@@ -121,6 +123,15 @@
 (set-keyboard-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+
+;;   Autosave settings
+(defvar temporary-file-directory "/tmp/")
+
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     clojure     ;;;;;;;;;;;;;;;;;;;;
@@ -155,8 +166,6 @@
 (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     C/C++     ;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
@@ -176,9 +185,6 @@
 (add-hook 'c++-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'c-mode-hook (lambda () (smartparens-mode 1)))
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Java     ;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
@@ -193,7 +199,6 @@
 ;; Smartparens
 (add-hook 'java-mode-hook (lambda () (smartparens-mode 1)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Python     ;;;;;;;;;;;;;;;;;;;;
@@ -205,8 +210,6 @@
 ;; Smartparens
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Ruby     ;;;;;;;;;;;;;;;;;;;;
@@ -229,12 +232,10 @@
 
 ;; use rvm
 (add-hook 'ruby-mode-hook
-          (lambda () (rvm-activate-corresponding-ruby)))
+		  (lambda () (rvm-activate-corresponding-ruby)))
 
 ;; Flycheck
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Lua     ;;;;;;;;;;;;;;;;;;;;
@@ -280,3 +281,20 @@
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 (add-hook 'haskell-mode-hook 'auto-complete-mode)
 (add-hook 'haskell-mode-hook (lambda () (smartparens-mode 1)))
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;     Racket       ;;;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+;; Auto-complete
+(add-hook 'racket-mode-hook 'auto-complete-mode)
+(add-hook 'racket-repl-mode-hook 'auto-complete-mode)
+
+;; Smartparens
+(add-hook 'racket-mode-hook (lambda () (smartparens-mode 1)))
+(add-hook 'racket-repl-mode-hook (lambda () (smartparens-mode 1)))
+
+(add-hook 'racket-mode-hook
+          (lambda ()
+            (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
+			(define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))

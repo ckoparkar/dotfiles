@@ -57,6 +57,8 @@
 (depends-on "f")
 (depends-on "prodigy")
 (depends-on "restclient")
+(depends-on "json-mode")
+(depends-on "racket-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
