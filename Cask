@@ -59,6 +59,8 @@
 (depends-on "restclient")
 (depends-on "json-mode")
 (depends-on "racket-mode")
+(depends-on "js2-mode")
+(depends-on "ac-js2")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")

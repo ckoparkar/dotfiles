@@ -298,3 +298,23 @@
           (lambda ()
             (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
 			(define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;     Javascript       ;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+
+;; Auto-complete
+(add-hook 'js2-mode-hook 'auto-complete-mode)
+
+;; Smartparens
+(add-hook 'js2-mode-hook (lambda () (smartparens-mode 1)))
+
+;; Highlight all js keywords
+(setq js2-highlight-level 3)
+
+;; jshint
+(add-hook 'js2-mode-hook
+          (lambda () (flycheck-mode t)))
