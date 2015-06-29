@@ -79,4 +79,18 @@ alias eZ='emacsclient -t ~/.zshrc'
 alias Z='source ~/.zshrc'
 alias v='vim'
 
+#### Functions
+
+function mov_to_gif() {
+  rm -rf /tmp/gifs /tmp/pngs
+  mkdir /tmp/pngs
+  ffmpeg -i "$1" -r 10 /tmp/pngs/out%04d.png
+
+  mkdir /tmp/gifs
+  sips -s format gif /tmp/pngs/*.png --out /tmp/gifs
+
+  cd /tmp/gifs
+  gifsicle *.gif --optimize=3 --delay=3 --loopcount > "$1.gif"
+}
+
 source $ZSH/oh-my-zsh.sh
