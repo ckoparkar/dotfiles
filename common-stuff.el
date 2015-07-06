@@ -33,6 +33,7 @@
 (require 'nyan-mode)
 (require 'prodigy)
 (require 'restclient)
+(require 'magit)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -80,6 +81,17 @@
 (guide-key-mode 1)
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
+
+;; magit mode
+(setq magit-last-seen-setup-instructions "1.4.0")
+(eval-after-load 'magit
+  '(progn
+	 (set-face-foreground 'magit-diff-add "green3")
+	 (set-face-background 'magit-diff-add "#000012")
+	 (set-face-foreground 'magit-diff-del "red3")
+	 (set-face-background 'magit-diff-del "#000012")
+	 (set-face-background 'magit-item-highlight "black")
+	 ))
 
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
