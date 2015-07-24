@@ -74,7 +74,9 @@
 
 (delete-selection-mode 1)
 
-(global-undo-tree-mode)
+;; white space alert
+(setq-default show-trailing-whitespace t)
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; guide-mode
 (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
