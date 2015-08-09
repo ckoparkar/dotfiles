@@ -34,6 +34,7 @@
 (require 'prodigy)
 (require 'restclient)
 (require 'magit)
+(require 'restclient)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -74,8 +75,7 @@
 
 (delete-selection-mode 1)
 
-;; white space alert
-(setq-default show-trailing-whitespace t)
+;; responsible white space
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; guide-mode
@@ -94,6 +94,7 @@
 	 (set-face-background 'magit-diff-del "#000012")
 	 (set-face-background 'magit-item-highlight "black")
 	 ))
+
 
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
@@ -142,9 +143,9 @@
 (defvar temporary-file-directory "/tmp/")
 
 (setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
+	  `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+	  `((".*" ,temporary-file-directory t)))
 
 
 ;; --------------------------------------------------
@@ -309,8 +310,8 @@
 (add-hook 'racket-repl-mode-hook (lambda () (smartparens-mode 1)))
 
 (add-hook 'racket-mode-hook
-          (lambda ()
-            (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
+		  (lambda ()
+			(define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
 			(define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
 
 ;; --------------------------------------------------
@@ -331,7 +332,7 @@
 
 ;; jshint
 (add-hook 'js2-mode-hook
-          (lambda () (flycheck-mode t)))
+		  (lambda () (flycheck-mode t)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;;;;     Perl       ;;;;;;;;;;;;;;;;;;;
@@ -344,3 +345,9 @@
  cperl-indent-level 4
  cperl-indent-parens-as-block t
  cperl-tabs-always-indent t)
+
+;; --------------------------------------------------
+;;;;;;;;;;;;;;;;;;     Restclient       ;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+(add-to-list 'auto-mode-alist '("\\.rest\\'" . restclient-mode))

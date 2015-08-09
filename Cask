@@ -61,6 +61,7 @@
 (depends-on "racket-mode")
 (depends-on "js2-mode")
 (depends-on "ac-js2")
+(depends-on "restclient")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
