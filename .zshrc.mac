@@ -93,4 +93,7 @@ function mov_to_gif() {
   gifsicle *.gif --optimize=3 --delay=3 --loopcount > "$1.gif"
 }
 
+function clear_redis_pattern() {
+  redis-cli KEYS "$1*" | xargs redis-cli DEL
+ } 
 source $ZSH/oh-my-zsh.sh
