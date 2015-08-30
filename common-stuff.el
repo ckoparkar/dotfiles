@@ -35,6 +35,7 @@
 (require 'restclient)
 (require 'magit)
 (require 'restclient)
+(require 'evil)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -70,6 +71,9 @@
 (ido-vertical-mode 1)
 
 (key-chord-mode 1)
+
+(evil-mode 1)
+(global-vim-empty-lines-mode)
 
 (blink-cursor-mode 0)
 

@@ -62,6 +62,8 @@
 (depends-on "js2-mode")
 (depends-on "ac-js2")
 (depends-on "restclient")
+(depends-on "evil")
+(depends-on "vim-empty-lines-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
