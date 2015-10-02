@@ -64,6 +64,9 @@
 (depends-on "restclient")
 (depends-on "evil")
 (depends-on "vim-empty-lines-mode")
+(depends-on "evil-surround")
+(depends-on "evil-escape")
+(depends-on "evil-leader")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")

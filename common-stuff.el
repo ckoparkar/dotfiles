@@ -36,6 +36,9 @@
 (require 'magit)
 (require 'restclient)
 (require 'evil)
+(require 'evil-surround)
+(require 'evil-escape)
+(require 'evil-leader)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -72,8 +75,17 @@
 
 (key-chord-mode 1)
 
+(setq evil-escape-unordered-key-sequence 1)
+(setq-default evil-escape-delay 0.2)
+(evil-leader/set-leader "<SPC>")
+(global-evil-leader-mode)
+(evil-leader/set-key
+  "e" 'find-file)
+(evil-escape-mode 1)
+(setq-default evil-escape-key-sequence "jk")
 (evil-mode 1)
 (global-vim-empty-lines-mode)
+(global-evil-surround-mode 1)
 
 (blink-cursor-mode 0)
 
@@ -122,10 +134,10 @@ want to use in the modeline *in lieu of* the original.")
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; guide-mode
-(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
-(guide-key-mode 1)
-(setq guide-key/recursive-key-sequence-flag t)
-(setq guide-key/popup-window-position 'bottom)
+;; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
+;; (guide-key-mode 1)
+;; (setq guide-key/recursive-key-sequence-flag t)
+;; (setq guide-key/popup-window-position 'bottom)
 
 ;; magit mode
 (setq magit-last-seen-setup-instructions "1.4.0")
