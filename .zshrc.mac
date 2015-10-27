@@ -78,6 +78,7 @@ alias e='emacsclient -t'
 alias eZ='emacsclient -t ~/.zshrc'
 alias Z='source ~/.zshrc'
 alias v='vim'
+alias gi='go install'
 
 #### Functions
 
