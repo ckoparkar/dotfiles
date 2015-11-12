@@ -67,6 +67,8 @@
 (depends-on "evil-surround")
 (depends-on "evil-escape")
 (depends-on "evil-leader")
+(depends-on "rust-mode")
+(depends-on "rustfmt")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")

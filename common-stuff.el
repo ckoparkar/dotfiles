@@ -345,6 +345,17 @@ want to use in the modeline *in lieu of* the original.")
 (add-hook 'go-mode-hook 'auto-complete-mode)
 
 ;; --------------------------------------------------
+;;;;;;;;;;;;;;;        Rust        ;;;;;;;;;;;;;;;;;;
+;; --------------------------------------------------
+
+;; (add-to-list 'exec-path "~/.cargo/bin")
+(defun csk-rust-mode-hooks ()
+  (add-hook 'before-save-hook 'rustfmt-format-buffer)
+  )
+(add-hook 'rust-mode-hook 'csk-rust-mode-hooks)
+(add-hook 'rust-mode-hook 'auto-complete-mode)
+
+;; --------------------------------------------------
 ;;;;;;;;;;;;;;;      Haskell    ;;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
