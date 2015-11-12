@@ -1,5 +1,6 @@
 (load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
 (load-file "~/.emacs.d/rutable/rutable.el")
+(load-file "~/.emacs.d/emacs-rustfmt/rustfmt.el")
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
@@ -350,8 +351,7 @@ want to use in the modeline *in lieu of* the original.")
 
 ;; (add-to-list 'exec-path "~/.cargo/bin")
 (defun csk-rust-mode-hooks ()
-  (add-hook 'before-save-hook 'rustfmt-format-buffer)
-  )
+  (add-hook 'before-save-hook 'rustfmt-before-save))
 (add-hook 'rust-mode-hook 'csk-rust-mode-hooks)
 (add-hook 'rust-mode-hook 'auto-complete-mode)
 
