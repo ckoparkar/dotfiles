@@ -13,6 +13,7 @@
 (depends-on "pkg-info")
 (depends-on "epl")
 (depends-on "cider")
+(depends-on "refactor-nrepl")
 (depends-on "clojure-mode")
 (depends-on "ac-cider")
 (depends-on "yasnippet")
@@ -69,6 +70,7 @@
 (depends-on "evil-leader")
 (depends-on "rust-mode")
 (depends-on "rustfmt")
+(depends-on "linum-relative")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")

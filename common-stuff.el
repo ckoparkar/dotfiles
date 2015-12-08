@@ -40,6 +40,7 @@
 (require 'evil-surround)
 (require 'evil-escape)
 (require 'evil-leader)
+(require 'linum-relative)
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
@@ -69,6 +70,9 @@
 (setq linum-format
 	  (propertize "%4d  " 'face 'linum-face)
 	  )
+
+(global-linum-mode 1)
+(linum-relative-on)
 
 (projectile-global-mode)
 (flx-ido-mode 1)
@@ -161,7 +165,6 @@ want to use in the modeline *in lieu of* the original.")
 
 (yas-global-mode 1)
 (global-auto-complete-mode t)
-(global-linum-mode 1)
 (global-pretty-mode 1)
 (setq ring-bell-function 'ignore)
 (setq column-number-mode 1)
@@ -324,6 +327,7 @@ want to use in the modeline *in lieu of* the original.")
 (add-hook 'emacs-lisp-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'lisp-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))
+(add-hook 'lisp-interaction-mode-hook (lambda () (setq-default indent-tabs-mode nil)))
 
 
 ;; Autocomplete
