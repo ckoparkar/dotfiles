@@ -66,12 +66,12 @@
 ;;;; Commenting stuff
 
 (defun comment-dwim-line (&optional arg)
-  "Replacement for the comment-dwim command.
+  "Replacement for the comment-dwim command. If no region is selected and current line is not blank and we are not at the end of the line, then comment current line. Replaces default behaviour of comment-dwim, when it inserts comment at the end of the line."
   (interactive "*P")
   (comment-normalize-vars)
   (if (and (not (region-active-p)) (not (looking-at "[ \t]*$")))
-	  (comment-or-uncomment-region (line-beginning-position) (line-end-position))
-	(comment-dwim arg)))
+      (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+    (comment-dwim arg)))
 
 (global-set-key (kbd "M-;") 'comment-dwim-line)
 
@@ -87,33 +87,33 @@
 
 ;; Enable smex, enhancement for M-x
 (global-set-key (kbd "M-x")
-				(lambda ()
-				  (interactive)
-				  (or (boundp 'smex-cache)
-					 (smex-initialize))
-				  (global-set-key (kbd "M-x") 'smex)
-				  (smex)))
+                (lambda ()
+                  (interactive)
+                  (or (boundp 'smex-cache)
+                     (smex-initialize))
+                  (global-set-key (kbd "M-x") 'smex)
+                  (smex)))
 
 (global-set-key [(shift meta x)]
-				(lambda ()
-				  (interactive)
-				  (or (boundp 'smex-cache)
-					 (smex-initialize))
-				  (global-set-key [(shift meta x)] 'smex-major-mode-commands)
-				  (smex-major-mode-commands)))
+                (lambda ()
+                  (interactive)
+                  (or (boundp 'smex-cache)
+                     (smex-initialize))
+                  (global-set-key [(shift meta x)] 'smex-major-mode-commands)
+                  (smex-major-mode-commands)))
 
 (global-set-key (kbd "C-c C-m")
-				(lambda ()
-				  (interactive)
-				  (or (boundp 'smex-cache)
-					 (smex-initialize))
-				  (global-set-key (kbd "C-c C-m") 'smex)
-				  (smex)))
+                (lambda ()
+                  (interactive)
+                  (or (boundp 'smex-cache)
+                     (smex-initialize))
+                  (global-set-key (kbd "C-c C-m") 'smex)
+                  (smex)))
 
 (global-set-key (kbd "C-x C-m")
-				(lambda ()
-				  (interactive)
-				  (or (boundp 'smex-cache)
-					 (smex-initialize))
-				  (global-set-key (kbd "C-x C-m") 'smex)
-				  (smex)))
+                (lambda ()
+                  (interactive)
+                  (or (boundp 'smex-cache)
+                     (smex-initialize))
+                  (global-set-key (kbd "C-x C-m") 'smex)
+                  (smex)))
