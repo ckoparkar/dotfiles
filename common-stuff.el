@@ -64,15 +64,15 @@
 ;; Linum
 (make-face 'linum-face)
 (set-face-attribute 'linum-face nil
-					:foreground "#718c00"
-					:weight 'bold
-					)
+                    :foreground "#718c00"
+                    :weight 'bold
+                    )
 (setq linum-format
-	  (propertize "%4d  " 'face 'linum-face)
-	  )
+      (propertize "%4d  " 'face 'linum-face)
+      )
 
 (global-linum-mode 1)
-(linum-relative-on)
+;; (linum-relative-on)
 
 (projectile-global-mode)
 (flx-ido-mode 1)
@@ -96,24 +96,28 @@
 
 (delete-selection-mode 1)
 
+;; set auto-scroll off in shell mode
+(remove-hook 'comint-output-filter-functions
+             'comint-postoutput-scroll-to-bottom)
+
 ;; hide minor modes emacs
 (defvar mode-line-cleaner-alist
   `((auto-complete-mode . " ac")
-	(projectile-mode " pm")
-	(eldoc-mode . "")
-	(abbrev-mode . "")
-	(undo-tree-mode . "")
-	(highlight-parentheses-mode . "")
-	(magit-auto-revert-mode . "")
-	(guide-key-mode . "")
-	(smartparens-mode . "")
+    (projectile-mode " pm")
+    (eldoc-mode . "")
+    (abbrev-mode . "")
+    (undo-tree-mode . "")
+    (highlight-parentheses-mode . "")
+    (magit-auto-revert-mode . "")
+    (guide-key-mode . "")
+    (smartparens-mode . "")
 
-	;; Major modes
-	(lisp-interaction-mode . "λ")
-	(clojure-mode . "λ")
-	(haskell-mode . "λ")
-	(python-mode . "Py")
-	(emacs-lisp-mode . "λ"))
+    ;; Major modes
+    (lisp-interaction-mode . "λ")
+    (clojure-mode . "λ")
+    (haskell-mode . "λ")
+    (python-mode . "Py")
+    (emacs-lisp-mode . "λ"))
   "Alist for `clean-mode-line'.
 
 When you add a new element to the alist, keep in mind that you
@@ -123,14 +127,14 @@ want to use in the modeline *in lieu of* the original.")
 (defun clean-mode-line ()
   (interactive)
   (loop for cleaner in mode-line-cleaner-alist
-		do (let* ((mode (car cleaner))
-				 (mode-str (cdr cleaner))
-				 (old-mode-str (cdr (assq mode minor-mode-alist))))
-			 (when old-mode-str
-				 (setcar old-mode-str mode-str))
-			   ;; major mode
-			 (when (eq mode major-mode)
-			   (setq mode-name mode-str)))))
+        do (let* ((mode (car cleaner))
+                  (mode-str (cdr cleaner))
+                  (old-mode-str (cdr (assq mode minor-mode-alist))))
+             (when old-mode-str
+               (setcar old-mode-str mode-str))
+             ;; major mode
+             (when (eq mode major-mode)
+               (setq mode-name mode-str)))))
 
 
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
@@ -148,12 +152,12 @@ want to use in the modeline *in lieu of* the original.")
 (setq magit-last-seen-setup-instructions "1.4.0")
 (eval-after-load 'magit
   '(progn
-	 (set-face-foreground 'magit-diff-add "green3")
-	 (set-face-background 'magit-diff-add "#000012")
-	 (set-face-foreground 'magit-diff-del "red3")
-	 (set-face-background 'magit-diff-del "#000012")
-	 (set-face-background 'magit-item-highlight "black")
-	 ))
+     (set-face-foreground 'magit-diff-add "green3")
+     (set-face-background 'magit-diff-add "#000012")
+     (set-face-foreground 'magit-diff-del "red3")
+     (set-face-background 'magit-diff-del "#000012")
+     (set-face-background 'magit-item-highlight "black")
+     ))
 
 
 ;; markdown-mode
@@ -175,8 +179,8 @@ want to use in the modeline *in lieu of* the original.")
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
   (lambda ()
-	(highlight-parentheses-mode t)
-	))
+    (highlight-parentheses-mode t)
+    ))
 (global-highlight-parentheses-mode t)
 
 
@@ -202,9 +206,9 @@ want to use in the modeline *in lieu of* the original.")
 (defvar temporary-file-directory "/tmp/")
 
 (setq backup-directory-alist
-	  `((".*" . ,temporary-file-directory)))
+      `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
-	  `((".*" ,temporary-file-directory t)))
+      `((".*" ,temporary-file-directory t)))
 
 
 ;; --------------------------------------------------
@@ -306,7 +310,7 @@ want to use in the modeline *in lieu of* the original.")
 
 ;; use rvm
 (add-hook 'ruby-mode-hook
-		  (lambda () (rvm-activate-corresponding-ruby)))
+          (lambda () (rvm-activate-corresponding-ruby)))
 
 ;; Flycheck
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
@@ -353,17 +357,14 @@ want to use in the modeline *in lieu of* the original.")
 ;;;;;;;;;;;;;;;        Rust        ;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
-;; (add-to-list 'exec-path "~/.cargo/bin")
-(defun csk-rust-mode-hooks ()
-  (add-hook 'before-save-hook 'rustfmt-before-save))
-(add-hook 'rust-mode-hook 'csk-rust-mode-hooks)
+(add-hook 'rust-mode-hook #'rustfmt-enable-on-save)
 (add-hook 'rust-mode-hook 'auto-complete-mode)
+(add-hook 'rust-mode-hook (lambda () (smartparens-mode 1)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;      Haskell    ;;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
-(add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 (add-hook 'haskell-mode-hook 'auto-complete-mode)
 (add-hook 'haskell-mode-hook (lambda () (smartparens-mode 1)))
 
@@ -380,9 +381,9 @@ want to use in the modeline *in lieu of* the original.")
 (add-hook 'racket-repl-mode-hook (lambda () (smartparens-mode 1)))
 
 (add-hook 'racket-mode-hook
-		  (lambda ()
-			(define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
-			(define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
+          (lambda ()
+            (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
+            (define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Javascript       ;;;;;;;;;;;;;;;;
@@ -402,7 +403,7 @@ want to use in the modeline *in lieu of* the original.")
 
 ;; jshint
 (add-hook 'js2-mode-hook
-		  (lambda () (flycheck-mode t)))
+          (lambda () (flycheck-mode t)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;;;;     Perl       ;;;;;;;;;;;;;;;;;;;
