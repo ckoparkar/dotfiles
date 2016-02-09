@@ -2,51 +2,33 @@
 ;; (load-file "~/.emacs.d/rutable/rutable.el")
 ;; (load-file "~/.emacs.d/emacs-rustfmt/rustfmt.el")
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
-;; Requires
-(require 'auto-complete)
-(require 'ido)
 (require 'cc-mode)
-(require 'paredit)
-(require 'multiple-cursors)
-(require 'dash)
-(require 'pkg-info)
-(require 'clojure-mode)
-(require 'epl)
-(require 'cider)
-(require 'yasnippet)
-(require 'pretty-mode-plus)
-(require 'color-theme)
-(require 'highlight-parentheses)
-(require 'xclip)
-(require 'feature-mode)
-(require 'projectile)
-(require 'flx-ido)
-(require 'ido-vertical-mode)
-(require 'guide-key)
-(require 'expand-region)
-(require 'markdown-mode)
-(require 'go-mode)
-(require 'undo-tree)
-(require 'inf-ruby)
-(require 'rvm)
-(require 'nyan-mode)
-(require 'prodigy)
-(require 'restclient)
-(require 'magit)
-(require 'restclient)
-(require 'evil)
-(require 'evil-surround)
-(require 'evil-escape)
-(require 'evil-leader)
-(require 'linum-relative)
+;; (require 'dash)
+;; (require 'pkg-info)
+;; (require 'epl)
+;; (require 'color-theme)
+;; (require 'guide-key)
+;; (require 'prodigy)
+
+
+(require 'use-package)
+(require 'f)
+
+
+(defun load-local (file)
+  (load (f-expand file user-emacs-directory)))
+
+
+(load-local "defuns")
+(load-local "keybindings")
+(load-local "default-black-theme")
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
 
+;; initialize theme and modeline based on os
 (cond
  ((memq window-system '(x))
   (load-theme 'default-black t)
@@ -62,120 +44,286 @@
   (load-theme 'zenburn t)
   (turn-on-xclip)))
 
-;; Linum
-(make-face 'linum-face)
-(set-face-attribute 'linum-face nil
-            :foreground "#718c00"
-            :weight 'bold
-            )
-(setq linum-format
-      (propertize "%4d  " 'face 'linum-face)
-      )
 
-(global-linum-mode 1)
-;; (linum-relative-on)
-
-(projectile-global-mode)
-(flx-ido-mode 1)
-(ido-vertical-mode 1)
-
-(key-chord-mode 1)
-
-(setq evil-escape-unordered-key-sequence 1)
-(setq-default evil-escape-delay 0.2)
-(evil-leader/set-leader "<SPC>")
-(global-evil-leader-mode)
-(evil-leader/set-key
-  "e" 'find-file)
-(evil-escape-mode 1)
-(setq-default evil-escape-key-sequence "jk")
-(evil-mode 1)
-(global-vim-empty-lines-mode)
-(global-evil-surround-mode 1)
-
-(blink-cursor-mode 0)
-
-(delete-selection-mode 1)
-
-;; set auto-scroll off in shell mode
-(remove-hook 'comint-output-filter-functions
-         'comint-postoutput-scroll-to-bottom)
-
-;; hide minor modes emacs
-(defvar mode-line-cleaner-alist
-  `((auto-complete-mode . " ac")
-    (projectile-mode " pm")
-    (eldoc-mode . "")
-    (abbrev-mode . "")
-    (undo-tree-mode . "")
-    (highlight-parentheses-mode . "")
-    (magit-auto-revert-mode . "")
-    (guide-key-mode . "")
-    (smartparens-mode . "")
-
-    ;; Major modes
-    (lisp-interaction-mode . "λ")
-    (clojure-mode . "λ")
-    (haskell-mode . "λ")
-    (python-mode . "Py")
-    (emacs-lisp-mode . "λ"))
-  "Alist for `clean-mode-line'.
-
-When you add a new element to the alist, keep in mind that you
-must pass the correct minor/major mode symbol and a string you
-want to use in the modeline *in lieu of* the original.")
-
-(defun clean-mode-line ()
-  (interactive)
-  (loop for cleaner in mode-line-cleaner-alist
-    do (let* ((mode (car cleaner))
-          (mode-str (cdr cleaner))
-          (old-mode-str (cdr (assq mode minor-mode-alist))))
-         (when old-mode-str
-           (setcar old-mode-str mode-str))
-         ;; major mode
-         (when (eq mode major-mode)
-           (setq mode-name mode-str)))))
+(use-package linum-mode
+  :init
+  (progn
+    (make-face 'linum-face)
+    (set-face-attribute 'linum-face nil
+                        :foreground "#718c00"
+                        :weight 'bold
+                        )
+    (setq linum-format
+          (propertize "%4d  " 'face 'linum-face)
+          )
+    (global-linum-mode 1)
+    ))
 
 
-(add-hook 'after-change-major-mode-hook 'clean-mode-line)
-
-;; responsible white space
-(add-hook 'before-save-hook 'whitespace-cleanup)
-
-;; guide-mode
-;; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
-;; (guide-key-mode 1)
-;; (setq guide-key/recursive-key-sequence-flag t)
-;; (setq guide-key/popup-window-position 'bottom)
-
-;; magit mode
-(setq magit-last-seen-setup-instructions "1.4.0")
-(eval-after-load 'magit
-  '(progn
-     ;; (set-face-foreground 'magit-diff-add "green3")
-     ;; (set-face-background 'magit-diff-add "#000012")
-     ;; (set-face-foreground 'magit-diff-del "red3")
-     ;; (set-face-background 'magit-diff-del "#000012")
-     ;; (set-face-background 'magit-item-highlight "black")
-     ))
+(use-package projectile-mode
+  :diminish projectile-mode
+  :init (projectile-global-mode)
+  :config
+  (progn
+    (setq projectile-enable-caching t)
+    (setq projectile-require-project-root nil)
+    (setq projectile-completion-system 'ido)
+    (add-to-list 'projectile-globally-ignored-files ".DS_Store")))
 
 
-;; markdown-mode
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(use-package flx-ido
+  :init (flx-ido-mode 1))
 
-(sml-modeline-mode)
-(nyan-mode)
 
-(yas-global-mode 1)
-(global-auto-complete-mode t)
-(global-pretty-mode 1)
-(setq ring-bell-function 'ignore)
-(setq column-number-mode 1)
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(use-package xclip)
+
+
+(use-package ido-vertical-mode
+  :init (ido-vertical-mode 1))
+
+
+(use-package key-chord-mode
+  :init (key-chord-mode 1))
+
+
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))
+
+
+(use-package evil-mode
+  :init
+  (progn
+    (evil-mode 1)
+    (setq evil-escape-unordered-key-sequence 1)
+    (setq-default evil-escape-delay 0.2)
+    ))
+
+
+(use-package evil-surround
+  :init (global-evil-surround-mode 1))
+
+
+(use-package evil-escape
+  :init
+  (progn
+    (setq-default evil-escape-key-sequence "jk")
+    (evil-escape-mode 1)
+    ))
+
+
+;; (use-package evil-leader
+;;   :init
+;;   (progn
+;;  (evil-leader/set-leader "<SPC>")
+;;  (global-evil-leader-mode)
+;;  (evil-leader/set-key "e" 'find-file)
+;;  ))
+
+
+(use-package magit-mode
+  :init (setq magit-last-seen-setup-instructions "1.4.0")
+  :config
+  (progn
+    ;; (set-face-foreground 'magit-diff-add "green3")
+    ;; (set-face-background 'magit-diff-add "#000012")
+    ;; (set-face-foreground 'magit-diff-del "red3")
+    ;; (set-face-background 'magit-diff-del "#000012")
+    ;; (set-face-background 'magit-item-highlight "black")
+    ))
+
+
+(use-package markdown-mode
+  :mode
+  (("\\.markdown\\'" . markdown-mode)
+   ("\\.md\\'" . markdown-mode)))
+
+
+(use-package sml-modeline
+  :init (sml-modeline-mode))
+
+
+(use-package nyan-mode
+  :init (nyan-mode 1))
+
+
+(use-package yasnippet
+  :init (yas-global-mode 1))
+
+
+(use-package undo-tree)
+
+
+;; (use-package delete-selection-mode
+;;   :init (delete-selection-mode 0))
+
+
+(use-package pretty-mode-plus
+  :config (global-pretty-mode 1))
+
+
+(use-package multiple-cursors
+  :defer t
+  :bind (("M->" . mc/mark-next-like-this)
+         ("M-<" . mc/mark-previous-like-this)
+         ("C-x ." . mc/mark-all-like-this)
+         ("C-x /" . mc/edit-lines)
+         ))
+
+
+(use-package ido
+  :defer t
+  :init
+  (progn
+    (ido-mode 1)
+    (ido-everywhere 1))
+  :config
+  (progn
+    (defun ido-my-keys ()
+      (define-key ido-common-completion-map (kbd "C-n") 'ido-next-match)
+      (define-key ido-common-completion-map (kbd "C-p") 'ido-prev-match))
+    (add-hook 'ido-setup-hook 'ido-my-keys)
+    (setq ido-mode 1)
+    (setq ido-enable-flex-matching t)
+    (setq ido-everywhere t)
+    (setq ido-ubiquitous-mode t)
+    (setq ido-use-filename-at-point 'guess)
+    (setq ido-create-new-buffer 'always)
+    ))
+
+
+(use-package yaml-mode
+  :defer t
+  :mode ("\\.yml$" . yaml-mode))
+
+
+(use-package clojure-mode
+  :mode (("\\.clj\\'" . clojure-mode)
+         ("\\.cljx\\'" . clojure-mode)
+         ("\\.cljs\\'" . clojure-mode))
+  :config
+  (progn
+    (add-hook 'clojure-mode-hook (lambda () (clj-refactor-mode 1)))
+    ))
+
+
+(use-package clj-refactor
+  :defer t
+  :ensure t
+  :config (setq cljr-favor-prefix-notation nil)
+  :init
+  (progn (add-hook 'clojure-mode-hook
+                   (lambda ()
+                     (cljr-add-keybindings-with-prefix "C-c RET")
+                     (clj-refactor-mode 1)))))
+
+
+(use-package cider
+  :config
+  (progn
+    (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+    (setq nrepl-hide-special-buffers t)
+    (setq cider-repl-pop-to-buffer-on-connect nil)
+    (setq cider-popup-stacktraces nil)
+    (add-hook 'cider-repl-mode-hook (lambda () (smartparens-mode 1)))
+    ))
+
+(use-package auto-auto-indent
+  :init
+  (progn
+    (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))
+    ))
+
+
+(use-package auto-complete
+  :init
+  (progn
+    (add-hook 'clojure-mode-hook 'auto-complete-mode)
+    (add-hook 'lisp-mode-hook 'auto-complete-mode)
+    (add-hook 'lisp-interaction-mode-hook 'auto-complete-mode)
+    (add-hook 'ruby-mode-hook 'auto-complete-mode)
+    (add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
+    (add-hook 'go-mode-hook 'auto-complete-mode)
+    (add-hook 'rust-mode-hook 'auto-complete-mode)
+    (add-hook 'haskell-mode-hook 'auto-complete-mode)
+    (add-hook 'js2-mode-hook 'auto-complete-mode)
+    ))
+
+
+(use-package smartparens
+  :init
+  (progn
+    (add-hook 'clojure-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'ruby-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'emacs-lisp-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'lisp-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'go-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'rust-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'haskell-mode-hook (lambda () (smartparens-mode 1)))
+    (add-hook 'js2-mode-hook (lambda () (smartparens-mode 1)))
+    ;; fix this
+    (add-hook 'lisp-interaction-mode-hook (lambda () (setq-default indent-tabs-mode nil)))
+    ))
+
+
+(use-package ruby-mode
+  :init
+  (progn
+    (add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))
+    ))
+
+
+(use-package feature-mode
+  :mode (("\.feature$" . feature-mode)))
+
+
+(use-package inf-ruby
+  :init (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+  )
+
+
+(use-package rvm
+  :init (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby))))
+
+
+(use-package lua-mode
+  :mode (("\\.lua\\'" . lua-mode)))
+
+(use-package go-mode
+  :config
+  (progn
+    (defun csk-go-mode-hooks ()
+   (add-to-list 'exec-path "~/chai/go/bin")
+   (setq gofmt-command "gofmt")
+   (setq tab-width 8 indent-tabs-mode 1))
+
+    (add-hook 'go-mode-hook 'csk-go-mode-hooks)
+    (add-hook 'before-save-hook 'gofmt-before-save)
+    ))
+
+
+(use-package rust-mode
+  :init (add-hook 'rust-mode-hook #'rustfmt-enable-on-save))
+
+
+(use-package rest-client
+  :mode (("\\.rest\\'" . restclient-mode)))
+
+
+(use-package js-mode
+  :init (add-hook 'js-mode-hook 'js2-minor-mode))
+
+
+(use-package js2-mode
+  :init
+  (progn
+    (setq js2-highlight-level 3)
+    (add-hook 'js2-mode-hook (lambda () (flycheck-mode t)))
+    (add-hook 'js2-mode-hook 'ac-js2-mode)
+    ))
+
+
+;; Misc stuff
 
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
@@ -185,15 +333,36 @@ want to use in the modeline *in lieu of* the original.")
 (global-highlight-parentheses-mode t)
 
 
-(setq inhibit-startup-message t inhibit-startup-echo-area-message t)
+(blink-cursor-mode 0)
+;; set auto-scroll off in shell mode
+(remove-hook 'comint-output-filter-functions
+             'comint-postoutput-scroll-to-bottom)
 
-;; Ido completion
-(setq ido-mode 1)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(setq ido-ubiquitous-mode t)
-(setq ido-use-filename-at-point 'guess)
-(setq ido-create-new-buffer 'always)
+;; hide minor modes emacs
+(add-hook 'after-change-major-mode-hook 'clean-mode-line)
+
+;; responsible white space
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
+(set-default 'indicate-empty-lines t)
+
+;; Guide-mode
+;; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
+;; (guide-key-mode 1)
+;; (setq guide-key/recursive-key-sequence-flag t)
+;; (setq guide-key/popup-window-position 'bottom)
+
+(setq ring-bell-function 'ignore)
+(setq column-number-mode 1)
+
+;; clean GUI
+(mapc
+ (lambda (mode)
+   (when (fboundp mode)
+     (funcall mode -1)))
+ '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+
+(setq inhibit-startup-message t inhibit-startup-echo-area-message t)
 
 ;; Setting up Unicode
 (prefer-coding-system 'utf-8)
@@ -210,39 +379,6 @@ want to use in the modeline *in lieu of* the original.")
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     clojure     ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-;; Clojure-mode
-(add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
-(add-to-list 'auto-mode-alist '("\\.cljx\\'" . clojure-mode))
-(add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
-;; clj-refactor: Use C-c C-m. See https://github.com/magnars/clj-refactor.el
-
-(defun clj-refactor-hooks ()
-  (clj-refactor-mode 1)
-  (cljr-add-keybindings-with-prefix "C-c C-m")
-  )
-(add-hook 'clojure-mode-hook 'clj-refactor-hooks)
-
-;; Cider
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-(setq nrepl-hide-special-buffers t)
-(setq cider-repl-pop-to-buffer-on-connect nil)
-(setq cider-popup-stacktraces nil)
-
-;; Auto-complete
-(add-hook 'clojure-mode-hook 'auto-complete-mode)
-(add-hook 'lisp-mode-hook 'auto-complete-mode)
-(add-hook 'lisp-interaction-mode-hook 'auto-complete-mode)
-
-;; Smartparens
-(add-hook 'clojure-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'cider-repl-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))
 
 
 ;; --------------------------------------------------
@@ -289,86 +425,6 @@ want to use in the modeline *in lieu of* the original.")
 ;; Smartparens
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
 
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Ruby     ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-hook 'ruby-mode-hook 'auto-complete-mode)
-
-;; Smartparens
-(add-hook 'ruby-mode-hook (lambda () (smartparens-mode 1)))
-
-;; Indent
-(add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))
-
-;; Cucumber
-(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
-
-;; inf-ruby
-(autoload 'inf-ruby-minor-mode "inf-ruby" "Run an inferior Ruby process" t)
-(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
-
-;; use rvm
-(add-hook 'ruby-mode-hook
-      (lambda () (rvm-activate-corresponding-ruby)))
-
-;; Flycheck
-;; (add-hook 'ruby-mode-hook 'flycheck-mode)
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Lua     ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Emacs-lisp     ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-;; Smartparens
-(add-hook 'emacs-lisp-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'lisp-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'lisp-interaction-mode-hook (lambda () (setq-default indent-tabs-mode nil)))
-
-
-;; Autocomplete
-(add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;        Go        ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-;; require to make goimports work.
-(add-to-list 'exec-path "~/chai/go/bin")
-
-(defun csk-go-mode-hooks ()
-  (setq gofmt-command "goimports")
-  (setq tab-width 8 indent-tabs-mode 1)
-  (add-hook 'before-save-hook 'gofmt-before-save))
-
-(add-hook 'go-mode-hook 'csk-go-mode-hooks)
-(add-hook 'go-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'go-mode-hook 'auto-complete-mode)
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;        Rust        ;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-hook 'rust-mode-hook #'rustfmt-enable-on-save)
-(add-hook 'rust-mode-hook 'auto-complete-mode)
-(add-hook 'rust-mode-hook (lambda () (smartparens-mode 1)))
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;      Haskell    ;;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-hook 'haskell-mode-hook 'auto-complete-mode)
-(add-hook 'haskell-mode-hook (lambda () (smartparens-mode 1)))
-
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Racket       ;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
@@ -386,25 +442,6 @@ want to use in the modeline *in lieu of* the original.")
         (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
         (define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
 
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Javascript       ;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-hook 'js-mode-hook 'js2-minor-mode)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-
-;; Auto-complete
-(add-hook 'js2-mode-hook 'auto-complete-mode)
-
-;; Smartparens
-(add-hook 'js2-mode-hook (lambda () (smartparens-mode 1)))
-
-;; Highlight all js keywords
-(setq js2-highlight-level 3)
-
-;; jshint
-(add-hook 'js2-mode-hook
-      (lambda () (flycheck-mode t)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;;;;     Perl       ;;;;;;;;;;;;;;;;;;;
@@ -417,9 +454,3 @@ want to use in the modeline *in lieu of* the original.")
  cperl-indent-level 4
  cperl-indent-parens-as-block t
  cperl-tabs-always-indent t)
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;;;;     Restclient       ;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-to-list 'auto-mode-alist '("\\.rest\\'" . restclient-mode))
