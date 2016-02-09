@@ -1,6 +1,6 @@
-(load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
-(load-file "~/.emacs.d/rutable/rutable.el")
-(load-file "~/.emacs.d/emacs-rustfmt/rustfmt.el")
+;; (load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
+;; (load-file "~/.emacs.d/rutable/rutable.el")
+;; (load-file "~/.emacs.d/emacs-rustfmt/rustfmt.el")
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
@@ -46,6 +46,7 @@
 ;;;;;;;;;;;;;;;     Preferences     ;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
 
+
 (cond
  ((memq window-system '(x))
   (load-theme 'default-black t)
@@ -64,9 +65,9 @@
 ;; Linum
 (make-face 'linum-face)
 (set-face-attribute 'linum-face nil
-                    :foreground "#718c00"
-                    :weight 'bold
-                    )
+            :foreground "#718c00"
+            :weight 'bold
+            )
 (setq linum-format
       (propertize "%4d  " 'face 'linum-face)
       )
@@ -98,7 +99,7 @@
 
 ;; set auto-scroll off in shell mode
 (remove-hook 'comint-output-filter-functions
-             'comint-postoutput-scroll-to-bottom)
+         'comint-postoutput-scroll-to-bottom)
 
 ;; hide minor modes emacs
 (defvar mode-line-cleaner-alist
@@ -127,14 +128,14 @@ want to use in the modeline *in lieu of* the original.")
 (defun clean-mode-line ()
   (interactive)
   (loop for cleaner in mode-line-cleaner-alist
-        do (let* ((mode (car cleaner))
-                  (mode-str (cdr cleaner))
-                  (old-mode-str (cdr (assq mode minor-mode-alist))))
-             (when old-mode-str
-               (setcar old-mode-str mode-str))
-             ;; major mode
-             (when (eq mode major-mode)
-               (setq mode-name mode-str)))))
+    do (let* ((mode (car cleaner))
+          (mode-str (cdr cleaner))
+          (old-mode-str (cdr (assq mode minor-mode-alist))))
+         (when old-mode-str
+           (setcar old-mode-str mode-str))
+         ;; major mode
+         (when (eq mode major-mode)
+           (setq mode-name mode-str)))))
 
 
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
@@ -152,11 +153,11 @@ want to use in the modeline *in lieu of* the original.")
 (setq magit-last-seen-setup-instructions "1.4.0")
 (eval-after-load 'magit
   '(progn
-     (set-face-foreground 'magit-diff-add "green3")
-     (set-face-background 'magit-diff-add "#000012")
-     (set-face-foreground 'magit-diff-del "red3")
-     (set-face-background 'magit-diff-del "#000012")
-     (set-face-background 'magit-item-highlight "black")
+     ;; (set-face-foreground 'magit-diff-add "green3")
+     ;; (set-face-background 'magit-diff-add "#000012")
+     ;; (set-face-foreground 'magit-diff-del "red3")
+     ;; (set-face-background 'magit-diff-del "#000012")
+     ;; (set-face-background 'magit-item-highlight "black")
      ))
 
 
@@ -310,7 +311,7 @@ want to use in the modeline *in lieu of* the original.")
 
 ;; use rvm
 (add-hook 'ruby-mode-hook
-          (lambda () (rvm-activate-corresponding-ruby)))
+      (lambda () (rvm-activate-corresponding-ruby)))
 
 ;; Flycheck
 ;; (add-hook 'ruby-mode-hook 'flycheck-mode)
@@ -381,9 +382,9 @@ want to use in the modeline *in lieu of* the original.")
 (add-hook 'racket-repl-mode-hook (lambda () (smartparens-mode 1)))
 
 (add-hook 'racket-mode-hook
-          (lambda ()
-            (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
-            (define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
+      (lambda ()
+        (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
+        (define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     Javascript       ;;;;;;;;;;;;;;;;
@@ -403,7 +404,7 @@ want to use in the modeline *in lieu of* the original.")
 
 ;; jshint
 (add-hook 'js2-mode-hook
-          (lambda () (flycheck-mode t)))
+      (lambda () (flycheck-mode t)))
 
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;;;;     Perl       ;;;;;;;;;;;;;;;;;;;

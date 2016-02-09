@@ -1,1 +1,6 @@
 .weechat/*log*
+.emacs.d/.cask
+.emacs.d/ac-comphist.dat 
+.emacs.d/smex-items
+.emacs.d/projectile-bookmarks.eld
+.emacs.d/auto-save-list/
