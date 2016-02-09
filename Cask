@@ -71,6 +71,7 @@
 (depends-on "rust-mode")
 (depends-on "rustfmt")
 (depends-on "linum-relative")
+(depends-on "elm-mode")
 
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
