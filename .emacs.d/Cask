@@ -9,7 +9,7 @@
 (depends-on "cc-mode")
 (depends-on "paredit")
 (depends-on "multiple-cursors")
-;; (depends-on "dash")
+(depends-on "dash")
 ;; (depends-on "pkg-info")
 ;; (depends-on "epl")
 (depends-on "cider")

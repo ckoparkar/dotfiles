@@ -89,6 +89,18 @@ want to use in the modeline *in lieu of* the original.")
 	   (setq mode-name mode-str)))))
 
 
+(defun cider-repl-reset ()
+  (interactive)
+  (set-buffer
+   (car (-filter (lambda (buf-name) (s-starts-with? "*cider-repl" buf-name))
+			(-map (lambda (buf) (buffer-name buf)) (buffer-list)))))
+  (goto-char (point-max))
+  (insert "(ns user)")
+  (cider-repl-return)
+  (goto-char (point-max))
+  (insert "(reset)")
+  (cider-repl-return))
+
 
 (provide 'defuns)
 ;;; defuns.el ends here
