@@ -62,6 +62,8 @@ With prefix argument, wrap search query in quotes."
     (magit-auto-revert-mode . "")
     (guide-key-mode . "")
     (smartparens-mode . "")
+    (projectile-mode . "")
+    (cider . "")
 
     ;; Major modes
     (lisp-interaction-mode . "λ")
@@ -107,7 +109,7 @@ want to use in the modeline *in lieu of* the original.")
     (unless (region-active-p)
       (mark-whole-buffer))
     (unless (or (eq major-mode 'coffee-mode)
-               (eq major-mode 'feature-mode))
+                (eq major-mode 'feature-mode))
       (untabify (region-beginning) (region-end))
       (indent-region (region-beginning) (region-end)))
     (save-restriction

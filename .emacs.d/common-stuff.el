@@ -3,15 +3,9 @@
 ;; (load-file "~/.emacs.d/emacs-rustfmt/rustfmt.el")
 
 (require 'cc-mode)
-;; (require 'dash)
-;; (require 'pkg-info)
-;; (require 'epl)
-;; (require 'color-theme)
-;; (require 'guide-key)
-;; (require 'prodigy)
-
-
 (require 'use-package)
+(require 'dash)
+(require 's)
 (require 'f)
 
 
@@ -28,7 +22,7 @@
 ;; --------------------------------------------------
 
 
-initialize theme and modeline based on os
+;; initialize theme and modeline based on os
 (cond
  ((memq window-system '(x))
   (load-theme 'default-black t)
@@ -44,24 +38,36 @@ initialize theme and modeline based on os
   (turn-on-xclip)))
 
 
-(use-package dash)
-
-(use-package linum-mode
+;; programming utils
+(use-package auto-complete
   :init
   (progn
-    (make-face 'linum-face)
-    (set-face-attribute 'linum-face nil
-                        :foreground "#718c00"
-                        :weight 'bold
-                        )
-    (setq linum-format
-          (propertize "%4d  " 'face 'linum-face)
-          )
-    (global-linum-mode 1)))
+    (add-hook 'clojure-mode-hook 'auto-complete-mode)
+    (add-hook 'lisp-mode-hook 'auto-complete-mode)
+    (add-hook 'lisp-interaction-mode-hook 'auto-complete-mode)
+    (add-hook 'ruby-mode-hook 'auto-complete-mode)
+    (add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
+    (add-hook 'go-mode-hook 'auto-complete-mode)
+    (add-hook 'rust-mode-hook 'auto-complete-mode)
+    (add-hook 'haskell-mode-hook 'auto-complete-mode)
+    (add-hook 'js2-mode-hook 'auto-complete-mode)))
+
+
+(use-package auto-auto-indent
+  :init
+  (progn
+    (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))))
+
+
+(use-package multiple-cursors
+  :defer t
+  :bind (("M->" . mc/mark-next-like-this)
+         ("M-<" . mc/mark-previous-like-this)
+         ("C-x ." . mc/mark-all-like-this)
+         ("C-x /" . mc/edit-lines)))
 
 
 (use-package projectile-mode
-  :diminish projectile-mode
   :init (projectile-global-mode)
   :config
   (progn
@@ -71,54 +77,12 @@ initialize theme and modeline based on os
     (add-to-list 'projectile-globally-ignored-files ".DS_Store")))
 
 
-(use-package flx-ido
-  :init (flx-ido-mode 1))
-
-
-(use-package xclip)
-
-
-(use-package ido-vertical-mode
-  :init (ido-vertical-mode 1))
-
-
 (use-package key-chord-mode
   :init (key-chord-mode 1))
 
 
-(use-package expand-region
-  :bind ("C-=" . er/expand-region))
-
-
-(use-package evil-mode
-  :init
-  (progn
-    (evil-mode 1)
-    (setq evil-escape-unordered-key-sequence 1)
-    (setq-default evil-escape-delay 0.2)
-    (add-hook 'comint-mode-hook
-              (lambda ()
-                (define-key evil-normal-state-map "\C-p" 'comint-previous-input)))))
-
-
-(use-package evil-surround
-  :init (global-evil-surround-mode 1))
-
-
-(use-package evil-escape
-  :init
-  (progn
-    (setq-default evil-escape-key-sequence "jk")
-    (evil-escape-mode 1)))
-
-
-;; (use-package evil-leader
-;;   :init
-;;   (progn
-;;  (evil-leader/set-leader "<SPC>")
-;;  (global-evil-leader-mode)
-;;  (evil-leader/set-key "e" 'find-file)
-;;  ))
+(use-package ace-jump-mode
+  :bind ("C-c SPC" . ace-jump-mode))
 
 
 (use-package magit-mode
@@ -133,38 +97,51 @@ initialize theme and modeline based on os
     ))
 
 
-(use-package markdown-mode
-  :mode
-  (("\\.markdown\\'" . markdown-mode)
-   ("\\.md\\'" . markdown-mode)))
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))
 
 
-(use-package sml-modeline
-  :init (sml-modeline-mode))
+(use-package undo-tree
+  :bind ("C-x u" . undo-tree-visualize))
+
+
+(use-package exec-path-from-shell)
+
+(use-package rustfmt)
+
+(use-package xclip)
 
 
 (use-package yasnippet
   :init (yas-global-mode 1))
 
 
-(use-package undo-tree)
+(use-package inf-ruby
+  :init (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode))
 
 
-;; (use-package delete-selection-mode
-;;   :init (delete-selection-mode 0))
+(use-package rvm
+  :init (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby))))
 
+
+(use-package flycheck)
+
+
+;; better looking
 
 (use-package pretty-mode-plus
   :config (global-pretty-mode 1))
 
 
-(use-package multiple-cursors
-  :defer t
-  :bind (("M->" . mc/mark-next-like-this)
-         ("M-<" . mc/mark-previous-like-this)
-         ("C-x ." . mc/mark-all-like-this)
-         ("C-x /" . mc/edit-lines)))
+(use-package sml-modeline
+  :init (sml-modeline-mode))
 
+
+(use-package nyan-mode
+  :init (nyan-mode 1))
+
+
+;; IDO completion
 
 (use-package ido
   :defer t
@@ -186,56 +163,16 @@ initialize theme and modeline based on os
     (setq ido-create-new-buffer 'always)))
 
 
-(use-package yaml-mode
-  :defer t
-  :mode ("\\.yml$" . yaml-mode))
+(use-package flx-ido
+  :init (flx-ido-mode 1))
 
 
-(use-package clojure-mode
-  :mode (("\\.clj\\'" . clojure-mode)
-         ("\\.cljx\\'" . clojure-mode)
-         ("\\.cljs\\'" . clojure-mode)))
+(use-package ido-vertical-mode
+  :init (ido-vertical-mode 1))
 
+(use-package smex)
 
-(use-package clj-refactor
-  :init
-  (progn
-    (add-hook 'clojure-mode-hook
-              (lambda ()
-                (clj-refactor-mode 1)
-                (yas-minor-mode 1)
-                (cljr-add-keybindings-with-prefix "C-c C-m")))))
-
-(use-package cider
-  :diminish cider
-  :config
-  (progn
-    (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
-    (setq nrepl-hide-special-buffers t)
-    (setq cider-repl-pop-to-buffer-on-connect nil)
-    (setq cider-popup-stacktraces nil))
-
-  :bind (("C-c r". cider-repl-reset)))
-
-(use-package auto-auto-indent
-  :init
-  (progn
-    (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))))
-
-
-(use-package auto-complete
-  :init
-  (progn
-    (add-hook 'clojure-mode-hook 'auto-complete-mode)
-    (add-hook 'lisp-mode-hook 'auto-complete-mode)
-    (add-hook 'lisp-interaction-mode-hook 'auto-complete-mode)
-    (add-hook 'ruby-mode-hook 'auto-complete-mode)
-    (add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
-    (add-hook 'go-mode-hook 'auto-complete-mode)
-    (add-hook 'rust-mode-hook 'auto-complete-mode)
-    (add-hook 'haskell-mode-hook 'auto-complete-mode)
-    (add-hook 'js2-mode-hook 'auto-complete-mode)))
-
+;; managing parens
 
 (use-package smartparens
   :init
@@ -256,31 +193,35 @@ initialize theme and modeline based on os
     (add-hook 'lisp-interaction-mode-hook (lambda () (smartparens-mode 1)))))
 
 
-(use-package evil-smartparens
-  :init
-  (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
+;; clojure utils
 
-
-(use-package ruby-mode
+(use-package clj-refactor
   :init
   (progn
-    (add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))))
+    (add-hook 'clojure-mode-hook
+              (lambda ()
+                (clj-refactor-mode 1)
+                (yas-minor-mode 1)
+                (cljr-add-keybindings-with-prefix "C-c C-m")))))
 
 
-(use-package feature-mode
-  :mode (("\.feature$" . feature-mode)))
+(use-package cider
+  :config
+  (progn
+    (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+    (setq nrepl-hide-special-buffers t)
+    (setq cider-repl-pop-to-buffer-on-connect nil)
+    (setq cider-popup-stacktraces nil))
+  :bind (("C-c r". cider-repl-reset)))
 
 
-(use-package inf-ruby
-  :init (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode))
+;; major modes
 
+(use-package clojure-mode
+  :mode (("\\.clj\\'" . clojure-mode)
+         ("\\.cljx\\'" . clojure-mode)
+         ("\\.cljs\\'" . clojure-mode)))
 
-(use-package rvm
-  :init (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby))))
-
-
-(use-package lua-mode
-  :mode (("\\.lua\\'" . lua-mode)))
 
 (use-package go-mode
   :config
@@ -294,16 +235,41 @@ initialize theme and modeline based on os
     (add-hook 'before-save-hook 'gofmt-before-save)))
 
 
+(use-package ruby-mode
+  :init
+  (progn
+    (add-hook 'ruby-mode-hook '(lambda () (define-key ruby-mode-map "\C-m" 'newline-and-indent)))))
+
+
+(use-package feature-mode
+  :mode (("\.feature$" . feature-mode)))
+
+
 (use-package rust-mode
   :init (add-hook 'rust-mode-hook #'rustfmt-enable-on-save))
 
 
-(use-package rest-client
+(use-package lua-mode
+  :mode (("\\.lua\\'" . lua-mode)))
+
+
+(use-package markdown-mode
+  :mode
+  (("\\.markdown\\'" . markdown-mode)
+   ("\\.md\\'" . markdown-mode)))
+
+
+;; (use-package delete-selection-mode
+;;   :init (delete-selection-mode 0))
+
+
+(use-package yaml-mode
+  :defer t
+  :mode ("\\.yml$" . yaml-mode))
+
+
+(use-package restclient
   :mode (("\\.rest\\'" . restclient-mode)))
-
-
-;; (use-package js-mode
-;;   :init (add-hook 'js-mode-hook 'js2-minor-mode))
 
 
 (use-package js2-mode
@@ -324,8 +290,21 @@ initialize theme and modeline based on os
 (global-highlight-parentheses-mode t)
 
 
+;; setup linum
+(make-face 'linum-face)
+(set-face-attribute 'linum-face nil
+                    :foreground "#718c00"
+                    :weight 'bold
+                    )
+(setq linum-format
+      (propertize "%4d  " 'face 'linum-face)
+      )
+(global-linum-mode 1)
+
+;; other
 (setq-default indent-tabs-mode nil)
 (blink-cursor-mode 0)
+
 ;; set auto-scroll off in shell mode
 (remove-hook 'comint-output-filter-functions
              'comint-postoutput-scroll-to-bottom)
@@ -447,3 +426,42 @@ initialize theme and modeline based on os
  cperl-indent-level 4
  cperl-indent-parens-as-block t
  cperl-tabs-always-indent t)
+
+
+
+;; evil stuff
+
+;; (use-package evil-mode
+;;   :init
+;;   (progn
+;;     (evil-mode 1)
+;;     (setq evil-escape-unordered-key-sequence 1)
+;;     (setq-default evil-escape-delay 0.2)
+;;     (add-hook 'comint-mode-hook
+;;               (lambda ()
+;;                 (define-key evil-normal-state-map "\C-p" 'comint-previous-input)))))
+
+
+;; (use-package evil-surround
+;;   :init (global-evil-surround-mode 1))
+
+
+;; (use-package evil-escape
+;;   :init
+;;   (progn
+;;     (setq-default evil-escape-key-sequence "jk")
+;;     (evil-escape-mode 1)))
+
+
+;; (use-package evil-leader
+;;   :init
+;;   (progn
+;;  (evil-leader/set-leader "<SPC>")
+;;  (global-evil-leader-mode)
+;;  (evil-leader/set-key "e" 'find-file)
+;;  ))
+
+
+;; (use-package evil-smartparens
+;;   :init
+;;   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))

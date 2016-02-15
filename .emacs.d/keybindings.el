@@ -1,8 +1,8 @@
 ;; Dont use this
-;; (global-unset-key (kbd "<up>"))
-;; (global-unset-key (kbd "<down>"))
-;; (global-unset-key (kbd "<left>"))
-;; (global-unset-key (kbd "<right>"))
+(global-unset-key (kbd "<up>"))
+(global-unset-key (kbd "<down>"))
+(global-unset-key (kbd "<left>"))
+(global-unset-key (kbd "<right>"))
 
 ;; Change ALT key seq
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
@@ -23,43 +23,17 @@
 (global-set-key (kbd "C-x e") 'end-of-buffer)
 (global-set-key (kbd "C-x a") 'beginning-of-buffer)
 
-(global-set-key (kbd "C-x d") 'duplicate-line)
-
-;; evil-mode deprecates this
-;; ;; iy-go-to-char
-
-;; (key-chord-define-global "fg" 'iy-go-to-char)
-;; (key-chord-define-global "df" 'iy-go-to-char-backward)
-
-;; ace-jump
-(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
-
 ;; Magit
 (key-chord-define-global "mg" 'magit-status)
 
-;; Easy transpose
-;; (define-key evil-normal-state-map "\C-t" 'transpose-chars)
-
-
-;;;; Commenting stuff
-
+;; Custom defuns
+(global-set-key (kbd "C-x d") 'duplicate-line)
 (global-set-key (kbd "M-;") 'comment-dwim-line)
-
 (global-set-key (kbd "C-x ;") 'comment-or-uncomment-region)
-
 (global-set-key (kbd "C-c C-g") 'google)
-
 (global-set-key (kbd "C-c C-s") 'swap-windows)
-
 (global-set-key (kbd "C-c da") 'smartparens-dedent-all)
 
-;;; smaertparens traverse
-
-(global-set-key (kbd "M-]") 'sp-next-sexp)
-(global-set-key (kbd "M-[") 'sp-previous-sexp)
-
-(global-set-key (kbd "M-}") 'sp-down-sexp)
-(global-set-key (kbd "M-{") 'sp-up-sexp)
 
 ;; Enable smex, enhancement for M-x
 (global-set-key (kbd "M-x")
@@ -93,3 +67,10 @@
                      (smex-initialize))
                   (global-set-key (kbd "C-x C-m") 'smex)
                   (smex)))
+
+
+;; evil-mode deprecates this
+;; iy-go-to-char
+
+;; (key-chord-define-global "fg" 'iy-go-to-char)
+;; (key-chord-define-global "df" 'iy-go-to-char-backward)
