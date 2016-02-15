@@ -1,8 +1,8 @@
 ;; Dont use this
-(global-unset-key (kbd "<up>"))
-(global-unset-key (kbd "<down>"))
-(global-unset-key (kbd "<left>"))
-(global-unset-key (kbd "<right>"))
+;; (global-unset-key (kbd "<up>"))
+;; (global-unset-key (kbd "<down>"))
+;; (global-unset-key (kbd "<left>"))
+;; (global-unset-key (kbd "<right>"))
 
 ;; Change ALT key seq
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
@@ -40,6 +40,7 @@
 ;; Easy transpose
 ;; (define-key evil-normal-state-map "\C-t" 'transpose-chars)
 
+
 ;;;; Commenting stuff
 
 (global-set-key (kbd "M-;") 'comment-dwim-line)
@@ -49,6 +50,8 @@
 (global-set-key (kbd "C-c C-g") 'google)
 
 (global-set-key (kbd "C-c C-s") 'swap-windows)
+
+(global-set-key (kbd "C-c da") 'smartparens-dedent-all)
 
 ;;; smaertparens traverse
 
