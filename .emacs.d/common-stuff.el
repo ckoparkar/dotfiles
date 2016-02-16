@@ -150,6 +150,7 @@
     (defun ido-my-keys ()
       (define-key ido-common-completion-map (kbd "C-n") 'ido-next-match)
       (define-key ido-common-completion-map (kbd "C-p") 'ido-prev-match))
+    (setq ido-auto-merge-work-directories-length nil)
     (add-hook 'ido-setup-hook 'ido-my-keys)
     (setq ido-mode 1)
     (setq ido-enable-flex-matching t)
@@ -330,13 +331,6 @@
 (add-hook 'before-save-hook 'clean-up-buffer-or-region)
 
 (set-default 'indicate-empty-lines t)
-
-;; Guide-mode
-;; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8"))
-;; (guide-key-mode 1)
-;; (setq guide-key/recursive-key-sequence-flag t)
-;; (setq guide-key/popup-window-position 'bottom)
-
 (setq ring-bell-function 'ignore)
 (setq column-number-mode 1)
 

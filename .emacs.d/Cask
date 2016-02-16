@@ -9,6 +9,7 @@
 
 ;; programming utilities
 (depends-on "cask")
+(depends-on "pallet")
 (depends-on "auto-complete")
 (depends-on "auto-auto-indent")
 (depends-on "multiple-cursors")
@@ -77,9 +78,7 @@
 ;; (depends-on "drag-stuff")
 ;; (depends-on "flycheck-cask")
 ;; (depends-on "htmlize")
-;; (depends-on "pallet")
 ;; (depends-on "popwin")
-;; (depends-on "use-package")
 ;; (depends-on "web-mode")
 
 
@@ -91,10 +90,7 @@
 ;; (depends-on "iy-go-to-char")
 ;; (depends-on "zenburn-theme")
 ;; (depends-on "magit-filenotify")
-;; (depends-on "pallet")
 ;; (depends-on "ghc")
 ;; (depends-on "prodigy")
-;; (depends-on "linum-relative")
 ;; (depends-on "rainbow-delimiters")
-;; (depends-on "guide-key")
 ;; (depends-on "paredit")
