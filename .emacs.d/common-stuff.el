@@ -315,6 +315,9 @@
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
 
+;; remap right-command key to alt in mac
+(setq ns-right-command-modifier 'meta)
+
 ;; other
 (setq-default indent-tabs-mode nil)
 (blink-cursor-mode 0)
