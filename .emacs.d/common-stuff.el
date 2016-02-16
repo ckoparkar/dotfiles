@@ -208,9 +208,12 @@
     (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
     (setq nrepl-hide-special-buffers t)
     (setq cider-repl-pop-to-buffer-on-connect nil)
-    (setq cider-popup-stacktraces nil))
+    (setq cider-popup-stacktraces nil)
+    (define-key cider-repl-mode-map (kbd "C-p") 'cider-repl-backward-input)
+    (define-key cider-repl-mode-map (kbd "C-n") 'cider-repl-forward-input))
   :bind (("C-c r". cider-repl-reset)))
 
+(use-package 4clojure)
 
 ;; major modes
 

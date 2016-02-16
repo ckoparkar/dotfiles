@@ -63,7 +63,7 @@ With prefix argument, wrap search query in quotes."
     (guide-key-mode . "")
     (smartparens-mode . "")
     (projectile-mode . "")
-    (cider . "")
+    (cider-mode . "")
 
     ;; Major modes
     (lisp-interaction-mode . "λ")
@@ -109,7 +109,7 @@ want to use in the modeline *in lieu of* the original.")
     (unless (region-active-p)
       (mark-whole-buffer))
     (unless (or (eq major-mode 'coffee-mode)
-                (eq major-mode 'feature-mode))
+               (eq major-mode 'feature-mode))
       (untabify (region-beginning) (region-end))
       (indent-region (region-beginning) (region-end)))
     (save-restriction
@@ -124,6 +124,25 @@ Invoke from line containing trailing parens."
   (while (equal (string (char-after)) ")")
     (sp-dedent-adjust-sexp))
   (kill-whole-line))
+
+
+(defun 4clojure-check ()
+  "Check the answer and show the next question if it worked."
+  (interactive)
+  (unless
+      (save-excursion
+        ;; Find last sexp (the answer).
+        (goto-char (point-max))
+        (forward-sexp -1)
+        ;; Check the answer.
+        (cl-letf ((answer
+                   (buffer-substring (point) (point-max)))
+                  ;; Preserve buffer contents, in case you failed.
+                  ((buffer-string)))
+          (goto-char (point-min))
+          (while (search-forward "__" nil t)
+            (replace-match answer))
+          (string-match "failed." (4clojure-check-answers))))))
 
 
 (provide 'defuns)
