@@ -67,7 +67,7 @@
          ("C-x /" . mc/edit-lines)))
 
 
-(use-package projectile-mode
+(use-package projectile
   :init (projectile-global-mode)
   :config
   (progn
@@ -75,10 +75,6 @@
     (setq projectile-require-project-root nil)
     (setq projectile-completion-system 'ido)
     (add-to-list 'projectile-globally-ignored-files ".DS_Store")))
-
-
-(use-package key-chord-mode
-  :init (key-chord-mode 1))
 
 
 (use-package ace-jump-mode
@@ -294,12 +290,29 @@
 (make-face 'linum-face)
 (set-face-attribute 'linum-face nil
                     :foreground "#718c00"
-                    :weight 'bold
-                    )
-(setq linum-format
-      (propertize "%4d  " 'face 'linum-face)
-      )
+                    :weight 'bold)
+(setq linum-format (propertize "%4d  " 'face 'linum-face))
 (global-linum-mode 1)
+
+;; enable y/n answers
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; delete the selection with a keypress
+;; If you enable Delete Selection mode, a minor mode, then inserting text while the mark is active causes the selected text to be deleted first. This also deactivates the mark. Many graphical applications follow this convention, but Emacs does not.
+(delete-selection-mode t)
+
+;; revert buffers automatically when underlying files are changed externally
+(global-auto-revert-mode t)
+
+;; Newline at end of file
+(setq require-final-newline t)
+
+;; more useful frame title, that show either a file or a
+;; buffer name (if the buffer isn't visiting a file)
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
 
 ;; other
 (setq-default indent-tabs-mode nil)
