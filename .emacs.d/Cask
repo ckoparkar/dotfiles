@@ -14,6 +14,7 @@
 (depends-on "auto-auto-indent")
 (depends-on "multiple-cursors")
 (depends-on "projectile")
+(depends-on "crux")
 (depends-on "key-chord")
 (depends-on "ace-jump-mode")
 (depends-on "magit")

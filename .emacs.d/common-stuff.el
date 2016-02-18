@@ -77,6 +77,10 @@
     (add-to-list 'projectile-globally-ignored-files ".DS_Store")))
 
 
+(use-package crux)
+
+(use-package key-chord)
+
 (use-package ace-jump-mode
   :bind ("C-c SPC" . ace-jump-mode))
 
