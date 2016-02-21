@@ -89,14 +89,12 @@
   :init (setq magit-last-seen-setup-instructions "1.4.0")
   :config
   (progn
-    (set-face-foreground 'magit-diff-added "green3")
-    (set-face-background 'magit-diff-added "#000012")
-    (set-face-foreground 'magit-diff-removed "red3")
-    (set-face-background 'magit-diff-removed "#000012")
-    (set-face-background 'magit-diff-context-highlight "black")
-    (set-face-background 'magit-section-highlight "black")
-    (set-face-foreground 'magit-diff-added-highlight "green3")
-    (set-face-background 'magit-diff-added-highlight "black")))
+    ;; (set-face-foreground 'magit-diff-add "green3")
+    ;; (set-face-background 'magit-diff-add "#000012")
+    ;; (set-face-foreground 'magit-diff-del "red3")
+    ;; (set-face-background 'magit-diff-del "#000012")
+    ;; (set-face-background 'magit-item-highlight "black")
+    ))
 
 
 (use-package expand-region
