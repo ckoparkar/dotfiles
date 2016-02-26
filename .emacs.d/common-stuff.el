@@ -39,18 +39,8 @@
 
 
 ;; programming utils
-(use-package auto-complete
-  :init
-  (progn
-    (add-hook 'clojure-mode-hook 'auto-complete-mode)
-    (add-hook 'lisp-mode-hook 'auto-complete-mode)
-    (add-hook 'lisp-interaction-mode-hook 'auto-complete-mode)
-    (add-hook 'ruby-mode-hook 'auto-complete-mode)
-    (add-hook 'emacs-lisp-mode-hook 'auto-complete-mode)
-    (add-hook 'go-mode-hook 'auto-complete-mode)
-    (add-hook 'rust-mode-hook 'auto-complete-mode)
-    (add-hook 'haskell-mode-hook 'auto-complete-mode)
-    (add-hook 'js2-mode-hook 'auto-complete-mode)))
+(use-package company
+  :config (global-company-mode))
 
 
 (use-package auto-auto-indent
