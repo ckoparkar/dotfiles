@@ -119,10 +119,6 @@
 
 ;; better looking
 
-(use-package pretty-mode-plus
-  :config (global-pretty-mode 1))
-
-
 (use-package sml-modeline
   :init (sml-modeline-mode))
 
@@ -171,6 +167,7 @@
     (smartparens-global-strict-mode 1)
     (smartparens-global-mode 1)
     (sp-pair "'" nil :actions :rem)
+    (sp-pair "`" nil :actions :rem)
     (add-hook 'cider-repl-mode-hook (lambda () (smartparens-mode 1)))
     (add-hook 'clojure-mode-hook (lambda () (smartparens-mode 1)))
     (add-hook 'ruby-mode-hook (lambda () (smartparens-mode 1)))
@@ -200,6 +197,7 @@
   :config
   (progn
     (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+    (add-hook 'cider-repl-mode-hook #'eldoc-mode)
     (setq nrepl-hide-special-buffers t)
     (setq cider-repl-pop-to-buffer-on-connect nil)
     (setq cider-popup-stacktraces nil)
