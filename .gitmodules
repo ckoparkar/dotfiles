@@ -1,0 +1,6 @@
+[submodule ".emacs.d/site-lisp/cider"]
+	path = .emacs.d/site-lisp/cider
+	url = git@github.com:cskksc/cider.git
+[submodule ".emacs.d/site-lisp/clj-refactor.el"]
+	path = .emacs.d/site-lisp/clj-refactor.el
+	url = git@github.com:cskksc/clj-refactor.el.git

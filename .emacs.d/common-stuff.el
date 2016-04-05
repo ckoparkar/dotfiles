@@ -1,7 +1,9 @@
-;; (load-file "~/.emacs.d/rspec-mode/rspec-mode.el")
-;; (load-file "~/.emacs.d/rutable/rutable.el")
-;; (load-file "~/.emacs.d/emacs-rustfmt/rustfmt.el")
+;; Setup load path
+(add-to-list 'load-path "/Users/chaitanya/.emacs.d/site-lisp/cider")
+(add-to-list 'load-path "/Users/chaitanya/.emacs.d/site-lisp/clj-refactor.el")
 
+(require 'cider)
+(require 'clj-refactor)
 (require 'cc-mode)
 (require 'use-package)
 (require 'dash)
@@ -183,16 +185,6 @@
 
 ;; clojure utils
 
-(use-package clj-refactor
-  :init
-  (progn
-    (add-hook 'clojure-mode-hook
-              (lambda ()
-                (clj-refactor-mode 1)
-                (yas-minor-mode 1)
-                (cljr-add-keybindings-with-prefix "C-c C-m")))))
-
-
 (use-package cider
   :config
   (progn
@@ -204,6 +196,16 @@
     (define-key cider-repl-mode-map (kbd "C-p") 'cider-repl-backward-input)
     (define-key cider-repl-mode-map (kbd "C-n") 'cider-repl-forward-input))
   :bind (("C-c r". cider-repl-reset)))
+
+
+(use-package clj-refactor
+  :init
+  (progn
+    (add-hook 'clojure-mode-hook
+              (lambda ()
+                (clj-refactor-mode 1)
+                (yas-minor-mode 1)
+                (cljr-add-keybindings-with-prefix "C-c C-m")))))
 
 (use-package 4clojure)
 
@@ -220,7 +222,7 @@
   (progn
     (defun csk-go-mode-hooks ()
       (add-to-list 'exec-path "~/chai/go/bin")
-      (setq gofmt-command "gofmt")
+      (setq gofmt-command "goimports")
       (setq tab-width 8 indent-tabs-mode 1))
 
     (add-hook 'go-mode-hook 'csk-go-mode-hooks)

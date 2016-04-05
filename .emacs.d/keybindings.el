@@ -31,7 +31,7 @@
 (global-set-key (kbd "M-;") 'comment-dwim-line)
 (global-set-key (kbd "C-x ;") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-g") 'google)
-(global-set-key (kbd "C-c C-s") 'swap-windows)
+(global-set-key (kbd "C-c C-s") 'crux-swap-windows)
 (global-set-key (kbd "C-c da") 'smartparens-dedent-all)
 
 
@@ -40,7 +40,7 @@
                 (lambda ()
                   (interactive)
                   (or (boundp 'smex-cache)
-                     (smex-initialize))
+                      (smex-initialize))
                   (global-set-key (kbd "M-x") 'smex)
                   (smex)))
 
@@ -48,7 +48,7 @@
                 (lambda ()
                   (interactive)
                   (or (boundp 'smex-cache)
-                     (smex-initialize))
+                      (smex-initialize))
                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
                   (smex-major-mode-commands)))
 
@@ -56,7 +56,7 @@
                 (lambda ()
                   (interactive)
                   (or (boundp 'smex-cache)
-                     (smex-initialize))
+                      (smex-initialize))
                   (global-set-key (kbd "C-c C-m") 'smex)
                   (smex)))
 
@@ -64,7 +64,7 @@
                 (lambda ()
                   (interactive)
                   (or (boundp 'smex-cache)
-                     (smex-initialize))
+                      (smex-initialize))
                   (global-set-key (kbd "C-x C-m") 'smex)
                   (smex)))
 

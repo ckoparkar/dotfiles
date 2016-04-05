@@ -45,8 +45,6 @@
 (depends-on "smartparens")
 
 ;; clojure utils
-(depends-on "clj-refactor" :git "https://github.com/clojure-emacs/clj-refactor.el")
-(depends-on "cider")
 (depends-on "4clojure")
 
 ;; major modes
