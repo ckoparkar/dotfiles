@@ -315,6 +315,13 @@
 ;; remap right-command key to alt in mac
 (setq ns-right-command-modifier 'meta)
 
+
+;; 80 columns is wide enough
+(require 'whitespace)
+(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-style '(face lines-tail))
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
 ;; other
 (setq-default indent-tabs-mode nil)
 (blink-cursor-mode 0)
