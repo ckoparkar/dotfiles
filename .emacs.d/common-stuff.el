@@ -103,11 +103,6 @@
 
 (use-package xclip)
 
-
-(use-package yasnippet
-  :init (yas-global-mode 1))
-
-
 (use-package inf-ruby
   :init (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode))
 

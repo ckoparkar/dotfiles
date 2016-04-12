@@ -24,7 +24,6 @@
 (depends-on "exec-path-from-shell")
 (depends-on "rustfmt")
 (depends-on "xclip")
-(depends-on "yasnippet")
 (depends-on "inf-ruby")
 (depends-on "rvm")
 (depends-on "flycheck")
