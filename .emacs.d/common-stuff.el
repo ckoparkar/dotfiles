@@ -156,6 +156,11 @@
 
 (use-package smex)
 
+(use-package eldoc
+  :init
+  (progn
+    (add-hook 'emacs-lisp-mode-hook (lambda () (eldoc-mode 1)))))
+
 ;; managing parens
 
 (use-package smartparens
@@ -312,6 +317,7 @@
 
 
 ;; 80 columns is wide enough
+;; http://stackoverflow.com/questions/18855510/have-emacs-highlight-characters-over-80/18855782#18855782
 (require 'whitespace)
 (setq whitespace-line-column 80) ;; limit line length
 (setq whitespace-style '(face lines-tail))
