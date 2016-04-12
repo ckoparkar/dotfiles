@@ -14,10 +14,6 @@
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "C-c C-k") 'kill-region)
 
-;; Fix backspace
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "C-?") 'help-command)
-
 ;; Extra navigation
 (global-set-key (kbd "C-x g") 'goto-line)
 (global-set-key (kbd "C-x e") 'end-of-buffer)
