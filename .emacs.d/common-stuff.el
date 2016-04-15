@@ -193,8 +193,8 @@
     (setq nrepl-hide-special-buffers t)
     (setq cider-repl-pop-to-buffer-on-connect nil)
     (setq cider-popup-stacktraces nil)
-    (define-key cider-repl-mode-map (kbd "C-p") 'cider-repl-backward-input)
-    (define-key cider-repl-mode-map (kbd "C-n") 'cider-repl-forward-input))
+    (define-key cider-repl-mode-map (kbd "M-p") 'cider-repl-backward-input)
+    (define-key cider-repl-mode-map (kbd "M-n") 'cider-repl-forward-input))
   :bind (("C-c r". cider-repl-reset)))
 
 
@@ -204,7 +204,6 @@
     (add-hook 'clojure-mode-hook
               (lambda ()
                 (clj-refactor-mode 1)
-                (yas-minor-mode 1)
                 (cljr-add-keybindings-with-prefix "C-c C-m")))))
 
 (use-package 4clojure)
