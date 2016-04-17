@@ -11,7 +11,6 @@
 (depends-on "cask")
 (depends-on "pallet")
 (depends-on "company")
-(depends-on "auto-auto-indent")
 (depends-on "multiple-cursors")
 (depends-on "projectile")
 (depends-on "crux")

@@ -45,12 +45,6 @@
   :config (global-company-mode))
 
 
-(use-package auto-auto-indent
-  :init
-  (progn
-    (add-hook 'clojure-mode-hook (lambda () (auto-auto-indent-mode 1)))))
-
-
 (use-package multiple-cursors
   :defer t
   :bind (("M->" . mc/mark-next-like-this)
