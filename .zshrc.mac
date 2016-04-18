@@ -16,7 +16,7 @@ plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF-8
 export EDITOR='vim'
-export EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
+export EMACS=/Applications/Emacs25.app/Contents/MacOS/Emacs
 
 
 ## PATH settings
@@ -27,6 +27,7 @@ export PATH="/Users/chaitanya/.cask/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/chai/go
 export PATH="$GOPATH/bin:$PATH"
+export PATH=/Users/chaitanya/.cabal/bin:$PATH
 
 ## boot2docker
 export DOCKER_HOST=tcp://192.168.59.103:2376
