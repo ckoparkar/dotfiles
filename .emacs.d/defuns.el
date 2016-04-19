@@ -126,5 +126,13 @@ Invoke from line containing trailing parens."
           (string-match "failed." (4clojure-check-answers))))))
 
 
+(defmacro measure-time (&rest body)
+  "Measure the time it takes to evaluate BODY.
+Source: https://lists.gnu.org/archive/html/help-gnu-emacs/2008-06/msg00087.html"
+  `(let ((time (current-time)))
+     ,@body
+     (message "%.06f" (float-time (time-since time)))))
+
+
 (provide 'defuns)
 ;;; defuns.el ends here
