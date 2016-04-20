@@ -8,7 +8,6 @@
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-c C-m") 'execute-extended-command)
 
-
 ;; Avoid backspace
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
@@ -23,7 +22,6 @@
 (define-key 'help-command (kbd "C-k") 'find-function-on-key)
 (define-key 'help-command (kbd "C-v") 'find-variable)
 (define-key 'help-command (kbd "C-l") 'find-library)
-
 
 ;; Extra navigation
 (global-set-key (kbd "C-x g") 'goto-line)
@@ -43,7 +41,6 @@
 (global-set-key (kbd "C-c C-g") 'google)
 (global-set-key (kbd "C-c C-s") 'crux-swap-windows)
 (global-set-key (kbd "C-c da") 'smartparens-dedent-all)
-
 
 ;; Enable smex, enhancement for M-x
 (global-set-key (kbd "M-x")
@@ -77,10 +74,3 @@
                       (smex-initialize))
                   (global-set-key (kbd "C-x C-m") 'smex)
                   (smex)))
-
-
-;; evil-mode deprecates this
-;; iy-go-to-char
-
-;; (key-chord-define-global "fg" 'iy-go-to-char)
-;; (key-chord-define-global "df" 'iy-go-to-char-backward)

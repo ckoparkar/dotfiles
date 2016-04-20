@@ -2,7 +2,6 @@
 ;;
 ;; Exports custom utility functions
 
-
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
@@ -11,7 +10,6 @@
   (newline)
   (yank))
 
-
 (defun comment-dwim-line (&optional arg)
   "Replacement for the comment-dwim command. If no region is selected and current line is not blank and we are not at the end of the line, then comment current line. Replaces default behaviour of comment-dwim, when it inserts comment at the end of the line."
   (interactive "*P")
@@ -19,7 +17,6 @@
   (if (and (not (region-active-p)) (not (looking-at "[ \t]*$")))
       (comment-or-uncomment-region (line-beginning-position) (line-end-position))
     (comment-dwim arg)))
-
 
 (defun google (arg)
   "Googles a query or region if any.
@@ -32,7 +29,6 @@ With prefix argument, wrap search query in quotes."
     (when arg (setq query (concat "\"" query "\"")))
     (browse-url
      (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" query))))
-
 
 (defvar mode-line-cleaner-alist
   `((auto-complete-mode . " ac")
@@ -70,7 +66,6 @@ want to use in the modeline *in lieu of* the original.")
              (when (eq mode major-mode)
                (setq mode-name mode-str)))))
 
-
 (defun cider-repl-reset ()
   (interactive)
   (set-buffer
@@ -79,7 +74,6 @@ want to use in the modeline *in lieu of* the original.")
   (goto-char (point-max))
   (insert "(reset)")
   (cider-repl-return))
-
 
 ;; NOTE: (region-beginning) and (region-end) are not saved in
 ;; variables since they can change after each clean step.
@@ -97,7 +91,6 @@ want to use in the modeline *in lieu of* the original.")
       (narrow-to-region (region-beginning) (region-end))
       (delete-trailing-whitespace))))
 
-
 (defun smartparens-dedent-all ()
   "Dedent untill all ) are properly dedented.
 Invoke from line containing trailing parens."
@@ -105,7 +98,6 @@ Invoke from line containing trailing parens."
   (while (equal (string (char-after)) ")")
     (sp-dedent-adjust-sexp))
   (kill-whole-line))
-
 
 (defun 4clojure-check ()
   "Check the answer and show the next question if it worked."
@@ -125,14 +117,12 @@ Invoke from line containing trailing parens."
             (replace-match answer))
           (string-match "failed." (4clojure-check-answers))))))
 
-
 (defmacro measure-time (&rest body)
   "Measure the time it takes to evaluate BODY.
 Source: https://lists.gnu.org/archive/html/help-gnu-emacs/2008-06/msg00087.html"
   `(let ((time (current-time)))
      ,@body
      (message "%.06f" (float-time (time-since time)))))
-
 
 (defun prelude-move-beginning-of-line (arg)
   "Move point back to indentation of beginning of line.
