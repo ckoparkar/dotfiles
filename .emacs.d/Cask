@@ -26,6 +26,8 @@
 (depends-on "inf-ruby")
 (depends-on "rvm")
 (depends-on "flycheck")
+(depends-on "elisp-slime-nav")
+(depends-on "easy-kill")
 
 ;; better looking
 (depends-on "pretty-mode-plus")

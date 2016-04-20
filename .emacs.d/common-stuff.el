@@ -100,12 +100,20 @@
 (use-package inf-ruby
   :init (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode))
 
-
 (use-package rvm
   :init (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby))))
 
-
 (use-package flycheck)
+
+(use-package elisp-slime-nav
+  :config
+  (progn
+    (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+      (add-hook hook 'elisp-slime-nav-mode))))
+
+(use-package easy-kill
+  :config
+  (global-set-key [remap kill-ring-save] 'easy-kill))
 
 
 ;; better looking
