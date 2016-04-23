@@ -28,6 +28,7 @@
 (depends-on "flycheck")
 (depends-on "elisp-slime-nav")
 (depends-on "easy-kill")
+(depends-on "ace-window")
 
 ;; better looking
 (depends-on "pretty-mode-plus")

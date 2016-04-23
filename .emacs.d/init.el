@@ -116,6 +116,11 @@
   :config
   (global-set-key [remap kill-ring-save] 'easy-kill))
 
+(use-package ace-window
+  :config
+  (progn
+    (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))))
+
 ;; better looking
 
 (use-package sml-modeline

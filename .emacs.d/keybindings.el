@@ -30,6 +30,7 @@
 (global-set-key (kbd "<C-return>") 'crux-smart-open-line)
 (global-set-key (kbd "<S-return>") 'crux-smart-open-line-above)
 (global-set-key [remap move-beginning-of-line] 'prelude-move-beginning-of-line)
+(global-set-key (kbd "M-p") 'ace-window)
 
 ;; Magit
 (key-chord-define-global "mg" 'magit-status)
