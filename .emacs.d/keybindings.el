@@ -14,10 +14,6 @@
 (global-set-key (kbd "C-c C-k") 'kill-region)
 
 ;; Better help functions
-
-;; A quick major mode help with discover-my-major
-(define-key 'help-command (kbd "C-m") 'discover-my-major)
-
 (define-key 'help-command (kbd "C-f") 'find-function)
 (define-key 'help-command (kbd "C-k") 'find-function-on-key)
 (define-key 'help-command (kbd "C-v") 'find-variable)
@@ -31,9 +27,6 @@
 (global-set-key (kbd "<S-return>") 'crux-smart-open-line-above)
 (global-set-key [remap move-beginning-of-line] 'prelude-move-beginning-of-line)
 (global-set-key (kbd "M-p") 'ace-window)
-
-;; Magit
-(key-chord-define-global "mg" 'magit-status)
 
 ;; Custom defuns
 (global-set-key (kbd "C-x d") 'duplicate-line)

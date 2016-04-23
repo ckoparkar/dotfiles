@@ -70,21 +70,11 @@
 
 (use-package crux)
 
-(use-package key-chord)
-
 (use-package ace-jump-mode
   :bind ("C-c SPC" . ace-jump-mode))
 
 (use-package magit-mode
-  :init (setq magit-last-seen-setup-instructions "1.4.0")
-  :config
-  (progn
-    ;; (set-face-foreground 'magit-diff-add "green3")
-    ;; (set-face-background 'magit-diff-add "#000012")
-    ;; (set-face-foreground 'magit-diff-del "red3")
-    ;; (set-face-background 'magit-diff-del "#000012")
-    ;; (set-face-background 'magit-item-highlight "black")
-    ))
+  :init (setq magit-last-seen-setup-instructions "1.4.0"))
 
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
@@ -120,6 +110,10 @@
   :config
   (progn
     (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))))
+
+(use-package discover-my-major
+  :config
+  (define-key 'help-command (kbd "C-m") 'discover-my-major))
 
 ;; better looking
 

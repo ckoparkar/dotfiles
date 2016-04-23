@@ -14,7 +14,6 @@
 (depends-on "multiple-cursors")
 (depends-on "projectile")
 (depends-on "crux")
-(depends-on "key-chord")
 (depends-on "ace-jump-mode")
 (depends-on "magit")
 (depends-on "use-package")
@@ -29,6 +28,7 @@
 (depends-on "elisp-slime-nav")
 (depends-on "easy-kill")
 (depends-on "ace-window")
+(depends-on "discover-my-major")
 
 ;; better looking
 (depends-on "pretty-mode-plus")
@@ -67,29 +67,14 @@
 
 
 ;; evil stuff
-;; (depends-on "evil")
-;; (depends-on "evil-surround")
-;; (depends-on "evil-escape")
-;; (depends-on "evil-leader")
-;; (depends-on "evil-paredit")
-;; (depends-on "evil-smartparens")
-
 ;; (depends-on "bind-key")
 ;; (depends-on "drag-stuff")
-;; (depends-on "flycheck-cask")
-;; (depends-on "htmlize")
 ;; (depends-on "popwin")
 ;; (depends-on "web-mode")
 
-
 ;; (depends-on "pkg-info")
 ;; (depends-on "epl")
-;; (depends-on "refactor-nrepl")
-;; (depends-on "color-theme")
 ;; (depends-on "iy-go-to-char")
-;; (depends-on "zenburn-theme")
 ;; (depends-on "magit-filenotify")
 ;; (depends-on "ghc")
 ;; (depends-on "prodigy")
-;; (depends-on "rainbow-delimiters")
-;; (depends-on "paredit")
