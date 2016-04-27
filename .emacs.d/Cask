@@ -44,6 +44,7 @@
 
 ;; managing parens
 (depends-on "smartparens")
+(depends-on "paxedit")
 
 ;; clojure utils
 (depends-on "4clojure")
