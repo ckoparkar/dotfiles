@@ -59,6 +59,10 @@
          ("C-x ." . mc/mark-all-like-this)
          ("C-x /" . mc/edit-lines)))
 
+(use-package key-chord
+  :config
+  (key-chord-mode +1))
+
 (use-package projectile
   :init (projectile-global-mode)
   :config
@@ -74,13 +78,16 @@
   :bind ("C-c SPC" . ace-jump-mode))
 
 (use-package magit-mode
-  :init (setq magit-last-seen-setup-instructions "1.4.0"))
+  :config
+  (progn
+    (setq magit-last-seen-setup-instructions "1.4.0")
+    (key-chord-define-global "mg" 'magit-status)))
 
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
 
 (use-package undo-tree
-  :bind ("C-x u" . undo-tree-visualize))
+  :config (key-chord-define-global "uu" 'undo-tree-visualize))
 
 (use-package exec-path-from-shell)
 
@@ -114,6 +121,14 @@
 (use-package discover-my-major
   :config
   (define-key 'help-command (kbd "C-m") 'discover-my-major))
+
+(use-package avy
+  :config
+  (progn
+    (key-chord-define-global "jj" 'avy-goto-word-1)
+    (key-chord-define-global "jl" 'avy-goto-line)
+    (key-chord-define-global "jk" 'avy-goto-char)
+    (key-chord-define-global "xx" 'execute-extended-command)))
 
 ;; better looking
 
@@ -192,25 +207,7 @@
                     rust-mode-hook
                     haskell-mode-hook
                     js2-mode-hook))
-      (add-hook hook (lambda () (smartparens-mode 1))))
-
-    (define-key paxedit-mode-map (kbd "M-<right>") 'paxedit-transpose-forward)
-    (define-key paxedit-mode-map (kbd "M-<left>") 'paxedit-transpose-backward)
-    (define-key paxedit-mode-map (kbd "M-<up>") 'paxedit-backward-up)
-    (define-key paxedit-mode-map (kbd "M-<down>") 'paxedit-backward-end)
-    (define-key paxedit-mode-map (kbd "M-b") 'paxedit-previous-symbol)
-    (define-key paxedit-mode-map (kbd "M-f") 'paxedit-next-symbol)
-    (define-key paxedit-mode-map (kbd "C-%") 'paxedit-copy)
-    (define-key paxedit-mode-map (kbd "C-&") 'paxedit-kill)
-    (define-key paxedit-mode-map (kbd "C-*") 'paxedit-delete)
-    (define-key paxedit-mode-map (kbd "C-^") 'paxedit-sexp-raise)
-    ;; Symbol backward/forward kill
-    (define-key paxedit-mode-map (kbd "C-w") 'paxedit-backward-kill)
-    (define-key paxedit-mode-map (kbd "M-w") 'paxedit-forward-kill)
-    ;; Symbol manipulation
-    (define-key paxedit-mode-map (kbd "M-u") 'paxedit-symbol-change-case)
-    (define-key paxedit-mode-map (kbd "C-@") 'paxedit-symbol-copy)
-    (define-key paxedit-mode-map (kbd "C-#") 'paxedit-symbol-kill)))
+      (add-hook hook (lambda () (paxedit-mode 1))))))
 
 ;; clojure utils
 
@@ -222,6 +219,7 @@
     (setq nrepl-hide-special-buffers t)
     (setq cider-repl-pop-to-buffer-on-connect nil)
     (setq cider-popup-stacktraces nil)
+    (setq cider-repl-display-help-banner nil)
     (define-key cider-repl-mode-map (kbd "M-p") 'cider-repl-backward-input)
     (define-key cider-repl-mode-map (kbd "M-n") 'cider-repl-forward-input))
   :bind (("C-c r". cider-repl-reset)))
@@ -451,3 +449,6 @@
  cperl-indent-level 4
  cperl-indent-parens-as-block t
  cperl-tabs-always-indent t)
+
+(setq safe-local-variable-values '((checkdoc-package-keywords-flag)
+                                   (bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")))

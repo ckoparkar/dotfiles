@@ -12,6 +12,7 @@
 (depends-on "pallet")
 (depends-on "company")
 (depends-on "multiple-cursors")
+(depends-on "key-chord")
 (depends-on "projectile")
 (depends-on "crux")
 (depends-on "ace-jump-mode")
@@ -29,6 +30,7 @@
 (depends-on "easy-kill")
 (depends-on "ace-window")
 (depends-on "discover-my-major")
+(depends-on "avy")
 
 ;; better looking
 (depends-on "pretty-mode-plus")
@@ -65,6 +67,7 @@
 (depends-on "json-mode")
 (depends-on "racket-mode")
 (depends-on "js2-mode")
+(depends-on "cask-mode")
 
 
 ;; evil stuff
