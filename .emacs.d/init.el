@@ -130,6 +130,12 @@
     (key-chord-define-global "jk" 'avy-goto-char)
     (key-chord-define-global "xx" 'execute-extended-command)))
 
+(use-package ivy)
+
+(use-package swiper
+  :config
+  :bind ("C-s" . swiper))
+
 ;; better looking
 
 (use-package sml-modeline

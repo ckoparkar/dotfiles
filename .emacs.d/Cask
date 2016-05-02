@@ -31,6 +31,8 @@
 (depends-on "ace-window")
 (depends-on "discover-my-major")
 (depends-on "avy")
+(depends-on "ivy")
+(depends-on "swiper")
 
 ;; better looking
 (depends-on "pretty-mode-plus")
