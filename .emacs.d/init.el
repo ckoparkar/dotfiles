@@ -328,8 +328,8 @@
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
 
-;; remap right-command key to alt in mac
-(setq ns-right-command-modifier 'meta)
+;; remap left-command key to alt in mac
+(setq ns-command-modifier 'meta)
 
 ;; 80 columns is wide enough
 ;; http://stackoverflow.com/questions/18855510/have-emacs-highlight-characters-over-80/18855782#18855782
