@@ -1,5 +1,4 @@
 (source melpa)
-(source marmalade)
 (source gnu)
 
 ;; libraries
@@ -33,6 +32,7 @@
 (depends-on "avy")
 (depends-on "ivy")
 (depends-on "swiper")
+(depends-on "geiser")
 
 ;; better looking
 (depends-on "pretty-mode-plus")

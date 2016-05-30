@@ -197,7 +197,9 @@
                     ruby-mode-hook
                     rust-mode-hook
                     haskell-mode-hook
-                    js2-mode-hook))
+                    js2-mode-hook
+                    racket-repl-mode-hook
+                    racket-mode-hook))
       (add-hook hook (lambda () (smartparens-mode 1))))))
 
 (use-package paxedit
@@ -214,6 +216,8 @@
                     haskell-mode-hook
                     js2-mode-hook))
       (add-hook hook (lambda () (paxedit-mode 1))))))
+
+(use-package geiser)
 
 ;; clojure utils
 
@@ -425,23 +429,6 @@
 
 ;; Smartparens
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Racket       ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-;; Auto-complete
-(add-hook 'racket-mode-hook 'auto-complete-mode)
-(add-hook 'racket-repl-mode-hook 'auto-complete-mode)
-
-;; Smartparens
-(add-hook 'racket-mode-hook (lambda () (smartparens-mode 1)))
-(add-hook 'racket-repl-mode-hook (lambda () (smartparens-mode 1)))
-
-(add-hook 'racket-mode-hook
-          (lambda ()
-            (define-key racket-mode-map (kbd "C-c C-r") 'racket-send-region)
-            (define-key racket-mode-map (kbd "C-x C-e") 'racket-send-definition)))
 
 
 ;; --------------------------------------------------
