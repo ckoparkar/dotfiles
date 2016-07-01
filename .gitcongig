@@ -1,3 +1,7 @@
+[user]
+    name = cskksc
+    email = ckoparkar@live.in
+
 [alias]
     st = status
     ci = commit
