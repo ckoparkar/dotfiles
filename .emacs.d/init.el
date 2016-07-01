@@ -181,9 +181,26 @@
 
 ;; managing parens
 
+(defvar c-sp-keymap
+  (let ((map (make-sparse-keymap))
+        (forward-map (make-sparse-keymap))
+        (backward-map (make-sparse-keymap)))
+    (define-key map (kbd "r") #'sp-raise-sexp)
+    (define-key map (kbd "s") #'sp-splice-sexp)
+    ;; a keymap to hold forward* keybindings
+    (define-key map (kbd "f") forward-map)
+    (define-key forward-map (kbd "s") #'sp-forward-slurp-sexp)
+    (define-key forward-map (kbd "b") #'sp-forward-barf-sexp)
+    ;; a keymap to hold backward* keybindings
+    (define-key map (kbd "b") backward-map)
+    (define-key backward-map (kbd "s") #'sp-backward-slurp-sexp)
+    (define-key backward-map (kbd "b") #'sp-backward-barf-sexp)
+    map))
+
 (use-package smartparens
-  :init
+  :config
   (progn
+    (global-set-key (kbd "C-c C-s") c-sp-keymap)
     (smartparens-global-strict-mode 1)
     (smartparens-global-mode 1)
     (sp-pair "'" nil :actions :rem)
