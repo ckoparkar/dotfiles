@@ -422,10 +422,6 @@
 (setq mf--source-file-extension "cpp")
 (add-hook 'c++-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
 
-;; Auto-complete
-(add-hook 'c-mode-hook 'auto-complete-mode)
-(add-hook 'c++-mode-hook 'auto-complete-mode)
-
 ;; Smartparens
 (add-hook 'c++-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'c-mode-hook (lambda () (smartparens-mode 1)))
@@ -438,9 +434,6 @@
 (setq-default c-basic-offset 4 c-default-style "linux")
 ;; (setq-default tab-width 4 indent-tabs-mode t)
 
-;; Auto-complete
-(add-hook 'java-mode-hook 'auto-complete-mode)
-
 ;; Smartparens
 (add-hook 'java-mode-hook (lambda () (smartparens-mode 1)))
 
@@ -450,7 +443,6 @@
 ;; --------------------------------------------------
 
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
-(add-hook 'python-mode-hook 'auto-complete-mode)
 
 ;; Smartparens
 (add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
