@@ -69,6 +69,7 @@
 (depends-on "racket-mode")
 (depends-on "js2-mode")
 (depends-on "cask-mode")
+(depends-on "idris-mode")
 
 
 ;; evil stuff

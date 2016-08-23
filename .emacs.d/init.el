@@ -312,13 +312,21 @@
     (add-hook 'js2-mode-hook (lambda () (flycheck-mode t)))
     (add-hook 'js2-mode-hook 'ac-js2-mode)))
 
+(use-package cask-mode)
+
+(use-package idris-mode
+  :init
+  (add-hook 'idris-mode-hook
+            '(lambda ()
+               (remove-hook 'before-save-hook 'whitespace-cleanup)
+               (remove-hook 'before-save-hook 'clean-up-buffer-or-region))))
+
 ;; Misc stuff
 
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
   (lambda ()
-    (highlight-parentheses-mode t)
-    ))
+    (highlight-parentheses-mode t)))
 (global-highlight-parentheses-mode t)
 
 ;; setup linum
