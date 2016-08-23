@@ -32,7 +32,6 @@
 (global-set-key (kbd "C-x d") 'duplicate-line)
 (global-set-key (kbd "M-;") 'comment-dwim-line)
 (global-set-key (kbd "C-x ;") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-c C-g") 'google)
 (global-set-key (kbd "C-c C-s") 'crux-swap-windows)
 (global-set-key (kbd "C-c da") 'smartparens-dedent-all)
 
