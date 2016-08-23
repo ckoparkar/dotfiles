@@ -35,7 +35,6 @@
 (depends-on "geiser")
 
 ;; better looking
-(depends-on "pretty-mode-plus")
 (depends-on "sml-modeline")
 (depends-on "nyan-mode")
 (depends-on "highlight-parentheses")
