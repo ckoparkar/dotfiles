@@ -411,6 +411,11 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+
+;; safe local variables
+(setq safe-local-variable-values '((checkdoc-package-keywords-flag)
+                                   (bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")))
+
 ;; --------------------------------------------------
 ;;;;;;;;;;;;;;;     C/C++     ;;;;;;;;;;;;;;;;;;;;
 ;; --------------------------------------------------
@@ -425,40 +430,3 @@
 ;; Smartparens
 (add-hook 'c++-mode-hook (lambda () (smartparens-mode 1)))
 (add-hook 'c-mode-hook (lambda () (smartparens-mode 1)))
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Java     ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-hook 'java-mode-hook 'auto-auto-indent-mode)
-(setq-default c-basic-offset 4 c-default-style "linux")
-;; (setq-default tab-width 4 indent-tabs-mode t)
-
-;; Smartparens
-(add-hook 'java-mode-hook (lambda () (smartparens-mode 1)))
-
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;     Python     ;;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
-
-;; Smartparens
-(add-hook 'python-mode-hook (lambda () (smartparens-mode 1)))
-
-
-;; --------------------------------------------------
-;;;;;;;;;;;;;;;;;;     Perl       ;;;;;;;;;;;;;;;;;;;
-;; --------------------------------------------------
-
-(defalias 'perl-mode 'cperl-mode)
-(setq
- cperl-close-paren-offset -4
- cperl-continued-statement-offset 4
- cperl-indent-level 4
- cperl-indent-parens-as-block t
- cperl-tabs-always-indent t)
-
-(setq safe-local-variable-values '((checkdoc-package-keywords-flag)
-                                   (bug-reference-bug-regexp . "#\\(?2:[[:digit:]]+\\)")))
