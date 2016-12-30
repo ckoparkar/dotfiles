@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 #ZSH=/usr/share/oh-my-zsh/
-ZSH=/home/cskksc/.oh-my-zsh/
+ZSH=/usr/share/oh-my-zsh/
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,41 +51,16 @@ plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
 
 
 # User configuration
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF8
 export EDITOR='emacsclient -t'
 export BROWSER='luakit'
-
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-	export TERM='xterm-256color'
-else
-	export TERM='xterm-color'
-fi
-
+export TERM='xterm-256color'
 export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
 export PATH="/home/cskksc/.cask/bin:$PATH"
-######################## #Android
-export PATH=$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/
-export ANDROID_NDK=/home/cskksc/chai/android-ndk-r8b
-
 export GOPATH=/home/cskksc/chai/go
 export PATH=$PATH:$GOPATH/bin
-
 export PATH=$PATH:/home/cskksc/.cabal/bin/
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 
 ##########################  Color Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -139,8 +114,6 @@ alias rmr='rm -r'
 ### Zsh
 alias eZ='emacsclient -t ~/.zshrc'
 alias Z='source ~/.zshrc'
-alias eB='emacsclient -t ~/.oh-my-zsh/themes/csk.zsh-theme'
-alias eXT='emacsclient -t ~/.Xresources'
 alias v='vim'
 
 ## Apps
@@ -202,38 +175,7 @@ tsm-speed()
 }
 tsm-ncurse() { transmission-remote-cli ;}
 
-####################
-
-## PCL
-alias pv='pcl_viewer'
-export pcl_home='/home/cskksc/chai/my_pcl'
-export pcl_data='/home/cskksc/chai/my_pcl/data'
-kinect_record()
-{
-	cmd='$pcl_home/save_cloud/build/save_cloud'
-	if [[ -n $2 ]]; then
-		cmd=$cmd' '$1' '$2
-	fi
-
-	if [[ -n $4  ]]; then
-		cmd=$cmd' '$3' '$4
-	fi
-
-	eval ${cmd}
-}
-
-
-## git
-alias metamug_push='jgit push amazon-s3://.jgit_s3_public@metamug.gitrepo/projects/MetaScrapper cskksc'
-
-
 ###################################################################
 
 source $ZSH/oh-my-zsh.sh
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# The next line updates PATH for the Google Cloud SDK.
-export PATH="$PATH:$HOME/google-cloud-sdk/bin"
-export CLOUDSDK_PYTHON=/usr/bin/python2.7
