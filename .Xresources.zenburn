@@ -4,15 +4,15 @@ UXTerm*metaSendsEscape: true
 UXTerm*saveLines: 65536
 UXTerm*VT100.geometry: 80x30
 *visualBell: on
-UXTerm*cursorBlink: true
+UXTerm*cursorBlink: false
 UXTerm.VT100.renderFont: true
-UXTerm*faceName: Dejavu Sans Mono:size=10.5:antialias=true
+UXTerm*faceName: xft:Monaco:size=10:antialias=true
 UXTerm*letterSpace: -1
 UXTerm*utf8: 1
 UXTerm*transparent : True
 UXTerm*shading: 20
 
-UXTerm*background : #404040
+UXTerm*background : #000000
 UXTerm*foreground : #F6F3E8
 
 UXTerm*colorBD : #FFFFFF
@@ -52,8 +52,8 @@ UXTerm*color15 : #ffffff
 
 !--------------------------------Urxvt-------------------------------------
 
-URxvt.font: xft:Monaco:size=12:antialias=true
-URxvt.geometry: 95x33
+URxvt.font: xft:Monaco:size=10:antialias=true
+URxvt.geometry: 90x30
 URxvt.cursorBlink: false
 URxvt.letterSpace: -1
 URxvt.metaSendsEscape: true
@@ -79,7 +79,7 @@ URxvt.tabbed.tab-fg: 3
 URxvt.tabbed.tab-bg: 0
 
 URxvt.depth: 32
-URxvt.background: [85]#404040
+URxvt.background: #000000
 URxvt.foreground: #F6F3E8
 
 URxvt.colorBD: #FFFFFF
@@ -119,3 +119,6 @@ URxvt.color15 : #ffffff
 
 URxvt.keysym.Home: \033[1~
 URxvt.keysym.End: \033[4~
+
+!! HiDPI
+Xft.dpi: 160
