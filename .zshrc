@@ -97,6 +97,7 @@ alias pac-remove='sudo pacman -Rs'
 alias pac-search='sudo pacman -Ss'
 alias pac-list='sudo pacman -Ql'
 alias pac-installed='sudo pacman -Qe'
+alias pac-rem-unused='sudo pacman -Rsn $(pacman -Qdtq)'
 
 ### Directories
 alias ll='ls -lh'
