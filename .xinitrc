@@ -20,6 +20,12 @@ export GPG_AGENT_INFO SSH_AUTH_SOCK
 # Pulseaudio
 ( ( sleep 10 && /usr/bin/pulseaudio ) & )
 
+# xbindkeys
+if [ `type -P xbindkeys` ]; then
+    # Load custom keyboard key bindings
+    xbindkeys
+fi;
+
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 compton &
 xmodmap ~/.Xmodmap
