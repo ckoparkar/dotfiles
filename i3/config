@@ -133,3 +133,5 @@ bar {
         status_command i3status
         position top
 }
+
+bindsym Control+Mod4+l exec /home/cskksc/chai/dotfiles/lock.sh
