@@ -29,4 +29,5 @@ fi;
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xmodmap ~/.Xmodmap
 xrandr --dpi 220
+feh --bg-scale ~/chai/dotfiles/wall.png
 exec i3
