@@ -15,10 +15,10 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 export GPG_AGENT_INFO SSH_AUTH_SOCK
 
 # Music Player Daemon
-( ( sleep 10 && /usr/bin/mpd ) & )
+#( ( sleep 10 && /usr/bin/mpd ) & )
 
 # Pulseaudio
-( ( sleep 10 && /usr/bin/pulseaudio ) & )
+#( ( sleep 10 && /usr/bin/pulseaudio ) & )
 
 # xbindkeys
 if [ `type -P xbindkeys` ]; then
@@ -27,6 +27,6 @@ if [ `type -P xbindkeys` ]; then
 fi;
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-compton &
 xmodmap ~/.Xmodmap
-exec awesome
+xrandr --dpi 220
+exec i3
