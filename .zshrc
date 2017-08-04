@@ -61,6 +61,9 @@ export PATH="/home/cskksc/.cask/bin:$PATH"
 export GOPATH=/home/cskksc/chai/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/cskksc/.cabal/bin/
+export PATH=$PATH:/home/cskksc/.local/bin/
+export TREELANGDIR=/home/cskksc/chai/tree-velocity
+source $HOME/.cargo/env
 
 ##########################  Color Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
