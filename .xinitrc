@@ -20,8 +20,13 @@ if [ `type -P xbindkeys` ]; then
     xbindkeys
 fi;
 
+# xresources and xmodmap
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xmodmap ~/.Xmodmap
+
+# i3
 xrandr --dpi 220
+# xrandr --dpi 142
 feh --bg-scale ~/chai/dotfiles/wall.png
 exec i3
+# exec gnome-session

@@ -63,6 +63,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/cskksc/.cabal/bin/
 export PATH=$PATH:/home/cskksc/.local/bin/
 export TREELANGDIR=/home/cskksc/chai/tree-velocity
+unset MALLOC_PERTURB_
 source $HOME/.cargo/env
 
 ##########################  Color Man Pages

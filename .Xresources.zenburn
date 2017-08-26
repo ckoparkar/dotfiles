@@ -6,7 +6,8 @@ UXTerm*VT100.geometry: 80x30
 *visualBell: on
 UXTerm*cursorBlink: false
 UXTerm.VT100.renderFont: true
-UXTerm*faceName: xft:Monaco:size=10:antialias=true
+UXTerm*faceName: xft:Monaco:size=11:antialias=true
+! UXTerm*faceName: xft:Monaco:size=7:antialias=true
 UXTerm*letterSpace: -1
 UXTerm*utf8: 1
 UXTerm*transparent : True

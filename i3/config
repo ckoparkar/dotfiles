@@ -22,8 +22,9 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+k focus right
+# bindsym $mod+l focus right
+# bindsym $mod+h focus left
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -45,7 +46,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+h split h
 
 # split in vertical orientation
 bindsym $mod+Shift+v split v
@@ -141,7 +142,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        position top
+        position bottom
 }
 
 set $Locker /home/cskksc/chai/dotfiles/lock.sh && sleep 1
@@ -162,3 +163,4 @@ bindsym Control+$mod+l mode "$mode_system"
 
 # networkmanager applet
 exec --no-startup-id nm-applet
+exec --no-startup-id pasystray
