@@ -32,7 +32,7 @@ DISABLE_LS_COLORS="true"
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
- COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -54,7 +54,7 @@ plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF8
 export EDITOR='emacsclient -t'
-export BROWSER='luakit'
+export BROWSER='google-chrome-stable'
 export TERM='xterm-256color'
 export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
 export PATH="/home/cskksc/.cask/bin:$PATH"
@@ -122,6 +122,7 @@ alias Z='source ~/.zshrc'
 alias v='vim'
 
 ## Apps
+alias monitoroff='xset dpms force off'
 alias m='mplayer'
 alias twitter='turses'
 alias news='newsbeuter'

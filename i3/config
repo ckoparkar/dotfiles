@@ -2,7 +2,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monaco 7
+font pango:monaco 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -18,7 +18,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Monaco-10'"
 
 # change focus
 bindsym $mod+j focus left
@@ -82,11 +82,6 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-
-bindsym $mod+y workspace 1
-bindsym $mod+u workspace 2
-bindsym $mod+i workspace 3
-bindsym $mod+o workspace 4
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1

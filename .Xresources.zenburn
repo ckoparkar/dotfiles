@@ -15,8 +15,8 @@ UXTerm*shading: 20
 UXTerm*selectToClipboard: true
 
 UXTerm.vt100.translations: #override \n\
-    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
-    Ctrl <Key>Y: insert-selection(CLIPBOARD)
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl <Key>Y: insert-selection(CLIPBOARD)
 
 UXTerm*background : #000000
 UXTerm*foreground : #F6F3E8
@@ -128,3 +128,4 @@ URxvt.keysym.End: \033[4~
 
 !! HiDPI
 Xft.dpi: 160
+! Xft.dpi: 142
