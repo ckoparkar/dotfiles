@@ -1,59 +1,25 @@
 # Path to your oh-my-zsh configuration.
-#ZSH=/usr/share/oh-my-zsh/
-ZSH=/usr/share/oh-my-zsh/
+ZSH=~/.oh-my-zsh/
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="csk"
-#ZSH_THEME="agnoster"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+ZSH_THEME="csk-rr"
 
 # Uncomment this to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
 
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
 # Uncomment following line if you want to disable colors in ls
 DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment following line if you want to  shown in the command execution time stamp 
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Plugins
 plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
 
 
-# User configuration
+# Path configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF8
-export EDITOR='emacsclient -t'
+export EDITOR='vim'
 export BROWSER='google-chrome-stable'
 export TERM='xterm-256color'
 export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
@@ -62,9 +28,12 @@ export GOPATH=/home/cskksc/chai/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/cskksc/.cabal/bin/
 export PATH=$PATH:/home/cskksc/.local/bin/
+export PATH=$PATH:/home/cskksc/chai/arcanist/bin
+export PATH=$PATH:/home/cskksc/chai/ghc/inplace/bin
 export TREELANGDIR=/home/cskksc/chai/tree-velocity
 unset MALLOC_PERTURB_
 source $HOME/.cargo/env
+export PATH=$PATH:/opt/ghc/bin
 
 ##########################  Color Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -103,6 +72,11 @@ alias pac-list='sudo pacman -Ql'
 alias pac-installed='sudo pacman -Qe'
 alias pac-rem-unused='sudo pacman -Rsn $(pacman -Qdtq)'
 
+### Ubuntu
+alias ulock='gnome-screensaver-command -l'
+alias agu='sudo apt-get update'
+alias agi='sudo apt-get install'
+
 ### Directories
 alias ll='ls -lh'
 alias la='ls -ah'
@@ -116,10 +90,11 @@ alias ..='cd ..'
 alias k='exit'
 alias rmr='rm -r'
 
-### Zsh
+### Misc
 alias eZ='emacsclient -t ~/.zshrc'
 alias Z='source ~/.zshrc'
 alias v='vim'
+alias g='git'
 
 ## Apps
 alias monitoroff='xset dpms force off'

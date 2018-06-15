@@ -1,5 +1,5 @@
 [user]
-    name = ckoparkar
+    name = Chaitanya Koparkar
     email = ckoparkar@gmail.com
 
 [alias]
@@ -25,3 +25,5 @@
 [branch]
 	autosetupmerge = always
 	autosetuprebase = always
+[url "git://github.com/ghc/packages-"]
+	insteadOf = git://github.com/ghc/packages/
