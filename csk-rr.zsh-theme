@@ -7,9 +7,9 @@ local git_branch='$(git_prompt_info)%{$reset_color%}'
 
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 
-PROMPT="${ret_status} ${user_host} ${current_dir} ${git_branch}
+PROMPT="${ret_status} ${user_host} ${current_dir} ${git_branch} [%T]
 %# "
-RPS1="%{$reset_color%}${return_code} %{$terminfo[bold]$fg[yellow]%} [%T] %{$reset_color%}"
+RPS1="%{$reset_color%}${return_code} %}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}‹"
 ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"

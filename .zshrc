@@ -13,24 +13,23 @@ DISABLE_LS_COLORS="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(git themes zsh-completions archlinux ruby zsh-syntax-highlighting rvm)
-
+plugins=(git themes zsh-completions zsh-syntax-highlighting)
 
 # Path configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=en_US.UTF8
 export EDITOR='vim'
-export BROWSER='google-chrome-stable'
-export TERM='xterm-256color'
-export PATH=$PATH:/home/cskksc/.gem/ruby/2.1.0/bin
-export PATH="/home/cskksc/.cask/bin:$PATH"
-export GOPATH=/home/cskksc/chai/go
+#export BROWSER='google-chrome-stable'
+#export TERM='xterm-256color'
+export PATH=$PATH:/home/$USER/.gem/ruby/2.1.0/bin
+export PATH="/home/$USER/.cask/bin:$PATH"
+export GOPATH=/home/$USER/chai/go
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/cskksc/.cabal/bin/
-export PATH=$PATH:/home/cskksc/.local/bin/
-export PATH=$PATH:/home/cskksc/chai/arcanist/bin
-export PATH=$PATH:/home/cskksc/chai/ghc/inplace/bin
-export TREELANGDIR=/home/cskksc/chai/tree-velocity
+export PATH=$PATH:/home/$USER/.cabal/bin/
+export PATH=$PATH:/home/$USER/.local/bin/
+export PATH=$PATH:/home/$USER/chai/arcanist/bin
+export PATH=$PATH:/home/$USER/chai/ghc/inplace/bin
+export TREELANGDIR=/home/$USER/chai/tree-velocity
 unset MALLOC_PERTURB_
 source $HOME/.cargo/env
 export PATH=$PATH:/opt/ghc/bin
@@ -47,7 +46,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'       # begin underline
 
 ##########################  Color Commands
 if [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors ~/.mydircolors`"
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
