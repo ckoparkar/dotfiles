@@ -29,9 +29,9 @@ export PATH=$PATH:/home/$USER/.cabal/bin/
 export PATH=$PATH:/home/$USER/.local/bin/
 export PATH=$PATH:/home/$USER/chai/arcanist/bin
 export PATH=$PATH:/home/$USER/chai/ghc/inplace/bin
-export TREELANGDIR=/home/$USER/chai/tree-velocity
+export GIBBONDIR=/home/$USER/chai/tree-velocity
 unset MALLOC_PERTURB_
-source $HOME/.cargo/env
+#source $HOME/.cargo/env
 export PATH=$PATH:/opt/ghc/bin
 
 ##########################  Color Man Pages
@@ -76,8 +76,6 @@ alias agu='sudo apt-get update'
 alias agi='sudo apt-get install'
 
 ### Directories
-alias ll='ls -lh'
-alias la='ls -ah'
 alias l='ls -lah'
 alias c='clear'
 alias ed='emacs --daemon'
@@ -89,7 +87,7 @@ alias k='exit'
 alias rmr='rm -r'
 
 ### Misc
-alias eZ='emacsclient -t ~/.zshrc'
+alias eZ="$EDITOR ~/.zshrc"
 alias Z='source ~/.zshrc'
 alias v='vim'
 alias g='git'

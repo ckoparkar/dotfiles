@@ -1,5 +1,6 @@
 # Start the SSH agent
-eval $(ssh-agent)
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+export GPG_AGENT_INFO SSH_AUTH_SOCK
 
 # Keybindings
 xmodmap ~/.Xmodmap
@@ -7,5 +8,5 @@ xmodmap ~/.Xmodmap
 # Wallpaper
 feh --bg-scale ~/chai/dotfiles/wall.png
 
-# Start i3
-exec i3
+## Don't start i3 by hand. Let gddm or whatever do it.
+# exec i3

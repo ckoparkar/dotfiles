@@ -8,7 +8,7 @@ font pango:monaco 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -21,11 +21,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Monaco-10'"
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus right
-# bindsym $mod+l focus right
-# bindsym $mod+h focus left
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -34,10 +33,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -46,7 +45,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Shift+h split h
+bindsym $mod+Shift+c split h
 
 # split in vertical orientation
 bindsym $mod+Shift+v split v
@@ -95,15 +94,11 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-bindsym $mod+Shift+y move container to workspace 1
-bindsym $mod+Shift+u move container to workspace 2
-bindsym $mod+Shift+i move container to workspace 3
-bindsym $mod+Shift+o move container to workspace 4
-
 # reload the configuration file
 bindsym $mod+Control+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Control+r restart
+
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Control+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -140,8 +135,7 @@ bar {
         position bottom
 }
 
-# Doesn't work on KDE :(
-#set $Locker exec --no-startup-id loginctl lock-session, mode "default"
+set $Locker exec gnome-screensaver-command -l, mode "default"
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
@@ -159,4 +153,3 @@ bindsym Control+$mod+l mode "$mode_system"
 
 # Applets
 exec --no-startup-id nm-applet
-exec --no-startup-id pa-applet
