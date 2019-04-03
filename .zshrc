@@ -33,6 +33,9 @@ export GIBBONDIR=/home/$USER/chai/tree-velocity
 unset MALLOC_PERTURB_
 #source $HOME/.cargo/env
 export PATH=$PATH:/opt/ghc/bin
+# Coq things
+export OPAMROOT=~/opam-coq.8.8.2
+eval `opam config env`
 
 ##########################  Color Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -76,6 +79,7 @@ alias agu='sudo apt-get update'
 alias agi='sudo apt-get install'
 
 ### Directories
+alias rm='rm -i'
 alias l='ls -lah'
 alias c='clear'
 alias ed='emacs --daemon'
