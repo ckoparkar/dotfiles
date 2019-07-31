@@ -78,83 +78,35 @@ alias ulock='gnome-screensaver-command -l'
 alias agu='sudo apt-get update'
 alias agi='sudo apt-get install'
 
-### Directories
+### Misc
 alias rm='rm -i'
 alias l='ls -lah'
 alias c='clear'
-alias ed='emacs --daemon'
-alias e='emacsclient -t'
-alias E='sudo emacsclient -t'
-alias home='cd ~'
 alias ..='cd ..'
 alias k='exit'
 alias rmr='rm -r'
-
-### Misc
+alias ed='emacs --daemon'
+alias e='emacsclient -t'
+alias E='sudo emacsclient -t'
 alias eZ="$EDITOR ~/.zshrc"
 alias Z='source ~/.zshrc'
 alias v='vim'
 alias g='git'
 
-## Apps
-alias monitoroff='xset dpms force off'
-alias m='mplayer'
-alias twitter='turses'
-alias news='newsbeuter'
-alias irc='weechat-curses'
-alias torrentz='~/scripts/torrentz_eu.sh'
-alias tpb='~/scripts/tpb.sh'
-alias py27='python2.7'
-alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
-alias ssha='eval "$(ssh-agent -s)"'
-discover ()
-{
-	keyword=$(echo "$@" |  sed 's/ /.*/g' | sed 's:|:\\|:g' | sed 's:(:\\(:g' | sed 's:):\\):g')
-	locate -ir $keyword
+hidpi () {
+    xrandr --output eDP-1 --dpi 192
+    i3-msg restart
 }
 
-record ()
-{
-	ffmpeg -f x11grab -r 30 -s 1600x900 -i :0.0 -vcodec libx264 -threads 0 "$1"
+lodpi () {
+    xrandr --output eDP-1 --dpi 96
+    i3-msg restart
 }
 
-### Advanced Copy/Move ###
-#alias cp='~/scripts/cp -gR'
-#alias mv='~/scripts/mv -gR'
-
-###### Transmission CLI ######
-
-tsm-clearcompleted()
-{
-    transmission-remote -l | grep 100% | grep Done | \
-    awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r ;
+record () {
+    ffmpeg -f x11grab -r 30 -s 1920x1080 -i :0.0 -vcodec libx264 -threads 0 "$1"
 }
 
-tsm-count()
-{
-	echo "Blocklist rules:" $(curl -s --data \
-								   '{"method": "session-get"}' localhost:9091/transmission/rpc -H \
-								   "$(curl -s -D - localhost:9091/transmission/rpc | grep X-Transmission-Session-Id)" \
-							  | cut -d: -f 11 | cut -d, -f1) ;
-}
-tsm() { transmission-remote --list ;}
-tsm-blocklist() { $PATH_SCRIPTS/blocklist.sh ;}
-tsm-daemon() { transmission-daemon ;}
-tsm-quit() { killall transmission-daemon ;}
-tsm-altspeedenable() { transmission-remote --alt-speed ;}
-tsm-altspeeddisable() {	transmission-remote --no-alt-speed ;}
-tsm-add() { transmission-remote --add "$1" ;}
-tsm-askmorepeers() { transmission-remote -t"$1" --reannounce ;}
-tsm-pause() { transmission-remote -t"$1" --stop ;}
-tsm-start() { transmission-remote -t"$1" --start ;}
-tsm-purge() { transmission-remote -t"$1" --remove-and-delete ;}
-tsm-remove() { transmission-remote -t"$1" --remove ;}
-tsm-info() { transmission-remote -t"$1" --info ;}
-tsm-speed()
-{
-	while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;
-}
-tsm-ncurse() { transmission-remote-cli ;}
 
 ###################################################################
 
