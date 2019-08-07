@@ -4,6 +4,7 @@ export GPG_AGENT_INFO SSH_AUTH_SOCK
 
 # Keybindings
 xmodmap ~/.Xmodmap
+xbindkeys
 
 # Wallpaper
 feh --bg-scale ~/chai/dotfiles/wall.png

@@ -31,7 +31,7 @@ export PATH=$PATH:/home/$USER/chai/arcanist/bin
 export PATH=$PATH:/home/$USER/chai/ghc/inplace/bin
 export GIBBONDIR=/home/$USER/chai/tree-velocity
 unset MALLOC_PERTURB_
-#source $HOME/.cargo/env
+source $HOME/.cargo/env
 export PATH=$PATH:/opt/ghc/bin
 # Coq things
 export OPAMROOT=~/opam-coq.8.8.2
