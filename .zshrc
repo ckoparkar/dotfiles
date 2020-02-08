@@ -13,29 +13,31 @@ DISABLE_LS_COLORS="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(git themes zsh-completions zsh-syntax-highlighting)
+plugins=(git themes zsh-completions zsh-syntax-highlighting nix-shell)
+
+export LANG=en_US.UTF8
+export EDITOR='vim'
 
 # Path configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export LANG=en_US.UTF8
-export EDITOR='vim'
 #export BROWSER='google-chrome-stable'
 #export TERM='xterm-256color'
-export PATH=$PATH:/home/$USER/.gem/ruby/2.1.0/bin
-export PATH="/home/$USER/.cask/bin:$PATH"
-export GOPATH=/home/$USER/chai/go
+export PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
+export GOPATH=$HOME/chai/go
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/$USER/.cabal/bin/
-export PATH=$PATH:/home/$USER/.local/bin/
-export PATH=$PATH:/home/$USER/chai/arcanist/bin
-export PATH=$PATH:/home/$USER/chai/ghc/inplace/bin
-export GIBBONDIR=/home/$USER/chai/tree-velocity
+export PATH=$PATH:$HOME/.cabal/bin/
+export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:$HOME/chai/arcanist/bin
+export PATH=$PATH:$HOME/chai/ghc/inplace/bin
+export PATH=$PATH:$HOME/.cask/bin
+export GIBBONDIR=$HOME/chai/tree-velocity
 unset MALLOC_PERTURB_
 source $HOME/.cargo/env
 export PATH=$PATH:/opt/ghc/bin
+
 # Coq things
-export OPAMROOT=~/opam-coq.8.8.2
-eval `opam config env`
+# export OPAMROOT=~/opam-coq.8.8.2
+# eval `opam config env`
 
 ##########################  Color Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -52,7 +54,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -85,8 +86,8 @@ alias c='clear'
 alias ..='cd ..'
 alias k='exit'
 alias rmr='rm -r'
-alias ed='emacs --daemon'
-alias e='emacsclient -t'
+alias ed='emacs --daemon=ed'
+alias e='emacsclient -t --socket-name ed'
 alias E='sudo emacsclient -t'
 alias eZ="$EDITOR ~/.zshrc"
 alias Z='source ~/.zshrc'
@@ -109,6 +110,33 @@ record () {
 
 
 ###################################################################
+# Phoenix things
+
+function prompt_nix_shell_precmd {
+  if [[ -n ${IN_NIX_SHELL} && ${IN_NIX_SHELL} != "0" ]] then
+    if [[ -n ${IN_WHICH_NIX_SHELL} ]] then
+      NIX_SHELL_NAME=": ${IN_WHICH_NIX_SHELL}"
+    fi
+    NIX_PROMPT="%F{8}[%F{3}nix-shell${NIX_SHELL_NAME}%F{8}]%f"
+    if [[ $PROMPT != *"$NIX_PROMPT"* ]] then
+      PROMPT="$NIX_PROMPT $PROMPT"
+    fi
+  fi
+}
+
+# Show [nix-shell] in the prompt
+function prompt_nix_shell_setup {
+  autoload -Uz add-zsh-hook
+  add-zsh-hook precmd prompt_nix_shell_precmd
+}
+
+if [ "$HOSTNAME" = "phoenix.sice.indiana.edu" ]; then
+    export PATH="/l/racket-7.2/bin:$PATH"
+    source $HOME/.nix-profile/etc/profile.d/nix.sh
+    prompt_nix_shell_setup
+fi
+
+
+###################################################################
 
 source $ZSH/oh-my-zsh.sh
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
