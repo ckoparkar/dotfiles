@@ -30,7 +30,7 @@ wireless _first_ {
 }
 
 disk "/" {
-        format = " %avail "
+        format = "DISK %avail "
 }
 
 battery 0 {

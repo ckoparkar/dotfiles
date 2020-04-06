@@ -8,7 +8,6 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 # Copy config files
 echo "Setting up config files..."
 ln -s ~/chai/dotfiles/.zshrc ~/.zshrc
-ln -s ~/chai/dotfiles/.xinitrc ~/.xinitrc
 ln -s ~/chai/dotfiles/.xsessionrc ~/.xsessionrc
 ln -s ~/chai/dotfiles/.Xmodmap ~/.Xmodmap
 ln -s ~/chai/dotfiles/.gitcongig ~/.gitconfig

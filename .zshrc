@@ -32,7 +32,7 @@ export PATH=$PATH:$HOME/chai/ghc/inplace/bin
 export PATH=$PATH:$HOME/.cask/bin
 export GIBBONDIR=$HOME/chai/tree-velocity
 unset MALLOC_PERTURB_
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
 export PATH=$PATH:/opt/ghc/bin
 
 # Coq things

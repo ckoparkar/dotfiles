@@ -9,5 +9,9 @@ xbindkeys
 # Wallpaper
 feh --bg-scale ~/chai/dotfiles/wall.png
 
+# Enable tap-to-click and natural scrolling
+exec xinput set-prop 10 278 1
+exec xinput set-prop 10 286 1
+
 ## Don't start i3 by hand. Let gddm or whatever do it.
 # exec i3
