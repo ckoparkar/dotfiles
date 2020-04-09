@@ -2,7 +2,7 @@
 
 # Install basic things (after an Ubuntu minimal install)
 sudo apt-get update
-sudo apt-get install vim build-essential zsh i3 curl python
+sudo apt-get install vim build-essential zsh i3 curl python feh gnome-screensaver xbindkeys
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 # Copy config files
@@ -24,5 +24,5 @@ sudo apt-get update
 sudo apt-get install emacs26
 git clone git@github.com/ckoparkar/dotemacs.git ~/.emacs
 curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-cd ~/.emacs
+cd ~/.emacs.d
 cask install
