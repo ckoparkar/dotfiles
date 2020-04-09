@@ -13,7 +13,7 @@ DISABLE_LS_COLORS="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(git themes zsh-completions zsh-syntax-highlighting nix-shell)
+plugins=(git themes zsh-completions nix-shell)
 
 export LANG=en_US.UTF8
 export EDITOR='vim'

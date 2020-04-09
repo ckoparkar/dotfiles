@@ -30,11 +30,11 @@ wireless _first_ {
 }
 
 disk "/" {
-        format = "DISK %avail "
+        format = "DISK: %avail "
 }
 
 battery 0 {
-        format = " %status %percentage %remaining "
+        format = " %status: %percentage %remaining "
         hide_seconds = true
         integer_battery_capacity = true
 }
