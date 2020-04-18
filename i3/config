@@ -158,8 +158,9 @@ mode "$mode_system" {
 bindsym Control+$mod+l mode "$mode_system"
 
 # Enable tap-to-click and natural scrolling
-exec xinput set-prop 10 278 1
-exec xinput set-prop 10 286 1
+# Figure the exact device-id and prop-id using xinput list and xinput list-props ID
+exec xinput set-prop 14 299 1
+exec xinput set-prop 14 317 1
 
 # Applets
 exec --no-startup-id nm-applet
