@@ -1,3 +1,4 @@
+syntax on
 set expandtab
 set relativenumber
 set nohlsearch
