@@ -5,6 +5,7 @@ set -eo pipefail
 # Install basic things (after an Ubuntu minimal install)
 sudo apt-get update
 sudo apt-get install vim build-essential zsh i3 curl python feh gnome-screensaver xbindkeys
+sudo apt install texlive texlive-fonts-extra texlive-fonts-recommended texlive-science
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 # Link config files

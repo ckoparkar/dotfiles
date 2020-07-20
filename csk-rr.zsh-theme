@@ -6,7 +6,6 @@ local ret_status="%(?:%{$terminfo[bold]$FG[002]%}➜ :%{$terminfo[bold]$fg[red]%
 
 PROMPT="${ret_status} ${user_host} ${current_dir} ${git_branch} [%T]
 %# "
-RPS1="%{$reset_color%}${return_code} %}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$terminfo[bold]$fg[blue]%}‹"
-ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$terminfo[bold]$fg[blue]%}git:("
+ZSH_THEME_GIT_PROMPT_SUFFIX=") %{$reset_color%}"
