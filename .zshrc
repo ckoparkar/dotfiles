@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=~/.oh-my-zsh/
 
-ZSH_THEME="csk-rr"
+ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=(git themes zsh-completions nix-shell)
@@ -95,4 +95,6 @@ fi
 
 ###################################################################
 
+ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
+if [ -e /Users/ckoparkar/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/ckoparkar/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

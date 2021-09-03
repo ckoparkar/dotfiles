@@ -1,5 +1,4 @@
 syntax on
-set expandtab
 set relativenumber
 set nohlsearch
 set ignorecase
