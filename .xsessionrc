@@ -2,12 +2,14 @@
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export GPG_AGENT_INFO SSH_AUTH_SOCK
 
-# Keybindings
+xrdb --merge ~/.Xresources
+
 xmodmap ~/.Xmodmap
 xbindkeys
 
 # Wallpaper
-feh --bg-scale ~/chai/dotfiles/wall.png
+# feh --bg-scale ~/chai/dotfiles/wall.png
+feh --bg-scale ~/chai/dotfiles/vertical_wall.png
 
 ## Don't start i3 by hand. Let gddm or whatever do it.
 # exec i3
