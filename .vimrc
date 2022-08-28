@@ -1,5 +1,5 @@
 syntax on
-set relativenumber
+set number
 set nohlsearch
 set ignorecase
 set smartcase
