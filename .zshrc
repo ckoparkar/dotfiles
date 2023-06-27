@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=~/.oh-my-zsh/
 
+source ~/.zprofile
+
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
